@@ -4,19 +4,19 @@
 
 
 @section('content')
-<div class="hero-slider">
+<div class="hero-slider" id="main_slider">
 	<div class="single-slide" style="background-image: url('{{ asset('assets/img/slide1.jpg') }}')">
 		<div class="inner">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="slide-content">
-							<h2>We Are Digital Product Design Agency.</h2>
+							<!-- <h2>We Are Digital Product Design Agency.</h2>
 							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 							<div class="slide-btn">
 								<a href="#" class="button">Learn More</a>
 								<a href="#" class="button-2">Live Preview</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -29,12 +29,12 @@
 				<div class="row justify-content-center">
 					<div class="col-lg-6 text-center">
 						<div class="slide-content">
-							<h2>We Are Digital Product Design Agency.</h2>
+							<!-- <h2>We Are Digital Product Design Agency.</h2>
 							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 							<div class="slide-btn">
 								<a href="#" class="button">Learn More</a>
 								<a href="#" class="button-2">Live Preview</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -47,17 +47,17 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="slide-content">
-							<h2>We Are Digital Product Design Agency.</h2>
+							<!-- <h2>We Are Digital Product Design Agency.</h2>
 							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 							<div class="slide-btn">
 								<a href="#" class="button">Learn More</a>
 								<a href="#" class="button-2">Live Preview</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="col-lg-6 text-center">
 						<div class="inner embed-responsive embed-responsive-16by9" data-margin="25px 0 0">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/GYtUAYYDPo0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+							<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/GYtUAYYDPo0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 						</div>
 					</div>
 				</div>
@@ -102,8 +102,8 @@
 <div class="service-area bg2 sp">
 	<div class="container">
 		<div class="section-title">
-			<h2>Our Service</h2>
-			<p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+			<h2>Latest News</h2>
+			<!-- <p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p> -->
 		</div>
 		<div class="row">
 			<div class="col-lg-4 col-md-6 single-service">
@@ -145,7 +145,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 single-service">
+			<!-- <div class="col-lg-4 col-md-6 single-service">
 				<div class="inner">
 					<div class="title">
 						<div class="icon">
@@ -183,11 +183,11 @@
 						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>
-<div class="portfolio-area sp">
+<!-- <div class="portfolio-area sp">
 	<div class="container">
 		<div class="section-title">
 			<h2>Latest Work</h2>
@@ -406,6 +406,19 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
+@endsection
+
+
+
+@section('js_script')
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#main_slider").owlCarousel({
+				autoplay : 800,
+				stopOnHover : false
+			});
+		});
+	</script>
 @endsection

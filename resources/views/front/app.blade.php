@@ -14,6 +14,19 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/slicknav.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+
+    <style type="text/css">
+        /*.footer_menu_widget ul li{
+            list-style: disc;
+        }
+
+        .footer_menu_widget ul li a{
+            font-size: 14px;
+            color: #72869c;
+        }*/
+    </style>
+
+    @yield('css_part')
 </head>
 <body>
     @include('front.parts.head')

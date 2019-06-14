@@ -2,6 +2,22 @@
 
 @section('title', '')
 
+@section('css_part')
+	<style type="text/css">
+		.news_content img{
+			display: none;
+		}
+		.news_content{
+			height: 400px !important;
+		}
+		.main_content{
+			height: inherit;
+			overflow-y: scroll;
+			scrollbar-width: thin;
+			scroll-behavior: auto;
+		} 
+	</style>
+@endsection
 
 @section('content')
 <div class="hero-slider" id="main_slider">
@@ -103,10 +119,93 @@
 	<div class="container">
 		<div class="section-title">
 			<h2>Latest News</h2>
-			<!-- <p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p> -->
 		</div>
 		<div class="row">
 			<div class="col-lg-4 col-md-6 single-service">
+				<div class="inner">
+					<div class="title" style="text-align: center;">
+						<img src="https://images.news18.com/static_news18/pix/ibnhome/news18/news18-logo-xmln.png" width="30%" height="30%">
+					</div>
+					<div class="content news_content">
+						<div class="main_content">
+						<?php
+							$html = "";
+							$url = "https://www.news18.com/rss/business.xml";
+							$xml = simplexml_load_file($url);
+							
+							for($i = 0; $i < 10; $i++){
+								$title = $xml->channel->item[$i]->title;
+								$link = $xml->channel->item[$i]->link;
+								$description = $xml->channel->item[$i]->description;
+								$pubDate = $xml->channel->item[$i]->pubDate;
+								
+							    $html .= "<a href='$link'><h5>$title</h5></a>";
+								$html .= "<br />$description<br />";
+								$html .= "<br /><span style='color: #4698ff;'>$pubDate</span><hr />";
+							}
+							echo $html;
+						?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 single-service">
+				<div class="inner">
+					<div class="title" style="text-align: center;">
+						<img src="https://images.news18.com/static_news18/pix/ibnhome/news18/news18-logo-xmln.png" width="30%" height="30%">
+					</div>
+					<div class="content news_content">
+						<div class="main_content">
+						<?php
+							$html = "";
+							$url = "https://gujarati.news18.com/rss/business.xml";
+							$xml = simplexml_load_file($url);
+							
+							for($i = 0; $i < 10; $i++){
+								$title = $xml->channel->item[$i]->title;
+								$link = $xml->channel->item[$i]->link;
+								$description = $xml->channel->item[$i]->description;
+								$pubDate = $xml->channel->item[$i]->pubDate;
+								
+							    $html .= "<a href='$link'><h5>$title</h5></a>";
+								$html .= "<br />$description<br />";
+								$html .= "<br /><span style='color: #4698ff;'>$pubDate</span><hr />";
+							}
+							echo $html;
+						?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 single-service">
+				<div class="inner">
+					<div class="title" style="text-align: center;">
+						<img src="https://images.news18.com/static_news18/pix/ibnhome/news18/news18-logo-xmln.png" width="30%" height="30%">
+					</div>
+					<div class="content news_content">
+						<div class="main_content">
+						<?php
+							$html = "";
+							$url = "https://hindi.news18.com/rss/khabar/business/business.xml";
+							$xml = simplexml_load_file($url);
+							
+							for($i = 0; $i < 10; $i++){
+								$title = $xml->channel->item[$i]->title;
+								$link = $xml->channel->item[$i]->link;
+								$description = $xml->channel->item[$i]->description;
+								$pubDate = $xml->channel->item[$i]->pubDate;
+								
+							    $html .= "<a href='$link' target='_blank'><h5>$title</h5></a>";
+								$html .= "<br />$description<br />";
+								$html .= "<br /><span style='color: #4698ff;'>$pubDate</span><hr />";
+							}
+							echo $html;
+						?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<div class="col-lg-4 col-md-6 single-service">
 				<div class="inner">
 					<div class="title">
 						<div class="icon">
@@ -145,7 +244,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="col-lg-4 col-md-6 single-service">
+			<div class="col-lg-4 col-md-6 single-service">
 				<div class="inner">
 					<div class="title">
 						<div class="icon">

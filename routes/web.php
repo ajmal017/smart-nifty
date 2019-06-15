@@ -20,3 +20,5 @@ Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/','front\mainController');
+
+Route::resource('/mx_ad_mstr','mx_ad_mstr\loginController');

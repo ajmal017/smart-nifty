@@ -21,4 +21,11 @@ Auth::routes();
 
 Route::resource('/','front\mainController');
 
-Route::resource('/mx_ad_mstr','mx_ad_mstr\loginController');
+
+
+
+/*==================================================================================================================================*/
+
+
+/* Admin Panel Routes */
+Route::get('/home','mx_ad_mstr\DashboardController@index')->name('home');

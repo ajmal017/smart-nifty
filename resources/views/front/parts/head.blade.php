@@ -7,8 +7,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6 col-sm-3 logo-column">
-                        <a href="index.html" class="logo">
-                            <img src="assets/img/logo.png" alt="logo">
+                        <a href="<?php echo url('/'); ?>" class="logo">
+                            <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
                         </a>
                     </div>
                     <div class="col-6 col-sm-9 nav-column clearfix">
@@ -26,17 +26,11 @@
                         </div>
                         <nav id="menu" class="d-none d-lg-block">
                             <ul>
-                                <li class="current-menu-item has-child">
-                                    <a href="index.html">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home - 01</a></li>
-                                        <li><a href="index-2.html">Home - 02</a></li>
-                                        <li><a href="index-3.html">Home - 03</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li class="has-child">
+                                <li><a href="<?php echo url('/'); ?>">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Screeners</a></li>
+                                <li><a href="#">Charts</a></li>
+                                <!-- <li class="has-child">
                                     <a href="#">Pages</a>
                                     <ul class="sub-menu">
                                         <li><a href="404.html">404</a></li>
@@ -51,8 +45,8 @@
                                         <li><a href="team.html">Team</a></li>
                                         <li><a href="testimonial.html">Testimonial</a></li>
                                     </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                </li> -->
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </nav>
                     </div>

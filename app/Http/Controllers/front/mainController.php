@@ -4,6 +4,7 @@ namespace App\Http\Controllers\front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\mx_ad_mstr\news;
 
 class mainController extends Controller
 {
@@ -14,7 +15,8 @@ class mainController extends Controller
      */
     public function index()
     {
-        return view('front.home.view');
+        $news_data = news::select()->first();
+        return view('front.home.view',compact('news_data'));
     }
 
     /**

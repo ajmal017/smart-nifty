@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Auth::routes();
+//Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
@@ -28,4 +28,6 @@ Route::resource('/','front\mainController');
 
 
 /* Admin Panel Routes */
-Route::get('/home','mx_ad_mstr\DashboardController@index')->name('home');
+Route::resource('/mx_ad_mstr','mx_ad_mstr\mainController');
+
+Route::resource('/h__p_news','mx_ad_mstr\h__p_news\mainController');

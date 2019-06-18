@@ -84,7 +84,8 @@
 <div class="brand-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-6 single-brand">
+			<center><h2><span style="color: #f00;">{{$news_data->news_content}}</span></h2></center>
+			<!-- <div class="col-md-3 col-6 single-brand">
 				<div class="inner">
 					<a href="#">
 						<img src="{{ asset('assets/img/brand1.png') }}" alt="">
@@ -111,7 +112,7 @@
 						<img src="assets/img/brand4.png" alt="">
 					</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>

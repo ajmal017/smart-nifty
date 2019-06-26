@@ -13,15 +13,13 @@
                     </div>
                     <div class="col-6 col-sm-9 nav-column clearfix">
                         <div class="right-nav">
-                            <span class="search-icon fa fa-search"></span>
+                            <!-- <span class="search-icon fa fa-search"></span>
                             <form action="#" class="search-form">
                                 <input type="search" placeholder="search now">
                                 <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
+                            </form> -->
                             <div class="header-social">
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-twitter"></a>
-                                <a href="#" class="fa fa-github"></a>
+                                <a href="https://www.facebook.com/permalink.php?story_fbid=717401932049724&id=717400522049865&aymt_tip=1&placement=aymt_boost_post_with_ads_intent_tip&notif_id=1561532320864323&notif_t=aymt_upsell_tip&ref=notif" class="fa fa-facebook" target="_blank"></a>
                             </div>
                         </div>
                         <nav id="menu" class="d-none d-lg-block">

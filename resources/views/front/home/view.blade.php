@@ -27,6 +27,7 @@
 	<div><img src="{{asset('assets/img/slide1.jpg')}}"></div>
 	<div><img src="{{asset('assets/img/slide2.jpg')}}"></div>
 	<div><img src="{{asset('assets/img/slide3.jpg')}}"></div>
+	<div><img src="{{asset('assets/img/slide4.jpg')}}"></div>
 </div>
 <?php
 /*
@@ -233,7 +234,8 @@
 				accessibility: true,
 				autoplay: true,
 				autoplaySpeed: 3000,
-				arrows: false
+				arrows: false,
+				responsive: true
 			});
 		});
 	</script>

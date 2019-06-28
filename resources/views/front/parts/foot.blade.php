@@ -32,7 +32,7 @@
                     <div class="inner">
                         <h4>Address</h4>
                         <h5>NIRAJ INVESTMENT</h5>
-                        <p>SHOP NO 2 UPASANA COMPLEX, <br>NEAR AMRAPALI RAILWAY CROSSING, <br>RAIYA ROAD RAJKOT 360007, <br> <h5><i class="fa fa-phone"></i>  9428228307</h5> <br><h5><i class="fa fa-envelope-o" aria-hidden="true"></i>  zinfo.rajkot@gmail.com</h5></p>
+                        <p>SHOP NO 2 UPASANA COMPLEX, <br>NEAR AMRAPALI RAILWAY CROSSING, <br>RAIYA ROAD,<br> RAJKOT-360007 <br> <h5><i class="fa fa-phone"></i>  9428228307</h5> <br><h5><i class="fa fa-envelope-o" aria-hidden="true"></i>  zinfo.rajkot@gmail.com</h5></p>
                     </div>
                 </div>
             </div>

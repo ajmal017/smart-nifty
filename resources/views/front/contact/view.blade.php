@@ -17,42 +17,45 @@
         <div class="row">
             <div class="col-md-5 contact-info">
                 <div class="single-info">
-                    <h5>Phone</h5>
-                    <p>+(121) - 237 - 979 - 3580</p>
+                    <h5><u>Phone</u></h5>
+                    <p>(+91) 9428228307</p>
                 </div>
                 <div class="single-info">
-                    <h5>Email</h5>
-                    <p>esmeralda_walsh@lucy.name</p>
+                    <h5><u>Email</u></h5>
+                    <p>zinfo.rajkot@gmail.com</p>
                 </div>
                 <div class="single-info">
-                    <h5>Address</h5>
-                    <p>30 Heathcote Vista, Cassinfort, LA</p>
+                    <h5><u>Address</u></h5>
+                    <p>SHOP NO 2 UPASANA COMPLEX,<br>
+                    NEAR AMRAPALI RAILWAY CROSSING,<br>
+                    RAIYA ROAD,<br>
+                    RAJKOT-360007</p>
                 </div>
                 <div class="single-info">
-                    <h5>Social</h5>
+                    <h5><u>Social</u></h5>
                     <p>
-                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.facebook.com/permalink.php?story_fbid=717401932049724&id=717400522049865&aymt_tip=1&placement=aymt_boost_post_with_ads_intent_tip&notif_id=1561532320864323&notif_t=aymt_upsell_tip&ref=notif" class="fa fa-facebook"></a>
                         <a href="#" class="fa fa-twitter"></a>
                         <a href="#" class="fa fa-linkedin"></a>
-                        <a href="#" class="fa fa-pinterest"></a>
                     </p>
                 </div>
             </div>
             <div class="col-md-7">
-            	<center><h4><u>Send Enquiry</u></h4></center>
-                <form action="#" class="contact-form">
+            	<h3><u>Send Enquiry</u></h3>
+                <form action="/s_mail" class="contact-form" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-lg-6">
-                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Name" required="" name="email_name">
                         </div>
                         <div class="col-lg-6">
-                            <input type="email" placeholder="Email">
+                            <input type="email" placeholder="Email" required="" name="email_id">
                         </div>
                         <div class="col-lg-12">
-                            <input type="text" placeholder="Subject">
+                            <input type="text" placeholder="Subject" required="" name="email_subject">
                         </div>
                         <div class="col-lg-12">
-                            <textarea placeholder="Message"></textarea>
+                            <textarea placeholder="Message" required="" name="email_message"></textarea>
                         </div>
                         <div class="col-lg-12">
                             <input class="button" type="submit" value="Send Message">

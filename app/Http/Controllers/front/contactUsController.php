@@ -4,6 +4,7 @@ namespace App\Http\Controllers\front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Mail;
 
 class contactUsController extends Controller
 {
@@ -81,5 +82,28 @@ class contactUsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function sendmail(Request $request)
+    {
+        if(isset($request['_token']) && !empty($request['_token']))
+        {
+            $data['title'] = "This is Testing Mail";
+
+            Mail::send('front.contact.view',$data,function($message){
+                $message->to('ranparagaurav98@gmail.com','Gaurav Ranpara')->subject('Testing Mail');
+            });
+
+            if(!Mail::failures()){
+                return "<h1>Success</h1>";
+            }else{
+                return "<h1>Please Try Again</h1>";
+            }    
+        }
+        else{
+            return view('front.contact.view');
+        }
+        
     }
 }

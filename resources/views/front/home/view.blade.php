@@ -127,6 +127,7 @@
 		</div>
 	</div>
 </div>
+
 <div class="service-area bg2 sp">
 	<div class="container">
 		<div class="section-title">
@@ -233,19 +234,14 @@
 			$(".main_slider").slick({
 				accessibility: true,
 				autoplay: true,
-				autoplaySpeed: 3000,
+				autoplaySpeed: 2000,
 				arrows: false,
-				responsive: true
+				responsive: true,
+				fade: true,
+				lazyLoad: 'progressive',
+				swipeToSlide: true
 			});
+
 		});
 	</script>
-
-	<!-- <script type="text/javascript">
-		$(document).ready(function(){
-			$("#main_slider").owlCarousel({
-				autoplay : 800,
-				stopOnHover : false
-			});
-		});
-	</script> -->
 @endsection

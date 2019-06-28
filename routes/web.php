@@ -21,6 +21,8 @@
 
 Route::resource('/','front\mainController');
 
+Route::resource('/contact_us','front\contactUsController');
+
 
 
 

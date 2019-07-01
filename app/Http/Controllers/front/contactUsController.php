@@ -89,17 +89,45 @@ class contactUsController extends Controller
     {
         if(isset($request['_token']) && !empty($request['_token']))
         {
-            $data['title'] = "This is Testing Mail";
 
-            Mail::send('front.contact.view',$data,function($message){
-                $message->to('ranparagaurav98@gmail.com','Gaurav Ranpara')->subject('Testing Mail');
+            $msg_data ='
+            <table border="2">
+                <tr>
+                    <td>Name :</td>
+                    <td>'.$request['email_name'].'</td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td>'.$request['email_id'].'</td>
+                </tr>
+                <tr>
+                    <td>Subject :</td>
+                    <td>'.$request['email_subject'].'</td>
+                </tr>
+                <tr>
+                    <td>Message :</td>
+                    <td>'.$request['email_message'].'</td>
+                </tr>
+            </table>';
+
+
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
+            $headers .= 'From: noreply@smartnifty.com';
+
+            @mail("ranparagaurav98@gmail.com", "Enquiry Mail", $msg_data, $headers);
+
+            /*$data['name'] = "This is Testing Mail";
+
+            Mail::send(['text'=>'mail'],$data,function($message){
+                $message->to('ranparagaurav98@gmail.com','Gaurav Ranpara')->subject('Testing Mail')->setBody("<h1>Final Testing</h1>",'text/html');
             });
 
             if(!Mail::failures()){
                 return view('front.thank_you');
             }else{
                 return "<h1>Please Try Again</h1>";
-            }    
+            }*/    
         }
         else{
             return view('front.contact.view');

@@ -24,7 +24,9 @@ Route::resource('/','front\mainController');
 Route::post('/s_mail','front\contactUsController@sendmail');
 Route::resource('/contact_us','front\contactUsController');
 
-
+Route::get('/thank_you',function(){
+	return view('front.thank_you');
+});
 
 
 

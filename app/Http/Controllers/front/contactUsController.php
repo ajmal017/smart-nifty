@@ -96,7 +96,7 @@ class contactUsController extends Controller
             });
 
             if(!Mail::failures()){
-                return "<h1>Success</h1>";
+                return view('front.thank_you');
             }else{
                 return "<h1>Please Try Again</h1>";
             }    

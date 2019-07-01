@@ -127,6 +127,7 @@
 		</div>
 	</div>
 </div>
+
 <div class="service-area bg2 sp">
 	<div class="container">
 		<div class="section-title">
@@ -233,23 +234,27 @@
 			$(".main_slider").slick({
 				accessibility: true,
 				autoplay: true,
-				autoplaySpeed: 3000,
+				autoplaySpeed: 2000,
 				arrows: false,
-				responsive: true
+				responsive: true,
+				fade: true,
+				lazyLoad: 'progressive',
+				swipeToSlide: true
 			});
+<<<<<<< HEAD
 
 
 			$(".main_content").children("img").remove();
 		});
 	</script>
+=======
+>>>>>>> 71dec0fd735d21fa531c25d7ac860b1361c3d7e1
 
-	<!-- <script type="text/javascript">
-		$(document).ready(function(){
-			$("#main_slider").owlCarousel({
-				autoplay : 800,
-				stopOnHover : false
-			});
 		});
+<<<<<<< HEAD
 	</script> -->
 
+=======
+	</script>
+>>>>>>> 71dec0fd735d21fa531c25d7ac860b1361c3d7e1
 @endsection

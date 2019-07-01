@@ -44,7 +44,7 @@
                                         <li><a href="testimonial.html">Testimonial</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/contact_us">Contact</a></li>
                             </ul>
                         </nav>
                     </div>

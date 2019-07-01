@@ -241,20 +241,10 @@
 				lazyLoad: 'progressive',
 				swipeToSlide: true
 			});
-<<<<<<< HEAD
+
 
 
 			$(".main_content").children("img").remove();
 		});
 	</script>
-=======
->>>>>>> 71dec0fd735d21fa531c25d7ac860b1361c3d7e1
-
-		});
-<<<<<<< HEAD
-	</script> -->
-
-=======
-	</script>
->>>>>>> 71dec0fd735d21fa531c25d7ac860b1361c3d7e1
 @endsection

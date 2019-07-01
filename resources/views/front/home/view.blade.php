@@ -237,6 +237,9 @@
 				arrows: false,
 				responsive: true
 			});
+
+
+			$(".main_content").children("img").remove();
 		});
 	</script>
 
@@ -248,4 +251,5 @@
 			});
 		});
 	</script> -->
+
 @endsection

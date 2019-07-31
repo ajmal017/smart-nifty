@@ -19,6 +19,8 @@
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
+Route::resource('/screeners','front\screenerController');
+
 Route::resource('/','front\mainController');
 
 Route::post('/s_mail','front\contactUsController@sendmail');

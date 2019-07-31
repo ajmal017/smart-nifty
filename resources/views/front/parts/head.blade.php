@@ -26,7 +26,7 @@
                             <ul>
                                 <li><a href="<?php echo url('/'); ?>">Home</a></li>
                                 <li><a href="#">About</a></li>
-                                <li><a href="#">Screeners</a></li>
+                                <li><a href="/screeners">Screeners</a></li>
                                 <li><a href="#">Charts</a></li>
                                 <!-- <li class="has-child">
                                     <a href="#">Pages</a>

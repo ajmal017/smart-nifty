@@ -4,6 +4,7 @@ namespace App\Http\Controllers\front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Ixudra\Curl\Facades\Curl;
 
 class screenerController extends Controller
 {
@@ -81,5 +82,13 @@ class screenerController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function getlivedata()
+    {
+        $api_data = Curl::to('http://www.smartnifty.com/convertcsv.json')->asJson()->get();
+        //$api_data = Curl::to('http://dummy.restapiexample.com/api/v1/employees')->asJson()->get();
+        return $api_data;
     }
 }

@@ -19,6 +19,7 @@
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/screeners_get','front\screenerController@getlivedata');
 Route::resource('/screeners','front\screenerController');
 
 Route::resource('/','front\mainController');

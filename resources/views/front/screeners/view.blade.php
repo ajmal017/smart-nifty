@@ -1,6 +1,6 @@
 @extends('front.app')
 
-@section('title', '| Contact Us')
+@section('title', '| Screeners')
 
 
 
@@ -111,6 +111,9 @@
                         <ul style="list-style: none;text-align: left;">
                             <li><a href="#" id="wipro_chart">Wipro</a></li>
                         </ul>
+
+                        <div id="chart_div">
+                        </div>
                     </div>
                 </div>
                 <!-- <div class="inner">
@@ -247,56 +250,83 @@
 
 
 @section('js_script')
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 
-    <script type="text/javascript">
+    <script type="application/x-javascript">
+        $(document).ready(function(){
+        });
+
         $(document).on('click','#wipro_chart',function(){
-            var chart = LightweightCharts.createChart(document.body, {
-                width: 600,
-                height: 300,
-                layout: {
-                    backgroundColor: '#000000',
-                    textColor: 'rgba(255, 255, 255, 0.9)',
-                },
-                grid: {
-                    vertLines: {
-                        color: 'rgba(197, 203, 206, 0.5)',
-                    },
-                    horzLines: {
-                        color: 'rgba(197, 203, 206, 0.5)',
-                    },
-                },
-                crosshair: {
-                    mode: LightweightCharts.CrosshairMode.Normal,
-                },
-                priceScale: {
-                    borderColor: 'rgba(197, 203, 206, 0.8)',
-                },
-                timeScale: {
-                    borderColor: 'rgba(197, 203, 206, 0.8)',
-                },
-            });
-
-
-
-            var candleSeries = chart.addCandlestickSeries({
-              upColor: 'rgba(255, 144, 0, 1)',
-              downColor: '#000',
-              borderDownColor: 'rgba(255, 144, 0, 1)',
-              borderUpColor: 'rgba(255, 144, 0, 1)',
-              wickDownColor: 'rgba(255, 144, 0, 1)',
-              wickUpColor: 'rgba(255, 144, 0, 1)',
-            });
-
-
             $.ajax({
-                url: 'http://www.smartnifty.com/convertcsv.json',
-                dataType: 'JSON',
-                method: 'GET',
-                success: function(result){
-                    console.log(result);
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: '/screeners_get',
+                method: 'POST',
+                success:function(result){
+                    var result_Data = [];
+                    $.each(result,function(key,value){
+                        var tmp_new_date = value.Date.split(/[- :]/);
+                        var new_time = tmp_new_date[1]+':'+tmp_new_date[2];
+                        var tmp_new_date2 = tmp_new_date[0].split('/');
+                        var final_date = (2000+Number(tmp_new_date2[2])+'-'+tmp_new_date2[1]+'-'+tmp_new_date2[0]+' '+new_time);
+                        
+                        result_Data.push({'time': moment(final_date).unix(),'open':value.WIPRO_EQO,'high':value.WIPRO_EQH,'low':value.WIPRO_EQL,'close':value.WIPRO_EQC});
+                    });
+
+
+                    const json_data = JSON.stringify(result_Data);
+
+                    //var new_data_object = Object.assign({},result_Data);
+                    //var json_data = JSON.stringify(new_data_object);
+                    /*console.log(json_data);
+                    return false;*/
+
+
+                    const chart = LightweightCharts.createChart(document.getElementById('chart_div'), {
+                        width: 600,
+                        height: 300,
+                        layout: {
+                            backgroundColor: '#000000',
+                            textColor: 'rgba(255, 255, 255, 0.9)',
+                        },
+                        grid: {
+                            vertLines: {
+                                color: 'rgba(197, 203, 206, 0.5)',
+                            },
+                            horzLines: {
+                                color: 'rgba(197, 203, 206, 0.5)',
+                            },
+                        },
+                        crosshair: {
+                            mode: LightweightCharts.CrosshairMode.Normal,
+                        },
+                        priceScale: {
+                            borderColor: 'rgba(197, 203, 206, 0.8)',
+                        },
+                        timeScale: {
+                            borderColor: 'rgba(197, 203, 206, 0.8)',
+                            timeVisible: true,
+                            secondsVisible: true,
+                        },
+                    });
+
+                    const candleSeries = chart.addCandlestickSeries({
+                      upColor: 'rgba(255, 144, 0, 1)',
+                      downColor: '#000',
+                      borderDownColor: 'rgba(255, 144, 0, 1)',
+                      borderUpColor: 'rgba(255, 144, 0, 1)',
+                      wickDownColor: 'rgba(255, 144, 0, 1)',
+                      wickUpColor: 'rgba(255, 144, 0, 1)',
+                    });
+
+                    candleSeries.setData(result_Data);
                 }
-            })
+            });
         });
         
     </script>

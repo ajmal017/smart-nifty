@@ -18,6 +18,7 @@
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/screeners/{stock_name}','front\stockController@index');
 
 Route::post('/screeners_get','front\screenerController@getlivedata');
 Route::resource('/screeners','front\screenerController');

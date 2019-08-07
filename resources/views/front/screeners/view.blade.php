@@ -2,7 +2,13 @@
 
 @section('title', '| Screeners')
 
-
+@section('css_part')
+    <style type="text/css">
+        .card-body li a{
+            color: #000;
+        }
+    </style>
+@endsection
 
 @section('content')
 
@@ -12,19 +18,18 @@
             <h2>Screeners</h2>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-6 single-service-2 bs-callout">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Fundamental Scans</h2>
-                    </div>
+            <div class="col-lg-4 col-md-4 single-service-2">
+                <div class="card border border-primary">
                     <div class="card-body">
-                        <ul class="list-group striped" style="list-style: none;text-align: left;">
-                            <li class="list-group-item"><a href="#" id="wipro_chart">Wipro</a></li>
-                            <li class="list-group-item" style="background-color: #eeeeee;"><a href="#">Profit Jump by 200%</a></li>
-                            <li class="list-group-item"><a href="#">Swing Trade Scanner</a></li>
-                            <li class="list-group-item" style="background-color: #eeeeee;"><a href="#">Low Debt Companies</a></li>
-                            <li class="list-group-item"><a href="#">Mid Cap Stocks</a></li>
-                            <li class="list-group-item" style="background-color: #eeeeee;"><a href="#">Small Cap Stocks</a></li>
+                        <h4 class="text-primary text-left">Fundamental Scans</h4>
+                        <ul class="list-group text-left">
+                            <!-- <li class="list-group-item"><a href="#" id="wipro_chart">Wipro</a></li> -->
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/Wipro">Wipro</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="#">Profit Jump by 200%</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="#">Swing Trade Scanner</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="#">Low Debt Companies</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="#">Mid Cap Stocks</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="#">Small Cap Stocks</a></li>
                         </ul>
                     </div>
                 </div>

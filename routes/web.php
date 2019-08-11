@@ -11,18 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-//Auth::routes();
-
-//Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/screeners/{stock_name}','front\stockController@index');
-
-Route::post('/screeners_get','front\screenerController@getlivedata');
-Route::resource('/screeners','front\screenerController');
-
 Route::resource('/','front\mainController');
 
 Route::post('/s_mail','front\contactUsController@sendmail');
@@ -31,6 +19,20 @@ Route::resource('/contact_us','front\contactUsController');
 Route::get('/thank_you',function(){
 	return view('front.thank_you');
 });
+
+
+//Route For Move To Screeners Details Table Page
+Route::get('/screeners/{stock_name}','front\stockController@index');
+Route::resource('/screeners','front\screenerController');
+
+
+//Route For Get Chart Of Specific Stock
+Route::post('/screeners_get','front\chartController@getlivedata');
+Route::get('/chart/{stock_name}','front\chartController@index');
+
+
+
+
 
 
 

@@ -14,7 +14,8 @@ class stockController extends Controller
      */
     public function index($stock_name)
     {
-        return $stock_name;
+        $stockName = $stock_name;
+        return view('front/screeners/screnners_list',compact('stockName'));
     }
 
     /**

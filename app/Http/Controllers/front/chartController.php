@@ -4,18 +4,20 @@ namespace App\Http\Controllers\front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Ixudra\Curl\Facades\Curl;
 
-
-class screenerController extends Controller
+class chartController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($stock_name)
     {
-        return view('front/screeners/view');
+        $stockName = $stock_name;
+        
+        return view('front\charts\view',compact('stockName'));
     }
 
     /**
@@ -82,5 +84,13 @@ class screenerController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function getlivedata()
+    {
+        $api_data = Curl::to('http://www.smartnifty.com/convertcsv.json')->asJson()->get();
+        //$api_data = Curl::to('http://dummy.restapiexample.com/api/v1/employees')->asJson()->get();
+        return $api_data;        
     }
 }

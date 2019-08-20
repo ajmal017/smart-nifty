@@ -21,14 +21,23 @@ Route::get('/thank_you',function(){
 });
 
 
+
+Route::get('/screeners/topLoved/{screenerName}','front\topLovedController@index');
+
+
 //Route For Move To Screeners Details Table Page
-Route::get('/screeners/{stock_name}','front\stockController@index');
-Route::resource('/screeners','front\screenerController');
+
+/*Route::get('/screeners/{stock_name}','front\stockController@index');
+Route::resource('/screeners','front\screenerController');*/
+
+
+
 
 
 //Route For Get Chart Of Specific Stock
-Route::post('/screeners_get','front\chartController@getlivedata');
-Route::get('/chart/{stock_name}','front\chartController@index');
+
+/*Route::post('/screeners_get','front\chartController@getlivedata');
+Route::get('/chart/{stock_name}','front\chartController@index');*/
 
 
 

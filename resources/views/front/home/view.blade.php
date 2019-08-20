@@ -8,7 +8,7 @@
 			display: none;
 		}
 		.news_content{
-			height: 400px !important;
+			height: 600px !important;
 		}
 		.main_content{
 			height: inherit;

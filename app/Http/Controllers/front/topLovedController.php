@@ -4,6 +4,7 @@ namespace App\Http\Controllers\front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Ixudra\Curl\Facades\Curl;
 
 class topLovedController extends Controller
 {
@@ -15,7 +16,11 @@ class topLovedController extends Controller
     public function index($screenerName)
     {
         $screenerName = $screenerName;
-        return view('front/screeners/screnners_list',compact('screenerName'));
+        $stockName = 'Wipro';
+        return view('front/screeners/screnners_list',compact('screenerName','stockName'));
+        /*$api_data = Curl::to('http://www.smartnifty.com/convertcsv.json')->asJson()->get();
+        return $api_data;
+        return view('front/screeners/screnners_list',compact('screenerName'));*/
     }
 
     /**

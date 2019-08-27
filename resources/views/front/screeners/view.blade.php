@@ -56,23 +56,23 @@
                         <h4 class="text-primary text-left">Top Loved</h4>
                         <ul class="list-group text-left">
                             <!-- <li class="list-group-item list-group-item-light"><a href="/screeners/Wipro">Wipro</a></li> -->
-                            <li class="list-group-item list-group-item-light"><a href="#">15 Minute stock Breakouts</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Short term Breakouts</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/15-Minute-Stock-Breakouts">15 Minute stock Breakouts</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Short-Term-Breakouts">Short term Breakouts</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Intraday buying seen in the Past 15 minutes</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Bulish for next day</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Last-15-Minutes-intraday">Intraday buying seen in the Past 15 minutes</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Bulish-For-Next-Day">Bulish for next day</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Supertrend positive breakout - 10 mins</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Volume shockers(stocks with rising volumes)</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Supertrend-10-Mins">Supertrend positive breakout - 10 mins</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Volume-Shockers">Volume shockers(stocks with rising volumes)</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Perfect sell(short)</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">NKs best buy stocks for intraday</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Perfect-Sell">Perfect sell(short)</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Nks-best-buy-stocks">NKs best buy stocks for intraday</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Potential breakouts</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Strong stocks</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Potential-Breakout">Potential breakouts</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Strong-Breakout">Strong stocks</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Macd bearish or bullish crossover</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Daily rsi oversold/overbought scan</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Macd-Bearish">Macd bearish or bullish crossover</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Daily-rsi">Daily rsi oversold/overbought scan</a></li>
                         </ul>
                     </div>
                 </div>

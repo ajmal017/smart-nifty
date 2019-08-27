@@ -7,16 +7,48 @@
         .card-body li a{
             color: #000;
         }
+        body{
+            background-color: #f5f5f5;
+        }
+        .card{
+            border-left-width: 5px !important;
+            border-radius: 3px !important;
+            border-right-width: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+        }
+
+        .card h4,h5{
+            font-size: 1.2rem;
+        }
     </style>
 @endsection
 
 @section('content')
 
-<div class="service-area sp">
+<div class="service-area sp" style="padding-top: 50px;">
     <div class="container">
-        <div class="section-title" data-margin="0 0 40px">
+        <!-- <div class="section-title" data-margin="0 0 40px">
             <h2>Screeners</h2>
+        </div> -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="card border border-success">
+                    <div class="card-body">
+                        <h5>Search Screeners</h5>
+                        <div class="input-group" style="margin-top: 10px;">
+                            <input type="text" class="form-control" placeholder="eg: RSI, Breakout, Uptrend, Short term .." name="screener_search">
+                            <span class="input-group-btn">
+                                 <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i> Search scans </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+
         <div class="row">
             <div class="col-lg-4 col-md-4 single-service-2">
                 <div class="card border border-primary">

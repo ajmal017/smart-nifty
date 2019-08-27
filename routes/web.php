@@ -27,8 +27,8 @@ Route::get('/screeners/topLoved/{screenerName}','front\topLovedController@index'
 
 //Route For Move To Screeners Details Table Page
 
-/*Route::get('/screeners/{stock_name}','front\stockController@index');
-Route::resource('/screeners','front\screenerController');*/
+//Route::get('/screeners/{stock_name}','front\stockController@index');
+Route::resource('/screeners','front\screenerController');
 
 
 

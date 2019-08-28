@@ -36,8 +36,8 @@ Route::resource('/screeners','front\screenerController');
 
 //Route For Get Chart Of Specific Stock
 
-/*Route::post('/screeners_get','front\chartController@getlivedata');
-Route::get('/chart/{stock_name}','front\chartController@index');*/
+Route::post('/screeners_get','front\chartController@getlivedata');
+Route::get('/chart/{stock_name}','front\chartController@index');
 
 
 

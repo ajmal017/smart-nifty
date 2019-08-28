@@ -1,9 +1,10 @@
 @extends('front.app')
 
-@section('title', '| Screeners List')
+@section('title', '')
 
 @section('css_part')
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
 	<style type="text/css">
 		body{
             background-color: #f5f5f5;
@@ -11,6 +12,7 @@
         .outerDiv{
         	padding-top: 10px;
         	border: 1px solid #bbbbbb;
+        	background-color: #f9f9f9;
         }
 	</style>
 @endsection
@@ -26,7 +28,7 @@
         	@endphp
             <h4 class="text-left">{{$screenerName}} Screener</h4>
         </div>
-        <div class="row">
+        <div class="row mb-3">
             <div class="col-lg-12 col-md-12">
             	<div class="card">
             		<div class="card-body">
@@ -68,9 +70,30 @@
 	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 
+
+	<!-- File Export JS -->
+
+	<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+
+	<!-- --->
+
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#example").DataTable();
+			$("#example").DataTable({
+				dom: 'Bfrtip',
+		        /*buttons: [
+		            'copy', 'csv', 'excel', 'pdf', 'print'
+		        ]*/
+		        buttons: [
+		            'excel'
+		        ]
+			});
 		});
 	</script>
 @endsection

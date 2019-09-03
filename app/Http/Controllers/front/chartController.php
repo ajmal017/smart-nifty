@@ -16,8 +16,36 @@ class chartController extends Controller
     public function index($stock_name)
     {
         $stockName = $stock_name;
+        $api_data = Curl::to('http://www.smartnifty.com/convertcsv.json')->asJson()->get();
+
+
+        $finalApiData = array();
+        foreach($api_data as $value){
+            $tmpApiData = array();  
+
+
+            $tmpDates = explode('/',$value->Date);
+            $tmpYear = substr($tmpDates[2],0,2);
+            $finalYear = 2000 + ((int)$tmpYear);
+
+
+            $tmpTime = substr($tmpDates[2],2);
+            $finalTime = $tmpTime.":00";
+
+            //$finalDate = $tmpDates[0]."/".$tmpDates[1]."/".$finalYear." ".$finalTime;
+            $finalDate = $finalYear."/".$tmpDates[1]."/".$tmpDates[0]." ".$finalTime;
+            
+            $tmpApiData['time'] = strtotime($finalDate);
+            $tmpApiData['open'] = $value->WIPRO_EQO;
+            $tmpApiData['high'] = $value->WIPRO_EQH;
+            $tmpApiData['low'] = $value->WIPRO_EQL;
+            $tmpApiData['close'] = $value->WIPRO_EQC;
+
+            array_push($finalApiData,$tmpApiData);
+        }
+        $apiData = json_encode($finalApiData);
         
-        return view('front\charts\view',compact('stockName'));
+        return view('front\charts\view',compact('apiData','stockName'));
     }
 
     /**
@@ -91,6 +119,6 @@ class chartController extends Controller
     {
         $api_data = Curl::to('http://www.smartnifty.com/convertcsv.json')->asJson()->get();
         //$api_data = Curl::to('http://dummy.restapiexample.com/api/v1/employees')->asJson()->get();
-        return $api_data;        
+        return $api_data;
     }
 }

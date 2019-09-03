@@ -56,7 +56,77 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $.ajax({
+            var result_Data = JSON.parse('<?php echo $apiData; ?>');
+            const chart = LightweightCharts.createChart(document.getElementById('chart_div'), {
+                width: 1050,
+                height: 300,
+                priceScale: {
+                    position: 'right',
+                    mode: 1,
+                    autoScale: true,
+                    invertScale: false,
+                    alignLabels: true,
+                    scaleMargins: {
+                        top: 0.30,
+                        bottom: 0.25,
+                    },
+                    borderColor: 'rgba(197, 203, 206, 0.8)',
+                },
+                watermark: {
+                    color: 'rgba(11, 94, 29, 0.4)',
+                    visible: true,
+                    text: 'Smart Nifty',
+                    fontSize: 24,
+                    horzAlign: 'left',
+                    vertAlign: 'bottom',
+                },
+                handleScroll: {
+                    mouseWheel: true,
+                    pressedMouseMove: true,
+                },
+                handleScale: {
+                    axisPressedMouseMove: true,
+                    mouseWheel: true,
+                    pinch: true,
+                },
+                layout: {
+                    backgroundColor: '#222538',
+                    textColor: 'rgba(255, 255, 255, 0.9)',
+                },
+                grid: {
+                    vertLines: {
+                        color: 'rgba(197, 203, 206, 0.5)',
+                    },
+                    horzLines: {
+                        color: 'rgba(197, 203, 206, 0.5)',
+                    },
+                },
+                crosshair: {
+                    mode: LightweightCharts.CrosshairMode.Normal,
+                },
+                timeScale: {
+                    borderColor: 'rgba(197, 203, 206, 0.8)',
+                    timeVisible: true,
+                    secondsVisible: true,
+                    rightOffset: 0,
+                    barSpacing: 40,
+                    fixLeftEdge: true,
+                    lockVisibleTimeRangeOnResize: true,
+                    rightBarStaysOnScroll: false,
+                },
+            });
+
+            const candleSeries = chart.addCandlestickSeries({
+                upColor: 'rgba(255, 144, 0, 1)',
+                downColor: '#000',
+                borderDownColor: 'rgba(255, 144, 0, 1)',
+                borderUpColor: 'rgba(255, 144, 0, 1)',
+                wickDownColor: 'rgba(255, 144, 0, 1)',
+                wickUpColor: 'rgba(255, 144, 0, 1)',
+            });
+
+            candleSeries.setData(result_Data);
+            /*$.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
@@ -147,7 +217,7 @@
 
                     candleSeries.setData(result_Data);
                 }
-            });
+            });*/
         });
         
 

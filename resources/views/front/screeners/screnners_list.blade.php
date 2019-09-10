@@ -47,9 +47,9 @@
 					        <tbody>
 					        	<tr>
 					        		<td>1</td>
-					        		<td><a href="/chart/{{$stockName}}">{{$stockName}}</a></td>
-					        		<td><a href="/chart/{{$stockName}}">WIP</a></td>
-					        		<td><a href="/chart/{{$stockName}}">P&F | F.A</a></td>
+					        		<td><a href="/chart/{{$screenerName}}/{{$stockName}}">{{$stockName}}</a></td>
+					        		<td><a href="/chart/{{$screenerName}}/{{$stockName}}">WIP</a></td>
+					        		<td><a href="/chart/{{$screenerName}}/{{$stockName}}">P&F | F.A</a></td>
 					        		<td>13.47%</td>
 					        		<td>263.65</td>
 					        		<td>221415</td>

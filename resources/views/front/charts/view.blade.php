@@ -3,6 +3,16 @@
 @section('title', '| Screeners')
 
 @section('css_part')
+<<<<<<< HEAD
+    <style type="text/css">
+        .rectangle {
+            border: 1px solid #FF0000;
+            position: absolute;
+            opacity: 1;
+            z-index: 9999;
+        }
+    </style>
+=======
 
 <style type="text/css">
 
@@ -78,6 +88,7 @@ canvas {
     
 
     
+>>>>>>> 5dd557dc7d97ca3b57e4d2fdd541980f916fb65e
 @endsection
 
 @section('content')
@@ -144,8 +155,9 @@ canvas {
 
     <script src="{{asset('assets/js/html2canvas.min.js')}}"></script>
     <script src="{{asset('assets/js/canvas2image.js')}}"></script>
+    <script src="{{asset('assets/js/draw.js')}}"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script> -->
 
 
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
@@ -153,6 +165,12 @@ canvas {
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.6/fabric.min.js'></script>
 
     <script type="text/javascript">
+        //This Function Draw the Shape On Canvas
+        initDraw(document.getElementById('chart_div'));
+
+
+
+
         $(document).ready(function(){
             var result_Data = JSON.parse('<?php echo $apiData; ?>');
             const chart = LightweightCharts.createChart(document.getElementById('chart_div'), {
@@ -180,7 +198,7 @@ canvas {
                 },
                 handleScroll: {
                     mouseWheel: true,
-                    pressedMouseMove: true,
+                    pressedMouseMove: false,
                 },
                 handleScale: {
                     axisPressedMouseMove: true,

@@ -3,7 +3,6 @@
 @section('title', '| Screeners')
 
 @section('css_part')
-<<<<<<< HEAD
     <style type="text/css">
         .rectangle {
             border: 1px solid #FF0000;
@@ -11,84 +10,72 @@
             opacity: 1;
             z-index: 9999;
         }
-    </style>
-=======
-
-<style type="text/css">
-
-.card
-{
-    border-color:black;
-}
-
-.card-header
-{
-    background-color: #e3e0ff;
-}
-
-
-.toolbar
-{
-    width: 98%;
-    margin-left:2px;
-    background: lightgray;
-    padding: 5px!important;
-    border-radius: 3px;
-}
-
-.toolbar-inner
-{
-    display: inline-flex;
-}    
-
-.toolbar-inner img
-{
-
-    background-color: white;
-    border:1px solid black;
-    border-radius: 2px;
-    padding: 2px;
     
-    /*padding-right: 5px;
-    padding-left: 5px;*/
-       
+		.card
+		{
+		    border-color:black;
+		}
 
-}
-
-.tool
-{
-    cursor: pointer;
-    width: 45px;
-    padding:3px;
-}
-
-.btn
-{
-
-}
-
-canvas {
-    cursor: crosshair;
-    border: 1px solid #000000;
-}
-
-.tools
-{
-	width: 1050px!important;
-	height: 300px!important;
-	/*position: absolute;*/
-	  top: 0!important;
-  left: 0!important;
-}	
+		.card-header
+		{
+		    background-color: #e3e0ff;
+		}
 
 
+		.toolbar
+		{
+		    width: 98%;
+		    margin-left:2px;
+		    background: lightgray;
+		    padding: 5px!important;
+		    border-radius: 3px;
+		}
 
-</style>
+		.toolbar-inner
+		{
+		    display: inline-flex;
+		}    
 
-    
+		.toolbar-inner img
+		{
 
-    
->>>>>>> 5dd557dc7d97ca3b57e4d2fdd541980f916fb65e
+		    background-color: white;
+		    border:1px solid black;
+		    border-radius: 2px;
+		    padding: 2px;
+		    
+		    /*padding-right: 5px;
+		    padding-left: 5px;*/
+		       
+
+		}
+
+		.tool
+		{
+		    cursor: pointer;
+		    width: 45px;
+		    padding:3px;
+		}
+
+		.btn
+		{
+
+		}
+
+		canvas {
+		    cursor: crosshair;
+		    border: 1px solid #000000;
+		}
+
+		.tools
+		{
+			width: 1050px!important;
+			height: 300px!important;
+			/*position: absolute;*/
+			  top: 0!important;
+		  left: 0!important;
+		}
+	</style>
 @endsection
 
 @section('content')

@@ -76,6 +76,11 @@
 		  left: 0!important;
 		}
 
+		#canvas_preview
+		{
+			display: none!important;
+		}
+
 		.canvas-container{
 			
 		}
@@ -86,48 +91,34 @@
 
 <div class="service-area sp">
     <div class="container">
-        <!-- <div class="section-title" data-margin="0 0 40px">
-            <h2>{{$stockName}} Screener</h2>
-        </div> -->
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header"><h3>{{$stockName}}</h3></div>
                     <div class="card-body">
-                        <div class="row toolbar">
-                            
-                            <div class="col-lg-8 toolbar-inner">
-                                <div class="tool" title="Mouse"><img src="{{ asset('assets/img/tool1.png') }}"></div>
-                                <div class="tool" title="Line"><img src="{{ asset('assets/img/tool2.png') }}"></div>
-                                <div class="tool" id="tool3" title="Horizontal Line"><img src="{{ asset('assets/img/tool3.png') }}"></div>
-                                <div class="tool" title="Vertical Line"><img src="{{ asset('assets/img/tool4.png') }}"></div>
-                                <div id="rect" class="tool"  title="Rectangle"><img src="{{ asset('assets/img/tool5.png') }}"></div>
-                                <div class="tool" title="Marker"><img src="{{ asset('assets/img/tool6.png') }}"></div>
-                                <div class="tool" title="Arrow Line"><img src="{{ asset('assets/img/tool7.png') }}"></div>
-                                <div class="tool" title="TextBox"><img src="{{ asset('assets/img/tool8.png') }}"></div>
-                                <div class="tool" title="UP Arrow"><img src="{{ asset('assets/img/tool9.png') }}"></div>
-                                <div class="tool" title="DOWN Arrow"><img src="{{ asset('assets/img/tool10.png') }}"></div>
-                            </div>
-                            <div class="col-lg-4">
-                                <button type="button" class="btn btn-primary float-right" id="btnDownloadImage" style="cursor: pointer;">Save Image</button>
-                            </div>
-
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-lg-12 tools">
-                                <div id="chart_div"></div>
-                          		<canvas id='canvas' width=1050 height=300 style="position: absolute !important;top: 1px !important;z-index: 2 !important;"></canvas>
-                        	</div>
-
-
-
-                       		<!--  <button id="rect">Draw Rectangle</button> -->
-							<button id="circle" style="display: none">Draw Circle</button>
-							<button id="arrow" style="display: none">Draw Arrow</button>
-							<button id="freedrawing" style="display: none">ToggleFreedrawing</button>
-								<!-- <canvas id='canvas' width=1050 height=300 style="background:transparent;"></canvas> -->
-
-                    	</div>
+                        	<div class="row toolbar">
+	                            <div class="col-lg-8 toolbar-inner">
+	                                <div id="" class="tool" title="Mouse"><img src="{{ asset('assets/img/tool1.png') }}"></div>
+	                                <div id="line" class="tool" title="Line"><img src="{{ asset('assets/img/tool2.png') }}"></div>
+	                                <div class="tool" id="tool3" title="Horizontal Line"><img src="{{ asset('assets/img/tool3.png') }}"></div>
+	                                <div class="tool" title="Vertical Line"><img src="{{ asset('assets/img/tool4.png') }}"></div>
+	                                <div id="rect" class="tool"  title="Rectangle"><img src="{{ asset('assets/img/tool5.png') }}"></div>
+	                                <div class="tool" title="Marker"><img src="{{ asset('assets/img/tool6.png') }}"></div>
+	                                <div id="arrow" class="tool" title="Arrow Line"><img src="{{ asset('assets/img/tool7.png') }}"></div>
+	                                <div class="tool" title="TextBox"><img src="{{ asset('assets/img/tool8.png') }}"></div>
+	                                <div class="tool" title="UP Arrow"><img src="{{ asset('assets/img/tool9.png') }}"></div>
+	                                <div class="tool" title="DOWN Arrow"><img src="{{ asset('assets/img/tool10.png') }}"></div>
+	                            </div>
+	                            <div class="col-lg-4">
+	                                <button type="button" class="btn btn-primary float-right" id="btnDownloadImage" style="cursor: pointer;">Save Image</button>
+	                            </div>
+							</div>
+	                        <div class="row mt-2">
+	                            <div class="col-lg-12 tools" id="chart">
+	                                <div id="chart_div"></div>
+	                          		<canvas id='canvas' width=1050 height=300 style="position: absolute !important;top: 1px !important;z-index: 2 !important;"></canvas>
+	                        	</div>
+	                    	</div>
                     </div>
                 </div>
             </div>
@@ -136,8 +127,8 @@
 </div>
 
 
-<div style="display: none;" id="canvas_preview"></div>
-<div style="display: none;" id="pic_preview"></div>
+<div style="display: none!important;" id="canvas_preview"></div>
+
 @endsection
 
 
@@ -146,20 +137,13 @@
 
     <script src="{{asset('assets/js/html2canvas.min.js')}}"></script>
     <script src="{{asset('assets/js/canvas2image.js')}}"></script>
-    <!-- <script src="{{asset('assets/js/draw.js')}}"></script> -->
     
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script> -->
-
-
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 
-    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.6/fabric.min.js'></script> -->
     <script src="{{asset('assets/js/fabric.js')}}"></script>
 
     <script type="text/javascript">
-        //This Function Draw the Shape On Canvas
-        //initDraw(document.getElementById('chart_div'));
-
+    
 
 
 
@@ -234,7 +218,6 @@
             });
 
             candleSeries.setData(result_Data);
-            //$("#chart_div canvas").attr('id','canvas');
         });
         
 
@@ -242,11 +225,13 @@
 
 
         $(document).on('click','#btnDownloadImage',function(){
-            var chartImage = $("#chart_div").get(0);
+          //  var chartImage = $("#chart_div").get(0);
+          	var chartImage = $("#chart").get(0);
+          	//console.log(chartImage); 
+          	//return false;
             html2canvas(chartImage).then(function(canvas){
                 var canvasWidth = canvas.width;
                 var canvasHeight = canvas.height;
-                $("#canvas_preview").after(canvas);
                 Canvas2Image.saveAsImage(canvas,1050,300,'png','Image');
             });
         });
@@ -260,13 +245,7 @@
 
         <script src="{{asset('assets/js/rectangle.js')}}"></script>
 
+        <!-- <script src="{{asset('assets/js/arrow.js')}}"></script> -->
 
-
-     
-		
-	   
-        
-
-
-  
+ 
 @endsection

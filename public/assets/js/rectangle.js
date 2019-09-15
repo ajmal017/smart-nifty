@@ -1,4 +1,6 @@
 var canvas = new fabric.Canvas('canvas');
+		
+		preserveObjectStacking: true;
 		canvas.selection = false;
 		$(".canvas-container").css('position','absolute');
 	    $(".canvas-container").css('top','1px');
@@ -6,12 +8,15 @@ var canvas = new fabric.Canvas('canvas');
 
 		//canvas.backgroundColor="white";
 		var rect, ellipse, line, triangle, isDown, origX, origY, freeDrawing = true, textVal, activeObj;
-		var isRectActive = false, isCircleActive = false, isArrowActive = false, isLineActive=false;
+		var isRectActive = false, isCircleActive = false, isArrowActive = false, isLineActive=false, isHorizontalLineActive=false,
+		 isVerticalLine=false,isMarkerActive =false;
 		
 		var rectangle = document.getElementById('rect');
 		var arrowSel = document.getElementById('arrow');
 		var line = document.getElementById('line');
-		
+		var hline = document.getElementById('hline');
+		var vline = document.getElementById('vline');
+		var marker = document.getElementById('marker');
 		
 		/*rectangle.addEventListener('click', function () {
 			isRectActive = !isRectActive;
@@ -38,9 +43,34 @@ var canvas = new fabric.Canvas('canvas');
 		    $(".canvas-container").css('top','1px');
 		    $(".canvas-container").css('z-index','2');
         });
+
+        $(document).on('click','#hline', function () { 
+			isHorizontalLineActive = !isHorizontalLineActive;
+			$(".canvas-container").css('position','absolute');
+		    $(".canvas-container").css('top','1px');
+		    $(".canvas-container").css('z-index','2');
+        });
+
+        $(document).on('click','#vline', function () { 
+			isVerticalLine = !isVerticalLine;
+			$(".canvas-container").css('position','absolute');
+		    $(".canvas-container").css('top','1px');
+		    $(".canvas-container").css('z-index','2');
+        });
+
+        $(document).on('click','#marker',function(){
+        	isMarkerActive = !isMarkerActive;
+        	$(".canvas-container").css('position','absolute');
+		    $(".canvas-container").css('top','1px');
+		    $(".canvas-container").css('z-index','2');
+        });
+
+
+        
 	
 		
 		canvas.on('mouse:down', function(o) {
+
 			if (freeDrawing) {
 			    isDown = true;
 			    var pointer = canvas.getPointer(o.e);
@@ -132,8 +162,155 @@ var canvas = new fabric.Canvas('canvas');
 	            canvas.add(line);
 		       activeObj = line;
 			}
+			else if (isHorizontalLineActive) {
+				var points = [pointer.x, pointer.y, pointer.x, pointer.y];
+	            line = new fabric.Line(points, {
+	                strokeWidth: 2,
+	                fill: 'red',
+	                stroke: 'red',
+	                originX: 'center',
+	                originY: 'center',
+	                id:'arrow_line',
+	                uuid : generateUUID(),
+	                type : 'arrow'
+	            });
+	            var centerX = (line.x1 + line.x2) / 2;
+	            var centerY = (line.y1 + line.y2) / 2;
+	            deltaX = line.left - centerX;
+	            deltaY = line.top - centerY;
 
-		}
+	            triangle = new fabric.Triangle({
+	                left: line.get('x1') + deltaX,
+	                top: line.get('y1') + deltaY,
+	                originX: 'center',
+	                originY: 'center',
+	                selectable: false,
+	                pointType: 'arrow_start',
+	                angle: -45,
+	                width: 14,
+	                height: 14,
+	                fill: 'red',
+	                id:'arrow_triangle',
+	                uuid : line.uuid
+	            });
+	            canvas.add(line);
+		       activeObj = line;
+			}
+			else if (isVerticalLine) {
+				var points = [pointer.x, pointer.y, pointer.x, pointer.y];
+	            line = new fabric.Line(points, {
+	                strokeWidth: 2,
+	                fill: 'red',
+	                stroke: 'red',
+	                originX: 'center',
+	                originY: 'center',
+	                id:'arrow_line',
+	                uuid : generateUUID(),
+	                type : 'arrow'
+	            });
+	            var centerX = (line.x1 + line.x2) / 2;
+	            var centerY = (line.y1 + line.y2) / 2;
+	            deltaX = line.left - centerX;
+	            deltaY = line.top - centerY;
+
+	            triangle = new fabric.Triangle({
+	                left: line.get('x1') + deltaX,
+	                top: line.get('y1') + deltaY,
+	                originX: 'center',
+	                originY: 'center',
+	                selectable: false,
+	                pointType: 'arrow_start',
+	                angle: -45,
+	                width: 14,
+	                height: 14,
+	                fill: 'red',
+	                id:'arrow_triangle',
+	                uuid : line.uuid
+	            });
+	            canvas.add(line);
+		       activeObj = line;
+			}
+			if(isMarkerActive) {
+			    	rect = new fabric.Rect({
+				        left: origX,
+				        top: origY,
+				        width: pointer.x-origX,
+				        height: pointer.y-origY,
+				        fill: 'rgba(255,0,0,0.28)',
+				        stroke : 'red',
+				        type : 'rect',
+				        uuid : generateUUID(),
+				        strokeWidth:0,
+				    });
+				    canvas.add(rect);
+				    activeObj = rect;
+				    $(".canvas-container").css('position','absolute');
+				    $(".canvas-container").css('top','1px');
+				    $(".canvas-container").css('z-index','2');
+
+			}
+			if (options.target) {
+        var thisTarget = options.target; 
+        var mousePos = canvas.getPointer(options.e);
+        if (thisTarget.isType('group')) {
+           var groupPos = {
+                x: thisTarget.left,
+                y: thisTarget.top
+            }
+			var currentGroup = [];
+			var groupItems = []
+			groupItems = thisTarget._objects;
+			thisTarget.forEachObject(function(object,i) {
+			currentGroup[i] = object;
+			currentGroup.push(object);
+		})
+            thisTarget.forEachObject(function(object,i) {
+             if(object.type == "textbox"){            
+			     console.log("Start for statement that finds the x and y for each object")            
+			var matrix = thisTarget.calcTransformMatrix()
+			var newPoint = fabric.util.transformPoint({y: object.top, x: object.left}, matrix)
+                var objectPos = {
+                    xStart: newPoint.x,
+                    xEnd: newPoint.x + object.width,
+                    yStart: newPoint.y,
+                    yEnd: newPoint.y + object.height
+                }
+                if (mousePos.x >= objectPos.xStart && mousePos.x <= (objectPos.xEnd)) {
+                    if (mousePos.y >= objectPos.yStart && mousePos.y <= objectPos.yEnd) {
+function ungroup (group) {
+    groupItems = group._objects;
+    group._restoreObjectsState();
+    canvas.remove(group);
+    for (var i = 0; i < groupItems.length; i++) {
+        canvas.add(groupItems[i]);
+    }
+    canvas.renderAll();
+};
+ungroup(thisTarget)
+canvas.setActiveObject(object);
+object.enterEditing();
+object.selectAll();
+object.on('editing:exited', function (options) {
+var items = [];
+    groupItems.forEach(function (obj) {
+        items.push(obj);
+        canvas.remove(obj);
+});
+console.log(JSON.stringify(groupItems))
+var grp = new fabric.Group(items, {});
+canvas.add(grp);   
+                      });
+                    }
+                }
+            }
+            });   
+        }    
+    }
+
+			
+
+
+		}	
 	});
 
 
@@ -157,90 +334,129 @@ var canvas = new fabric.Canvas('canvas');
 		canvas.on('mouse:move', function(o) {
 
 		    if (isDown && freeDrawing) {
-		    var pointer = canvas.getPointer(o.e);
+			    var pointer = canvas.getPointer(o.e);
 
-		    if(isRectActive) {
-		    	if(origX>pointer.x){
-			        rect.set({ left: Math.abs(pointer.x) });
-			    }
-			    if(origY>pointer.y){
-			        rect.set({ top: Math.abs(pointer.y) });
-			    }
-			    
-			    rect.set({ width: Math.abs(origX - pointer.x) });
-			    rect.set({ height: Math.abs(origY - pointer.y) });
-			}
-			else if (isArrowActive) {
-			line.set({
-                x2: pointer.x,
-                y2: pointer.y
-            });
-            triangle.set({
-                'left': pointer.x + deltaX,
-                'top': pointer.y + deltaY,
-                'angle': _FabricCalcArrowAngle(line.x1,
-                                                line.y1,
-                                                line.x2,
-                                                line.y2)
-            });
-		}
-			else if (isLineActive) {
-			line.set({
-                x2: pointer.x,
-                y2: pointer.y
-            });
-            triangle.set({
-                'left': pointer.x + deltaX,
-                'top': pointer.y + deltaY,
-                'angle': _FabricCalcArrowAngle(line.x1,
-                                                line.y1,
-                                                line.x2,
-                                                line.y2)
-            });
-		}
-		    canvas.renderAll();
+			    if(isRectActive) {
+			    	if(origX>pointer.x){
+				        rect.set({ left: Math.abs(pointer.x) });
+				    }
+				    if(origY>pointer.y){
+				        rect.set({ top: Math.abs(pointer.y) });
+				    }
+				    
+				    rect.set({ width: Math.abs(origX - pointer.x) });
+				    rect.set({ height: Math.abs(origY - pointer.y) });
+				}
+				else if (isArrowActive) {
+					line.set({
+		                x2: pointer.x,
+		                y2: pointer.y
+		            });
+		            triangle.set({
+		                'left': pointer.x + deltaX,
+		                'top': pointer.y + deltaY,
+		                'angle': _FabricCalcArrowAngle(line.x1,
+		                                                line.y1,
+		                                                line.x2,
+		                                                line.y2)
+		            });
+				}
+				else if (isLineActive) {
+					line.set({
+		                x2: pointer.x,
+		                y2: pointer.y
+		            });
+		            triangle.set({
+		                'left': pointer.x + deltaX,
+		                'top': pointer.y + deltaY,
+		                'angle': _FabricCalcArrowAngle(line.x1,
+		                                                line.y1,
+		                                                line.x2,
+		                                                line.y2)
+		            });
+				}
+				else if (isHorizontalLineActive) {
+					line.set({
+		                x2: pointer.x,
+		                y2: pointer.y
+		            });
+		            triangle.set({
+		                'left': pointer.x + deltaX,
+		                'top': pointer.y + deltaY,
+		                'angle': _FabricCalcArrowAngle(line.x1,
+		                                                line.y1,
+		                                                line.x2,
+		                                                line.y2)
+		            });
+				}
+				else if (isVerticalLine) {
+					line.set({
+		                x2: pointer.x,
+		                y2: pointer.y
+		            });
+		            triangle.set({
+		                'left': pointer.x + deltaX,
+		                'top': pointer.y + deltaY,
+		                'angle': _FabricCalcArrowAngle(line.x1,
+		                                                line.y1,
+		                                                line.x2,
+		                                                line.y2)
+		            });
+				}
+				if(isMarkerActive) {
+			    	if(origX>pointer.x){
+				        rect.set({ left: Math.abs(pointer.x) });
+				    }
+				    if(origY>pointer.y){
+				        rect.set({ top: Math.abs(pointer.y) });
+				    }
+				    
+				    rect.set({ width: Math.abs(origX - pointer.x) });
+				    rect.set({ height: Math.abs(origY - pointer.y) });
+				}
+			    canvas.renderAll();
 		   }
 		});
 
 		canvas.on('mouse:up', function(o) {
 			if(freeDrawing) {
-			isDown = false;
-			if (isRectActive || isArrowActive) {
-				//textVal = prompt('Please enter text value..', '45');
-			    if(isArrowActive) {
-			    	var group = new window.fabric.Group([line,triangle],
-			                {
-			                    borderColor: 'black',
-			                    cornerColor: 'green',
-			                    lockScalingFlip : true,
-			                    typeOfGroup : 'arrow',
-			                    userLevel : 1,
-			                    name:'my_ArrowGroup',
-			                    uuid : activeObj.uuid,
-			                    type : 'arrow'
-			                }
-			                );
-			    	canvas.remove(line, triangle);// removing old object
-			    	activeObj = group;
-			    	canvas.add(group);
+				isDown = false;
+				if (isRectActive || isArrowActive) {
+					//textVal = prompt('Please enter text value..', '45');
+				    if(isArrowActive) {
+				    	var group = new window.fabric.Group([line,triangle],
+				                {
+				                    borderColor: 'black',
+				                    cornerColor: 'green',
+				                    lockScalingFlip : true,
+				                    typeOfGroup : 'arrow',
+				                    userLevel : 1,
+				                    name:'my_ArrowGroup',
+				                    uuid : activeObj.uuid,
+				                    type : 'arrow'
+				                }
+				                );
+				    	canvas.remove(line, triangle);// removing old object
+				    	activeObj = group;
+				    	canvas.add(group);
+					}
+				
 				}
-			
+
 			}
 
-		}
-
-		isDown=false;
-		var objs = canvas.getObjects();
-   	    for (var i = 0 ; i < objs.length; i++) {	
-			objs[i].setCoords();	
-   	   	}
-   	   	isRectActive = false;
-   	   	isArrowActive = false;
-   	   	isLineActive = false;
-
-   	  // 	isDown=false;
-
-	});
+			isDown=false;
+			var objs = canvas.getObjects();
+	   	    for (var i = 0 ; i < objs.length; i++) {	
+				objs[i].setCoords();	
+	   	   	}
+	   	   	isRectActive = false;
+	   	   	isArrowActive = false;
+	   	   	isLineActive = false;
+	   	   	isHorizontalLineActive= false;
+	   	   	isVerticalLine =false;
+	   	   	isMarkerActive =false;
+		});
 
 
 
@@ -284,6 +500,19 @@ var canvas = new fabric.Canvas('canvas');
           	}
 	   	});
 
+		document.getElementById("addInputField").addEventListener("click", function(event) {
+				  var inputField = new fabric.Textbox('Some text', { 
+				  left: 10,
+				  top: 10,
+				  fill: 'black',
+				  width: 200,
+				  fontSize: 12,
+				  fontcolor: 'black',
+				  backgroundColor: '#EDEAFF'
+				})
+      			canvas.add(inputField);
+		});
+
 		var _hideText = function (e) {
 			try {
 	       	 	var obj = e.target;
@@ -312,3 +541,9 @@ var canvas = new fabric.Canvas('canvas');
 	    	_hideText(e);
 	    });
 	    canvas.renderAll();
+
+
+
+
+
+

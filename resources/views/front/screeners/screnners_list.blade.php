@@ -14,6 +14,8 @@
         	border: 1px solid #bbbbbb;
         	background-color: #f9f9f9;
         }
+
+
 	</style>
 @endsection
 
@@ -28,6 +30,17 @@
         	@endphp
             <h4 class="text-left">{{$screenerName}} Screener</h4>
         </div>
+
+        <div> Stock passes all of the below filters in cashsegment :
+
+        </div>
+
+        <!-- 	<label id="search">passes</label>
+			<div id="searchContent" style="display:none;"><select><option>passes</option><option>fails</option></select></div>	 -->
+
+
+
+
         <div class="row mb-3">
             <div class="col-lg-12 col-md-12">
             	<div class="card">
@@ -96,4 +109,25 @@
 			});
 		});
 	</script>
+
+	<!-- <script type="text/javascript">
+		
+
+		$(function () {
+    $("#search").click(function () {
+        var text = $(this).text();
+        if (text === "Advanced Search") {
+           // $(this).text("Basic Search");
+            $("#searchContent").show();
+        } else {
+           // $(this).text("Advanced Search");
+            $("#searchContent").hide();
+        }
+    });
+	});
+
+
+	</script>
+ -->
+	
 @endsection

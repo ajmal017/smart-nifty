@@ -105,9 +105,9 @@
 	                                <div id="rect" class="tool"  title="Rectangle"><img src="{{ asset('assets/img/tool5.png') }}"></div>
 	                                <div id="marker" class="tool" title="Marker"><img src="{{ asset('assets/img/tool6.png') }}"></div>
 	                                <div id="arrow" class="tool" title="Arrow Line"><img src="{{ asset('assets/img/tool7.png') }}"></div>
-	                                <!-- <div id="addInputField" class="tool" title="TextBox"><img src="{{ asset('assets/img/tool8.png') }}"></div> -->
-	                                <div class="tool" title="UP Arrow"><img src="{{ asset('assets/img/tool9.png') }}"></div>
-	                                <div class="tool" title="DOWN Arrow"><img src="{{ asset('assets/img/tool10.png') }}"></div>
+	                                <div id="addInputField" class="tool" title="TextBox"><img src="{{ asset('assets/img/tool8.png') }}"></div>
+	                                <!-- <div class="tool" title="UP Arrow"><img src="{{ asset('assets/img/tool9.png') }}"></div>
+	                                <div class="tool" title="DOWN Arrow"><img src="{{ asset('assets/img/tool10.png') }}"></div> -->
 	                            </div>
 	                            <div class="col-lg-4">
 	                                <button type="button" class="btn btn-primary float-right" id="btnDownloadImage" style="cursor: pointer;">Save Image</button>

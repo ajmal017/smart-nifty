@@ -15,6 +15,23 @@
         	background-color: #f9f9f9;
         }
 
+       
+		.method
+		{	
+			width: auto!important;
+			font-weight: bold;
+			background-color: transparent;
+  			border:none;
+  			-webkit-appearance: none;
+			-moz-appearance: none;
+  		}
+
+  		.filterSegment1
+  		{
+  			display: inline-flex;
+  			  font-style: italic;
+  			  font-size:16px;
+  		}
 
 	</style>
 @endsection
@@ -31,13 +48,30 @@
             <h4 class="text-left">{{$screenerName}} Screener</h4>
         </div>
 
-        <div> Stock passes all of the below filters in cashsegment :
-
+        <div class="filterSegment1"> 
+        	Stock <select id="method" class="method" name="method" required>
+      					<option name="method"  value="Passes" selected="true">Passes</option>
+      					<option name="method" value="Fails">Fails</option>
+    			</select>
+    			<select id="method" class="method" name="method" required>
+      					<option name="method"  value="All" selected="true">All</option>
+      					<option name="method" value="Any">Any</option>
+    			</select> 
+    		 of the below filters in
+    		 	<select id="method" class="method" name="method" required>
+      					<option name="method"  value="Cash" selected="true">Cash</option>
+      					<option name="method" value="Futures">Futures</option>
+ 						<option name="method" value="Indices">Indices</option>
+ 						<option name="method" value="Nifty100">Nifty 100</option>
+ 						<option name="method" value="Nifty200">Nifty 200</option>
+ 						<option name="method" value="Nifty50">Nifty 50</option>
+ 						<option name="method" value="Nifty500">Nifty 500</option>
+ 						<option name="method" value="Watchlist">Watchlist</option>
+    			</select> 
+    		  segment :
         </div>
 
-        <!-- 	<label id="search">passes</label>
-			<div id="searchContent" style="display:none;"><select><option>passes</option><option>fails</option></select></div>	 -->
-
+       
 
 
 
@@ -94,7 +128,8 @@
 	<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
 	<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
 
-	<!-- --->
+	
+	
 
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -108,26 +143,9 @@
 		        ]
 			});
 		});
-	</script>
-
-	<!-- <script type="text/javascript">
-		
-
-		$(function () {
-    $("#search").click(function () {
-        var text = $(this).text();
-        if (text === "Advanced Search") {
-           // $(this).text("Basic Search");
-            $("#searchContent").show();
-        } else {
-           // $(this).text("Advanced Search");
-            $("#searchContent").hide();
-        }
-    });
-	});
 
 
-	</script>
- -->
 	
+
+	</script>
 @endsection

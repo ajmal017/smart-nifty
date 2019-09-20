@@ -23,11 +23,13 @@
                             </div>
                         </div>
                         <nav id="menu" class="d-none d-lg-block">
-                            <ul>
-                                <li><a href="<?php echo url('/'); ?>">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="/screeners">Screeners</a></li>
-                                <li><a href="#">Charts</a></li>
+                            <ul style="display: inline-flex;float: right;">
+                                <div class="home"><a href="<?php echo url('/'); ?>">Home</a></div>
+                                <div class="about"><a href="#">About</a></div>
+                                <div class="screener"><a href="/screeners">Screeners</a><br/>
+                                	<a href="/createscan" class="sub">Create Scan</a>
+                                </div>
+                                <div class="chart"><a href="#">Charts</a></div>
                                 <!-- <li class="has-child">
                                     <a href="#">Pages</a>
                                     <ul class="sub-menu">
@@ -44,7 +46,7 @@
                                         <li><a href="testimonial.html">Testimonial</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="/contact_us">Contact</a></li>
+                                <div class="contact"><a href="/contact_us">Contact</a></div>
                             </ul>
                         </nav>
                     </div>

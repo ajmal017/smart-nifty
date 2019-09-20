@@ -1267,3 +1267,36 @@ footer {
     margin: 0 0 20px; }
 
 /*# sourceMappingURL=main.css.map */
+
+
+/* Custom Css */
+
+ul div
+{
+  font-weight: bold;
+  padding:0px 16px 0px 16px;
+  font-size: 16px;
+}
+
+
+.sub
+{
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.screener
+{
+  text-align: center;
+}
+
+.filter
+{
+  padding:0px 10px 0px 10px;
+}
+
+.fa-filter
+{
+  font-size: 30px;
+  color:darkblue;
+}

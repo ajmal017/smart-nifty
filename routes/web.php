@@ -30,6 +30,8 @@ Route::get('/screeners/topLoved/{screenerName}','front\topLovedController@index'
 //Route::get('/screeners/{stock_name}','front\stockController@index');
 Route::resource('/screeners','front\screenerController');
 
+Route::resource('/createscan','front\createScanController');
+
 
 
 

@@ -21,17 +21,14 @@ Route::get('/thank_you',function(){
 });
 
 
-
-Route::get('/screeners/topLoved/{screenerName}','front\topLovedController@index');
-
-
-//Route For Move To Screeners Details Table Page
-
-//Route::get('/screeners/{stock_name}','front\stockController@index');
-Route::resource('/screeners','front\screenerController');
-
+//Route Of Create Scan Or Create Screener
 Route::resource('/createscan','front\createScanController');
 
+//Route Of Main Screener Page
+Route::resource('/screeners','front\screenerController');
+
+//Route Of Screener Second Detail Page
+Route::get('/screeners/topLoved/{screenerName}','front\topLovedController@index');
 
 
 

@@ -57,6 +57,7 @@
                         <ul class="list-group text-left">
                             <!-- <li class="list-group-item list-group-item-light"><a href="/screeners/Wipro">Wipro</a></li> -->
                             <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/15-Minute-Stock-Breakouts">15 Minute stock Breakouts</a></li>
+                            
                             <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Short-Term-Breakouts">Short term Breakouts</a></li>
 
                             <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Last-15-Minutes-intraday">Intraday buying seen in the Past 15 minutes</a></li>

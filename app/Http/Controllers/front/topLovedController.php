@@ -13,6 +13,17 @@ class topLovedController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function getFilterRule($screenername)
+    {
+        if($screenername == "15-Minute-Stock-Breakouts"){
+            
+        }
+    }
+
+
+
+
     public function index($screenerName)
     {
         $screenerName = $screenerName;

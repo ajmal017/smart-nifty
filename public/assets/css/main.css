@@ -1300,3 +1300,8 @@ ul div
   font-size: 30px;
   color:darkblue;
 }
+
+select optgroup
+{
+   font-style:normal;
+}

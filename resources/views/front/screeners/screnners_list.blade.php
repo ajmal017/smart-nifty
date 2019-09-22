@@ -100,13 +100,29 @@
 	        				<option value="-7">-7</option>
 	        				<option value="-8">-8</option>
 	        				<option value="-n">n candles ago</option>
+	        				<optgroup label="--Day Candle--">
+	        					<option value="=1">=1(first candle)</option>
+		        				<option value="=2">=2(second candle)</option>
+		        				<option value="=3">=3</option>
+		        				<option value="=4">=4</option>
+		        				<option value="=5">=5</option>
+		        				<option value="=n">nth candle of day</option>	
+	        				</optgroup>
+	        				<optgroup label="--Prior day candles--">
+	        					<option value="=-1">=-1(previous days last candle)</option>
+		        				<option value="=-2">=-2(previous days second last candle)</option>
+		        				<option value="=-3">=-3</option>
+		        				<option value="=-4">=-4</option>
+		        				<option value="=-5">=-5</option>
+		        				<option value="=-n">-nth last candle of previous day</option>	
+	        				</optgroup>
 	        			</select>
 	        		</div>
 
 
 
 	        		<div id="filterRule2Div">
-	        			<span id="filterRule2" style="cursor: pointer;">[<b id="filterRuleChild2">15 Minute</b>]</span>
+	        			<span id="filterRule2" style="cursor: pointer;"><b id="filterRuleChild2">15 Minute</b></span>
 	        			<select id="filterRule2Select" style="display: none;">
 	        				<optgroup label="--Minute--">
 	        					<option value="1_minute">1 Minute</option>
@@ -121,6 +137,27 @@
 	        					<option value="60_minute">1 Hour</option>
 	        					<option value="120_minute">2 Hour</option>
 	        					<option value="240_minute">4 Hour</option>
+	        				</optgroup>
+	        				<optgroup label="--Days--">
+	        					<option value="Latest">Latest(daily)</option>
+	        					<option value="1_dayago">1 day ago</option>
+	        					<option value="2_dayago">2 days ago</option>
+	        					<option value="3_dayago">3 days ago</option>
+	        					<option value="n_dayago">n days ago</option>
+	        				</optgroup>
+	        				<optgroup label="--Weeks--">
+	        					<option value="Weekly">Weekly</option>
+	        					<option value="1_weekago">1 week ago</option>
+	        					<option value="2_weekago">2 weeks ago</option>
+	        					<option value="3_weekago">3 weeks ago</option>
+	        					<option value="n_weekago">n weeks ago</option>
+	        				</optgroup>
+	        				<optgroup label="--Months--">
+	        					<option value="Monthly">Monthly</option>
+	        					<option value="1_monthago">1 month ago</option>
+	        					<option value="2_monthago">2 months ago</option>
+	        					<option value="3_monthago">3 months ago</option>
+	        					<option value="n_monthago">n moths ago</option>
 	        				</optgroup>
 	        			</select>
 	        		</div>

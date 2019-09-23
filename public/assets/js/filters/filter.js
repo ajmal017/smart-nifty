@@ -88,3 +88,33 @@ $(document).on('change','#filterRule2Select',function(){
 	$("#filterRule2Select").css('display','none');
 });
 
+/**
+===========================================================================================================
+===========================================================================================================
+**/
+
+
+/**
+===========================================================================================================
+										This is Rule 3 Script
+===========================================================================================================
+**/
+
+$(document).on('click','#filterRule3',function(){
+	$("#filterRule3").css('display','none');
+	$("#filterRule3Select").css('display','');
+});
+
+$(document).on('change','#filterRule3Select',function(){
+	var selectedValue = $(this).val();
+
+	$("#filterRuleChild3").text(selectedValue);
+	$("#filterRule3").css('display','');
+	$("#filterRule3Select").css('display','none');
+});
+
+
+
+
+
+

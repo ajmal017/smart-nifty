@@ -163,6 +163,130 @@
 	        		</div>
 
 
+	        		<div id="filterRule3Div">
+	        			<span id="filterRule3" style="cursor: pointer;"><b id="filterRuleChild3">Close</b></span>
+	        			<select id="filterRule3Select" style="display: none;">
+	        				<option value="number_value">Number Value</option>
+	        				<optgroup label="--Stock Attributes--">
+	        					<option value="Open">Open</option>
+	        					<option value="High">High</option>
+	        					<option value="Low">Low</option>
+	        					<option value="Close">Close</option>
+	        					<option value="Volume">Volume</option>
+	        					<option value="HA-Open">HA-Open(Heikin-Ashi)</option>
+	        					<option value="HA-High">HA-High(Heikin-Ashi)</option>
+	        					<option value="HA-Low">HA-Low(Heikin-Ashi)</option>
+	        					<option value="HA-Close">HA-Close(Heikin-Ashi)</option>
+	        				</optgroup>
+	        				<optgroup label="--Math Functions--">
+	        					<option value="Bracket">Bracket(value)</option>
+	        					<option value="Min">Min(duration,value)</option>
+	        					<option value="Max">Max(duration,value)</option>
+	        					<option value="Abs">Abs(value)</option>
+	        					<option value="Ceil">Ceil(value)</option>
+	        					<option value="Floor">Floor(value)</option>
+	        					<option value="Round">Round(value)</option>
+	        					<option value="Square">Square(value)</option>
+	        					<option value="Square_root">Square root(value)</option>
+	        				</optgroup>
+	        				<optgroup label="--Indicators--">
+	        					<option value="Pivot_point">Pivot point</option>
+	        					<option value="Pivot_point_R1">Pivot point R1</option>
+	        					<option value="Pivot_point_R2">Pivot point R2</option>
+	        					<option value="Pivot_point_S1">Pivot point S1</option>
+	        					<option value="Pivot_point_S2">Pivot point S2</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="Sma">Sma(Simple)</option>
+	        					<option value="Ema">Ema(Exponential)</option>
+	        					<option value="Wma">Wma(Weighted)</option>
+	        					<option value="Tma">Tma(Triangular)</option>
+	        					<option value="Std">Std(Standard Deviation)</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="Parabolic_Sar">Parabolic Sar</option>
+	        					<option value="Upper_Bollinger_band">Upper Bollinger band</option>
+	        					<option value="Lower_Bollinger_band">Lower Bollinger band</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="SuperTrend">SuperTrend</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="Ichimoku_Base_Line">Ichimoku Base Line</option>
+	        					<option value="Ichimoku_Conversion_Line">Ichimoku Conversion Line</option>
+	        					<option value="Ichimoku_Span_A">Ichimoku Span A</option>
+	        					<option value="Ichimoku_Span_B">Ichimoku Span B</option>
+	        					<option value="Ichimoku_Cloud_Top">Ichimoku Cloud Top</option>
+	        					<option value="Ichimoku_Cloud_Bottom">Ichimoku Cloud Bottom</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="Rsi">Rsi</option>
+	        					<option value="StochRsi">StochRsi</option>
+	        					<option value="Cci">Cci</option>
+	        					<option value="Mfi">Mfi</option>
+	        					<option value="OBV">OBV(On Blance Volume)</option>
+	        					<option value="Williams_%R">Williams %R</option>
+	        					<option value="Bollinger_Bands_%B">Bollinger Bands %B</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="Macd_Line">Macd Line</option>
+	        					<option value="Macd_Signal">Macd Signal</option>
+	        					<option value="Macd_Histogram">Macd Histogram</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="ADX">ADX</option>
+	        					<option value="ADX_DI_Positive">ADX DI Positive</option>
+	        					<option value="ADX_DI_Negative">ADX DI Negative</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="True_Range">True Range</option>
+	        					<option value="Avg_True_Range">Avg True Range(ATR)</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="Aroon_Up">Aroon Up</option>
+	        					<option value="Aroon_Down">Aroon Down</option>
+	        					<option value="Aroon_Osc">Aroon Osc</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="Slow_Stochastic_%K">Slow Stochastic %K</option>
+	        					<option value="Slow_Stochastic_%D">Slow Stochastic %D</option>
+	        					<option value="Fast_Stochastic_%K">Fast Stochastic %K</option>
+	        					<option value="Fast_Stochastic_%D">Fast Stochastic %D</option>
+	        					<option value="Smi_%K">Smi %K(Stochastic Momentum Index)</option>
+	        					<option value="Smi_%D">Smi %D(Stochastic Momentum Index)</option>
+	        				</optgroup>
+	        				<optgroup label="--">
+	        					<option value="WaveTrend">WaveTrend</option>
+	        					<option value="WaveTrend_Trigger">WaveTrend Trigger</option>
+	        					<option value="WaveTrend_Momentum">WaveTrend Momentum</option>
+	        				</optgroup>
+	        				<optgroup label="--Fundamentals--">
+	        					<option value="Face_Value">Face Value</option>
+	        					<option value="Reserves">Reserves</option>
+	        					<option value="Dividend">Dividend</option>
+	        					<option value="Book_Value">Book Value</option>
+	        					<option value="Yearly_PE_Ratio">Yearly PE Ratio</option>
+	        					<option value="Yearly_PC_Ratio">Yearly PC Ratio</option>
+	        					<option value="Sales_Turnover">Sales Turnover[yearly]</option>
+	        					<option value="Net_Profit">Net Profit[yearly]</option>
+	        					<option value="Net_Profit_Variance">Net Profit Variance[yr]</option>
+	        					<option value="Net_Profit">Net Profit[quarter]</option>
+	        					<option value="Net_Profit_Variance">Net Profit Variance[qr]</option>
+	        					<option value="Earning_Per_Share">Earning Per Share[EPS]</option>
+	        					<option value="Prev_Year_EPS">Prev Year EPS</option>
+	        					<option value="Cash_Per_Share[yr]">Cash Per Share[yr]</option>
+	        					<option value="Cash_Per_Share[qr]">Cash Per Share[qr]</option>
+	        					<option value="Cash_Per_Share[mt]">Cash Per Share[mt]</option>
+	        					<option value="Net_Sales">Net Sales[quarter]</option>
+	        					<option value="Price_to_Book_Value">Price to Book Value</option>
+	        					<option value="Networth">Networth</option>
+	        					
+
+	        				</optgroup>
+	        			</select>
+	        		</div>
+
+
         		</div>
         	</div>
         </div>

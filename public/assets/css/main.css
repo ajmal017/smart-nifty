@@ -228,7 +228,8 @@ span {
     margin-bottom: 0; }
 
 body {
-  font-family: "Roboto", sans-serif;
+  /*font-family: "Roboto", sans-serif;*/
+  font-family: Verdana;
   font-size: 14px;
   line-height: 27px;
   font-weight: 400;

@@ -6,46 +6,14 @@
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
 	<style type="text/css">
-		body{
-            background-color: #f5f5f5;
-        }
-        .outerDiv{
-        	padding-top: 10px;
-        	border: 1px solid #bbbbbb;
-        	background-color: #f9f9f9;
-        }
-
-       
-		.method
-		{	
-			width: auto!important;
-			font-weight: bold;
-			background-color: transparent;
-  			border:none;
-  			-webkit-appearance: none;
-			-moz-appearance: none;
-  		}
-
-  		.filterSegment1
-  		{
-  			display: inline-flex;
-  			  font-style: italic;
-  			  font-size:16px;
-  		}
-
-  		#filterRuleArea{
-  			display: flex;
-  			border-left: 2px double #858585;
-  			list-style: none;
-  			padding-left: 20px;
-  			margin-top: 3px;
-  			font-size: 1rem;
-  		}
-
-
-  		#filterRuleArea div{
-  			padding-right: 10px !important;
-  		}
+		body{ background-color: #f5f5f5; }
+        .outerDiv{ padding-top: 10px;border: 1px solid #bbbbbb;background-color: #f9f9f9; }
+		.method{ width: auto!important;font-weight: bold;background-color: transparent;border:none;-webkit-appearance: none;-moz-appearance: none;}
+  		.filterSegment1{ display: inline-flex;font-style: italic;font-size:16px; }
+  		#filterRuleArea{ display: flex;border-left: 2px double #858585;list-style: none;padding-left: 20px;margin-top: 3px;font-size: 1rem;}
+  		#filterRuleArea div{ padding-right: 10px !important; }
+  		#filterRule2 b{ font-weight: normal; }
+  		#filterRule4Div{ color: #FF0000; }
 	</style>
 @endsection
 
@@ -302,6 +270,32 @@
 								<option value="trailing_twelve_month_pe">TTM PE</option>
 								<option value="trailing_twelve_month_cps">TTM CPS</option>
 								<option value="latest_ttmdepreciation">TTM Depreciation</option>
+							</optgroup>
+	        			</select>
+	        		</div>
+
+
+	        		<div id="filterRule4Div">
+	        			<span id="filterRule4" style="cursor: pointer;"><b id="filterRuleChild4">Greater than</b></span>
+	        			<select id="filterRule4Select" style="display: none;">
+	        				<option value="....">Please select a operation</option>
+							<option value="remove">Remove operations on right</option>
+							<optgroup label="--Arithmetic Operations--">
+								<option value="+">+</option>
+								<option value="-">-</option>
+								<option value="*">*</option>
+								<option value="/">/</option>
+							</optgroup>
+							<optgroup label="--Comparision Operations--">
+								<option value="=">Equals</option>
+								<option value=">">Greater than</option>
+								<option value=">=">Greater than equal to</option>
+								<option value="<">Less than</option>
+								<option value="<=">Less than equal to</option>
+							</optgroup>
+							<optgroup label="--Crossover Operations--">
+								<option value="crossed_above">Crossed above</option>
+								<option value="crossed_below">Crossed below</option>
 							</optgroup>
 	        			</select>
 	        		</div>

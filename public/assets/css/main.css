@@ -1306,3 +1306,13 @@ select optgroup
 {
    font-style:normal;
 }
+
+#filterRuleChild8
+{
+  font-size: 100%;
+  font-family: inherit;
+  background: transparent;
+  border: none!important;
+  padding: none!important;
+  outline: none;
+}

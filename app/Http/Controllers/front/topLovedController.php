@@ -28,7 +28,7 @@ class topLovedController extends Controller
     {
         $screenerName = $screenerName;
         $stockName = 'Wipro';
-        return view('front/screeners/screnners_list',compact('screenerName','stockName'));
+        return view('front/screeners/screnners',compact('screenerName','stockName'));
         /*$api_data = Curl::to('http://www.smartnifty.com/convertcsv.json')->asJson()->get();
         return $api_data;
         return view('front/screeners/screnners_list',compact('screenerName'));*/

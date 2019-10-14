@@ -5,6 +5,7 @@ namespace App\Http\Controllers\front;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Ixudra\Curl\Facades\Curl;
+use App\front\ArithmeticFilter;
 
 class topLovedController extends Controller
 {
@@ -26,6 +27,7 @@ class topLovedController extends Controller
 
     public function index($screenerName)
     {
+        return ArithmeticFilter::select()->get();
         $screenerName = $screenerName;
         $stockName = 'Wipro';
         return view('front/screeners/screnners',compact('screenerName','stockName'));

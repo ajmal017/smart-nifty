@@ -90,6 +90,161 @@ class topLovedController extends Controller
                 }
                 else if($tempEquation2[0] == "c1"){
                     //This is Open Filter Condition
+                    $finalReturnHTML .= "<select class='OpenFilter'>";
+                    $finalReturnHTML .= "<optgroup label='--Stock Attributes--'>";
+                    $finalReturnHTML .= ($tempEquation2[1] == "Open") ? '<option value="Open" selected="selected">Open</option>' :'<option value="Open">Open</option>';
+
+                    $finalReturnHTML .= ($tempEquation2[1] == "High") ? '<option value="High" selected="selected">High</option>' :'<option value="High">High</option>';
+
+                    $finalReturnHTML .= ($tempEquation2[1] == "Low") ? '<option value="Low" selected="selected">Low</option>' :'<option value="Low">Low</option>';
+
+                    $finalReturnHTML .= ($tempEquation2[1] == "Close") ? '<option value="Close" selected="selected">Close</option>' :'<option value="Close">Close</option>';
+
+                    $finalReturnHTML .= ($tempEquation2[1] == "Volume") ? '<option value="Volume" selected="selected">Volume</option>' :'<option value="Volume">Volume</option>';
+
+                    $finalReturnHTML .= ($tempEquation2[1] == "Vwap") ? '<option value="Vwap" selected="selected">Vwap</option>' :'<option value="Vwap">Vwap</option>';
+
+                    $finalReturnHTML .= ($tempEquation2[1] == "HA-Open") ? '<option value="HA-Open" selected="selected">HA-Open</option>' :'<option value="HA-Open">HA-Open</option>';
+
+                    $finalReturnHTML .= ($tempEquation2[1] == "HA-High") ? '<option value="HA-High" selected="selected">HA-High</option>' :'<option value="HA-High">HA-High</option>';
+
+                    $finalReturnHTML .= ($tempEquation2[1] == "HA-Low") ? '<option value="HA-Low" selected="selected">HA-Low</option>' :'<option value="HA-Low">HA-Low</option>';
+
+                    $finalReturnHTML .= ($tempEquation2[1] == "HA-Close") ? '<option value="HA-Close" selected="selected">HA-Close</option>' :'<option value="HA-Close">HA-Close</option>';
+
+                    $finalReturnHTML .= "</optgroup>";
+                    $finalReturnHTML .= "<optgroup label='--Math Functions--'>";
+
+                    $finalReturnHTML .= '<option value="brackets">Bracket(value)</option>';
+                    $finalReturnHTML .= '<option value="min">Min(duration, value)</option>';
+                    $finalReturnHTML .= '<option value="max">Max(duration, value)</option>';
+                    $finalReturnHTML .= '<option value="abs">Abs(value)</option>';
+                    $finalReturnHTML .= '<option value="ceil">Ceil(value)</option>';
+                    $finalReturnHTML .= '<option value="floor">Floor(value)</option>';
+                    $finalReturnHTML .= '<option value="round">Round(value)</option>';
+                    $finalReturnHTML .= '<option value="square">Square(value)</option>';
+                    $finalReturnHTML .= '<option value="square_root">Square root(value)</option>';
+
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--Indicators--">';
+
+                    $finalReturnHTML .= '<option value="pivot_point">Pivot point</option>';
+                    $finalReturnHTML .= '<option value="pivot_point_r1">Pivot point R1</option>';
+                    $finalReturnHTML .= '<option value="pivot_point_r2">Pivot point R2</option>';
+                    $finalReturnHTML .= '<option value="pivot_point_s1">Pivot point S1</option>';
+                    $finalReturnHTML .= '<option value="pivot_point_s2">Pivot point S2</option>';
+
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+
+                    $finalReturnHTML .= '<option value="sma">Sma(Simple)</option>';
+                    $finalReturnHTML .= '<option value="ema">Ema(Exponential)</option>';
+                    $finalReturnHTML .= '<option value="wma">Wma(Weighted)</option>';
+                    $finalReturnHTML .= '<option value="tma">Tma(Triangular)</option>';
+                    $finalReturnHTML .= '<option value="stddva">Std(Standard Deviation)</option>';
+
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+
+                    $finalReturnHTML .= '<option value="parabolic_sar">Parabolic Sar</option>';
+                    $finalReturnHTML .= '<option value="upper_bb">Upper Bollinger band</option>';
+                    $finalReturnHTML .= '<option value="lower_bb">Lower Bollinger band</option>';
+
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+
+                    $finalReturnHTML .= '<option value="supertrend">SuperTrend</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+                    $finalReturnHTML .= '<option value="ichimoku_base">Ichimoku Base Line</option>';
+                    $finalReturnHTML .= '<option value="ichimoku_conversion">Ichimoku Conversion Line</option>';
+                    $finalReturnHTML .= '<option value="ichimoku_span_a">Ichimoku Span A</option>';
+                    $finalReturnHTML .= '<option value="ichimoku_span_b">Ichimoku Span B</option>';
+                    $finalReturnHTML .= '<option value="ichimoku_cloud_top">Ichimoku Cloud Top</option>';
+                    $finalReturnHTML .= '<option value="ichimoku_cloud_bottom">Ichimoku Cloud Bottom</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+                    $finalReturnHTML .= '<option value="rsi">Rsi</option>';
+                    $finalReturnHTML .= '<option value="stochrsi">StochRsi</option>';
+                    $finalReturnHTML .= '<option value="cci">Cci</option>';
+                    $finalReturnHTML .= '<option value="mfi">Mfi</option>';
+                    $finalReturnHTML .= '<option value="obv">OBV(On Balance Volume)</option>';
+                    $finalReturnHTML .= '<option value="williamsr">Williams %R</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+                    $finalReturnHTML .= '<option value="macd_line">Macd Line</option>';
+                    $finalReturnHTML .= '<option value="macd_signal">Macd Signal</option>';
+                    $finalReturnHTML .= '<option value="macd_histogram">Macd Histogram</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+                    $finalReturnHTML .= '<option value="adx">ADX</option>';
+                    $finalReturnHTML .= '<option value="adx_di_positive">ADX DI Positive</option>';
+                    $finalReturnHTML .= '<option value="adx_di_negative">ADX DI Negative</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+                    $finalReturnHTML .= '<option value="true_range">True Range</option>';
+                    $finalReturnHTML .= '<option value="avg_true_range">Avg True Range(ATR)</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+                    $finalReturnHTML .= '<option value="aroon_up">Aroon Up</option>';
+                    $finalReturnHTML .= '<option value="aroon_down">Aroon Down</option>';
+                    $finalReturnHTML .= '<option value="aroon_osc">Aroon Osc</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+                    $finalReturnHTML .= '<option value="slow_stochastic_%d">Slow Stochastic %K</option>';
+                    $finalReturnHTML .= '<option value="slow_stochastic_%k">Slow Stochastic %D</option>';
+                    $finalReturnHTML .= '<option value="fast_stochastic_%d">Fast Stochastic %K</option>';
+                    $finalReturnHTML .= '<option value="fast_stochastic_%k">Fast Stochastic %D</option>';
+                    $finalReturnHTML .= '<option value="smi">Smi %K (Stochastic Momentum Index)</option>';
+                    $finalReturnHTML .= '<option value="smi_%d">Smi %D (Stochastic Momentum Index)</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--">';
+                    $finalReturnHTML .= '<option value="wavetrend">WaveTrend</option>';
+                    $finalReturnHTML .= '<option value="wavetrend_trigger">WaveTrend Trigger</option>';
+                    $finalReturnHTML .= '<option value="wavetrend_momentum">WaveTrend Momentum</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--Fundamentals--">';
+                    $finalReturnHTML .= '<option value="face_value">Face Value</option>';
+                    $finalReturnHTML .= '<option value="reserves">Reserves</option>';
+                    $finalReturnHTML .= '<option value="dividend">Dividend</option>';
+                    $finalReturnHTML .= '<option value="book_value">Book Value</option>';
+                    $finalReturnHTML .= '<option value="yearly_pe_ratio">Yearly PE Ratio</option>';
+                    $finalReturnHTML .= '<option value="yearly_pc_ratio">Yearly PC Ratio</option>';
+                    $finalReturnHTML .= '<option value="sales_turnover">Sales Turnover[yearly]</option>';
+                    $finalReturnHTML .= '<option value="net_profit">Net Profit[yearly]</option>';
+                    $finalReturnHTML .= '<option value="var">Net Profit Variance[yr]</option>';
+                    $finalReturnHTML .= '<option value="net_profithy">Net Profit[quarter]</option>';
+                    $finalReturnHTML .= '<option value="net_profitvhy">Net Profit Variance[qr]</option>';
+                    $finalReturnHTML .= '<option value="earning_per_share">Earning Per Share[EPS]</option>';
+                    $finalReturnHTML .= '<option value="p_earning_per_share">Prev Year EPS</option>';
+                    $finalReturnHTML .= '<option value="full_year_cps">Cash Per Share[yr]</option>';
+                    $finalReturnHTML .= '<option value="quarter_cps">Cash Per Share[qr]</option>';
+                    $finalReturnHTML .= '<option value="month_cps">Cash per share[mt]</option>';
+                    $finalReturnHTML .= '<option value="latest_quarter_sales">Net Sales[quarter]</option>';
+                    $finalReturnHTML .= '<option value="pvbv">Price to Book Value</option>';
+                    $finalReturnHTML .= '<option value="Networth">Networth</option>';
+                    $finalReturnHTML .= '<option value="bval">BSE Value in lakhs</option>';
+                    $finalReturnHTML .= '<option value="nval">NSE Value in lakhs</option>';
+                    $finalReturnHTML .= '<option value="market_cap">Market Cap</option>';
+                    $finalReturnHTML .= '<option value="latopm">Operating profit margin[yr]</option>';
+                    $finalReturnHTML .= '<option value="lathyopm">Operating profit margin[qr]</option>';
+                    $finalReturnHTML .= '<option value="latgpm">Gross profit margin</option>';
+                    $finalReturnHTML .= '<option value="gross_block">Gross Block</option>';
+                    $finalReturnHTML .= '<option value="totoloan">Total Loans</option>';
+                    $finalReturnHTML .= '<option value="advance_given_by_bank">Advance Given By Bank</option>';
+                    $finalReturnHTML .= '<option value="net_profit_asset">Net non performing assets</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_months_sales">TTM Sales</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_month_op">TTM Operating Profit</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_months_opm">TTM Operating Profit margin</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_month_gp">TTM Gross profit</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_month_gpm">TTM Gross profit margin</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_months_np">TTM Net profit</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_months_npv">TTM Net profit Variance</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_month_eps">TTM EPS</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_month_pe">TTM PE</option>';
+                    $finalReturnHTML .= '<option value="trailing_twelve_month_cps">TTM CPS</option>';
+                    $finalReturnHTML .= '<option value="latest_ttmdepreciation">TTM Depreciation</option>';
+                    $finalReturnHTML .= '</optgroup>';
                 }
                 else if($tempEquation2[0] == "d1"){
                     //This is Timing Filter Condition

@@ -33,6 +33,28 @@ class topLovedController extends Controller
                 $tempEquation2 = explode(':',$value2);
                 if($tempEquation2[0] == "a1"){
                     //This is Arithmetic Filter Condition
+                    $finalReturnHTML .= '<select class="">';
+                    $finalReturnHTML .= '<option value="....">Please select a operation</option>';
+                    $finalReturnHTML .= '<option value="remove">Remove operations on right</option>';
+                    $finalReturnHTML .= '<optgroup label="--Arithmetic Operations--">';
+                    $finalReturnHTML .= '<option value="+">+</option>';
+                    $finalReturnHTML .= '<option value="-">-</option>';
+                    $finalReturnHTML .= '<option value="*">*</option>';
+                    $finalReturnHTML .= '<option value="/">/</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--Comparision Operations--">';
+                    $finalReturnHTML .= '<option value="=">Equals</option>';
+                    $finalReturnHTML .= '<option value=">">Greater than</option>';
+                    $finalReturnHTML .= '<option value=">=">Greater than equal to</option>';
+                    $finalReturnHTML .= '<option value="<">Less than</option>';
+                    $finalReturnHTML .= '<option value="<=">Less than equal to</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '<optgroup label="--Crossover Operations--">';
+                    $finalReturnHTML .= '<option value="crossed_above">Crossed above</option>';
+                    $finalReturnHTML .= '<option value="crossed_below">Crossed below</option>';
+                    $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '</select>';
+
                 }
                 else if($tempEquation2[0] == "b1"){
                     //This is Numeric Filter Condition
@@ -245,6 +267,7 @@ class topLovedController extends Controller
                     $finalReturnHTML .= '<option value="trailing_twelve_month_cps">TTM CPS</option>';
                     $finalReturnHTML .= '<option value="latest_ttmdepreciation">TTM Depreciation</option>';
                     $finalReturnHTML .= '</optgroup>';
+                    $finalReturnHTML .= '</select>';
                 }
                 else if($tempEquation2[0] == "d1"){
                     //This is Timing Filter Condition

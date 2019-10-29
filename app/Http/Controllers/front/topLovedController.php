@@ -31,7 +31,7 @@ class topLovedController extends Controller
             $tempEquation = explode(',',$value);
             foreach($tempEquation as $value2){
                 $tempEquation2 = explode(':',$value2);
-                if($tempEquation2[0] == "a1"){
+                if($tempEquation2[0] == "a1" || $tempEquation2[0] == "arith"){
                     //This is Arithmetic Filter Condition
                     $finalReturnHTML .= '<select class="">';
                     $finalReturnHTML .= '<option value="....">Please select a operation</option>';
@@ -340,6 +340,26 @@ class topLovedController extends Controller
 					$finalReturnHTML .= ($tempEquation2[1] == "n_monthago") ? "<option value='n_monthago' selected='selected'>n weeks ago</option>" : "<option value='n_monthago'>n months ago</option>";
 
 					$finalReturnHTML .= "</select>";
+                }
+                else if($tempEquation2[0] == "other"){
+                	if($tempEquation2[1] == "("){
+                		$finalReturnHTML .= "(";
+                	}
+                	else if(strstr($tempEquation2[1], 'customtxt')){
+                		$custom_txt_values = explode('_',$tempEquation2[1]);
+                		$txt_box_values = array();
+                		foreach($custom_txt_values as $value4){
+                			if($value4 == "customtxt"){ 
+                				continue; 
+                			}else{
+                				array_push($txt_box_values,$value4);
+                			}
+                		}
+                		$finalReturnHTML .= "<input type='text' name='custom_txt' value=".implode(',',$txt_box_values).">";
+                	}
+                	else if($tempEquation2[1] == ")"){
+                		$finalReturnHTML .= ")";
+                	}
                 }
             }
         }

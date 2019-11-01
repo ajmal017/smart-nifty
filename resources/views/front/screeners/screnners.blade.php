@@ -10,10 +10,8 @@
         .outerDiv{ padding-top: 10px;border: 1px solid #bbbbbb;background-color: #f9f9f9; }
 		.method{ width: auto!important;font-weight: bold;background-color: transparent;border:none;-webkit-appearance: none;-moz-appearance: none;}
 
-		.equvation
-		{
-			border-left: 1px solid gray;
-		}
+		.equvation{ border-left: 1px solid gray; }
+		label{ color: #000;padding-right: 5px;padding-left: 5px; }
 
 	</style>
 @endsection
@@ -33,7 +31,7 @@
             	<div class="equvation">
 
             		<div class="col-md-12 mb-2 text-left">
-            			<p>equvation</p>
+            			<p>{!! $finalReturnHTML !!}</p>
             		</div>
 
             		<div class="col-md-12 mb-2 text-left">

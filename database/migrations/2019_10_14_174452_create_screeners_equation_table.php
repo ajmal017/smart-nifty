@@ -15,8 +15,9 @@ class CreateScreenersEquationTable extends Migration
     {
         Schema::create('screeners_equation', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('screener_name');
-            $table->text('screener_equation');
+            $table->text('screener_name')->nullable();
+            $table->text('heading_equation')->nullable();
+            $table->text('screener_equation')->nullable();
             $table->timestamps();
         });
     }

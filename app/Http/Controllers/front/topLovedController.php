@@ -26,14 +26,38 @@ class topLovedController extends Controller
 
           $getData = screeners_equation::select()->where(['screener_name'=>$screenerName])->get();
 
-          
+          $finalHeadingData = array();
+          $finalScreenersData = array();
+
+          $headingEquationCounter = 0;
           $mainHeadingEquation = explode('==',$getData[0]['heading_equation']);
+
 
           $mainScreenerEquation = explode('/',$getData[0]['screener_equation']);
           foreach($mainScreenerEquation as $masterValue){
+               $headingEquation = "";
+               $headingEquationParts = explode(',',$mainHeadingEquation[$headingEquationCounter]);
+
+
+               $tempCount = 1;
+
+               foreach($headingEquationParts as $value6){
+                    $tmpHeadingEquation = explode(':',$value6);
+                    if($tempCount == 1){
+                         $headingEquation .= "Stock ".$tmpHeadingEquation[1]." ";
+                         $tempCount++;
+                    }else if($tempCount == 2){
+                         $headingEquation .= $tmpHeadingEquation[1];
+                         $headingEquation .= " of the below filters in ";
+                         $tempCount++;
+                    }else if($tempCount == 3){
+                         $headingEquation .= $tmpHeadingEquation[1];
+                         $headingEquation .= " segment";
+                         $tempCount++;
+                    }
+               }
+
                $finalReturnHTML = "";
-
-
                $screenerEquation = explode('==',$masterValue);
                foreach($screenerEquation as $value){
                     $equation_counter++;
@@ -375,15 +399,19 @@ class topLovedController extends Controller
                     $finalReturnHTML .= "<br />";
                }
 
-               array_push()
+               $headingEquationCounter++;
+
+               $finalEquation = $finalReturnHTML;
+
+               array_push($finalHeadingData,$headingEquation);
+               $finalScreenersData[$headingEquation] = $finalReturnHTML;
           }
 
-          return "";
           
           //return $finalReturnHTML;
           $screenerName = $screenerName;
           $stockName = 'Wipro';
-          return view('front/screeners/screnners',compact('screenerName','stockName','finalReturnHTML'));
+          return view('front/screeners/screnners',compact('screenerName','stockName','finalHeadingData','finalScreenersData'));
           /*$api_data = Curl::to('http://www.smartnifty.com/convertcsv.json')->asJson()->get();
           return $api_data;
           return view('front/screeners/screnners_list',compact('screenerName'));*/

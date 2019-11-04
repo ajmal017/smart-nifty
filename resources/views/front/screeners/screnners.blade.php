@@ -29,10 +29,15 @@
 
             <div class="header">
             	<div class="equvation">
+            		@foreach($finalHeadingData as $value)
+	            		<div class="col-md-12 mt-1">
+	            			<p class="text-left" style="color: #f00;">{!! $value !!}</p>
+	            		</div>
 
-            		<div class="col-md-12 mb-2 text-left">
-            			<p>{!! $finalReturnHTML !!}</p>
-            		</div>
+	            		<div class="col-md-12 mb-2 text-left" style="padding-left: 25px;">
+	            			<p>{!! $finalScreenersData[$value] !!}</p>
+	            		</div>
+	            	@endforeach
 
             		<div class="col-md-12 mb-2 text-left">
         				<button class="btn btn-default filter"><i class="fa fa-filter" aria-hidden="true"></i></button>

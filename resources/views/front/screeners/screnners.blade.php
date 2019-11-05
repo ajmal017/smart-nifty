@@ -13,6 +13,8 @@
 		.equvation{ border-left: 1px solid gray; }
 		label{ color: #000;padding-right: 5px;padding-left: 5px; }
 
+		.heading_equation_div label{ color: #f00; }
+
 	</style>
 @endsection
 
@@ -30,8 +32,8 @@
             <div class="header">
             	<div class="equvation">
             		@foreach($finalHeadingData as $value)
-	            		<div class="col-md-12 mt-1">
-	            			<p class="text-left" style="color: #f00;">{!! $value !!}</p>
+	            		<div class="col-md-12 mt-1 heading_equation_div">
+	            			<p class="text-left">{!! $value !!}</p>
 	            		</div>
 
 	            		<div class="col-md-12 mb-2 text-left" style="padding-left: 25px;">
@@ -104,7 +106,8 @@
 	<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
 
 
-	<script src="{{ asset('assets/js/filters/filter.js')}}"></script>
+	<script src="{{ asset('assets/js/screeners_js/headingEquation.js') }}"></script>
+	<!-- <script src="{{ asset('assets/js/filters/filter.js')}}"></script> -->
 
 	
 	

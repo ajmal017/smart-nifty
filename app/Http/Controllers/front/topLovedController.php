@@ -38,24 +38,45 @@ class topLovedController extends Controller
                $headingEquation = "";
                $headingEquationParts = explode(',',$mainHeadingEquation[$headingEquationCounter]);
 
-
+               
                $tempCount = 1;
 
                foreach($headingEquationParts as $value6){
                     $tmpHeadingEquation = explode(':',$value6);
                     if($tempCount == 1){
-                         $headingEquation .= "Stock ".$tmpHeadingEquation[1]." ";
+                         $headingEquation .= "<label>Stock <span id='m1_span'>".$tmpHeadingEquation[1]." </span>";
+                         $headingEquation .= "<select id='m1_select' style='display: none;'>";
+                         $headingEquation .= "<option value='passes'>passes</option>";
+                         $headingEquation .= "<option value='fails'>fails</option>";
+                         $headingEquation .= "</select>";
                          $tempCount++;
                     }else if($tempCount == 2){
-                         $headingEquation .= $tmpHeadingEquation[1];
+                         $headingEquation .= " <span id='m2_span'>".$tmpHeadingEquation[1]."</span>";
+                         $headingEquation .= "<select id='m2_select' style='display: none;'>";
+                         $headingEquation .= "<option value='all'>all</option>";
+                         $headingEquation .= "<option value='any'>any</option>";
+                         $headingEquation .= "</select>";
                          $headingEquation .= " of the below filters in ";
                          $tempCount++;
                     }else if($tempCount == 3){
-                         $headingEquation .= $tmpHeadingEquation[1];
-                         $headingEquation .= " segment";
+                         $headingEquation .= "<span id='m3_span'>".$tmpHeadingEquation[1]."</span>";
+                         $headingEquation .= "<select id='m3_select' style='display: none;'>";
+                         $headingEquation .= "<option value='cash'>cash</option>";
+                         $headingEquation .= "<option value='futures'>futures</option>";
+                         $headingEquation .= "<option value='indices'>indices</option>";
+                         $headingEquation .= "<option value='nifty 100'>nifty 100</option>";
+                         $headingEquation .= "<option value='nifty 200'>nifty 200</option>";
+                         $headingEquation .= "<option value='nifty 50'>nifty 50</option>";
+                         $headingEquation .= "<option value='watchlist'>watchlist</option>";
+                         $headingEquation .= "</select>";
+                         $headingEquation .= " segment</label>";
                          $tempCount++;
                     }
                }
+
+
+
+
 
                $finalReturnHTML = "";
                $screenerEquation = explode('==',$masterValue);

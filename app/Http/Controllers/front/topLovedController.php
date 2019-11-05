@@ -30,6 +30,8 @@ class topLovedController extends Controller
           $finalScreenersData = array();
 
           $headingEquationCounter = 0;
+          $headingEquationClassCounter = 1;
+
           $mainHeadingEquation = explode('==',$getData[0]['heading_equation']);
 
 
@@ -44,23 +46,23 @@ class topLovedController extends Controller
                foreach($headingEquationParts as $value6){
                     $tmpHeadingEquation = explode(':',$value6);
                     if($tempCount == 1){
-                         $headingEquation .= "<label>Stock <span id='m1_span'>".$tmpHeadingEquation[1]." </span>";
-                         $headingEquation .= "<select id='m1_select' style='display: none;'>";
+                         $headingEquation .= "<label>Stock <span class='m1_span_".$headingEquationClassCounter."' onclick=span_click('m1','span',".$headingEquationClassCounter.")>".$tmpHeadingEquation[1]." </span>";
+                         $headingEquation .= "<select id='m1_select_".$headingEquationClassCounter."' style='display: none;' onchange=select_click('m1','select',".$headingEquationClassCounter.")>";
                          $headingEquation .= "<option value='passes'>passes</option>";
                          $headingEquation .= "<option value='fails'>fails</option>";
                          $headingEquation .= "</select>";
                          $tempCount++;
                     }else if($tempCount == 2){
-                         $headingEquation .= " <span id='m2_span'>".$tmpHeadingEquation[1]."</span>";
-                         $headingEquation .= "<select id='m2_select' style='display: none;'>";
+                         $headingEquation .= " <span class='m2_span_".$headingEquationClassCounter."' onclick=span_click('m2','span',".$headingEquationClassCounter.")>".$tmpHeadingEquation[1]."</span>";
+                         $headingEquation .= "<select id='m2_select_".$headingEquationClassCounter."' style='display: none;' onchange=select_click('m2','select',".$headingEquationClassCounter.")>";
                          $headingEquation .= "<option value='all'>all</option>";
                          $headingEquation .= "<option value='any'>any</option>";
                          $headingEquation .= "</select>";
                          $headingEquation .= " of the below filters in ";
                          $tempCount++;
                     }else if($tempCount == 3){
-                         $headingEquation .= "<span id='m3_span'>".$tmpHeadingEquation[1]."</span>";
-                         $headingEquation .= "<select id='m3_select' style='display: none;'>";
+                         $headingEquation .= "<span class='m3_span_".$headingEquationClassCounter."' onclick=span_click('m3','span',".$headingEquationClassCounter.")>".$tmpHeadingEquation[1]."</span>";
+                         $headingEquation .= "<select id='m3_select_".$headingEquationClassCounter."' style='display: none;' onchange=select_click('m3','select',".$headingEquationClassCounter.")>";
                          $headingEquation .= "<option value='cash'>cash</option>";
                          $headingEquation .= "<option value='futures'>futures</option>";
                          $headingEquation .= "<option value='indices'>indices</option>";
@@ -73,6 +75,10 @@ class topLovedController extends Controller
                          $tempCount++;
                     }
                }
+
+
+
+               $headingEquationClassCounter++;
 
 
 

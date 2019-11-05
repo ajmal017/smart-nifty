@@ -13,7 +13,8 @@
 		.equvation{ border-left: 1px solid gray; }
 		label{ color: #000;padding-right: 5px;padding-left: 5px; }
 
-		.heading_equation_div label{ color: #f00; }
+		.heading_equation_div label{ color: #f00;display: flex; }
+		.heading_equation_div label span{ padding-right: 5px;padding-left: 5px; }
 
 	</style>
 @endsection
@@ -82,7 +83,6 @@
 				</div>
             </div>
         </div>
-
         
     </div>
 </div>

@@ -16,6 +16,9 @@
 		.heading_equation_div label{ color: #f00;display: flex; }
 		.heading_equation_div label span{ padding-right: 5px;padding-left: 5px; }
 
+		.main_equation_div{ color: #000; }
+		.main_equation_div button{ padding: 0;margin-left: 5px;margin-right: 5px;font-size: 0.9rem;cursor: pointer; }
+
 	</style>
 @endsection
 
@@ -37,7 +40,7 @@
 	            			<p class="text-left">{!! $value !!}</p>
 	            		</div>
 
-	            		<div class="col-md-12 mb-2 text-left" style="padding-left: 25px;">
+	            		<div class="col-md-12 mb-2 text-left main_equation_div" style="padding-left: 25px;">
 	            			<p>{!! $finalScreenersData[$value] !!}</p>
 	            		</div>
 	            	@endforeach

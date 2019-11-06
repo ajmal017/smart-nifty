@@ -100,7 +100,7 @@ class topLovedController extends Controller
                          if($tempEquation2[0] == "a1" || $tempEquation2[0] == "arith"){
                          //This is Arithmetic Filter Condition
                               if($tempEquation2[0] == "a1"){
-                                   $finalReturnHTML .= '<label class="arith_label_'.$equation_counter.'_'.$class_counter.'" onclick="arith_label_click('.$equation_counter.','.$class_counter.')">'.ucfirst(str_replace('_',' ',$tempEquation2[1])).'</label>';
+                                   $finalReturnHTML .= '<label class="arith_label arith_label_'.$equation_counter.'_'.$class_counter.'" onclick="arith_label_click('.$equation_counter.','.$class_counter.')">'.ucfirst(str_replace('_',' ',$tempEquation2[1])).'</label>';
                               }
                               else{
                                    $finalReturnHTML .= '<button type="button" class="btn btn-info btn-sm arith_label_'.$equation_counter.'_'.$class_counter.'" onclick="arith_label_click('.$equation_counter.','.$class_counter.')"><i class="fa fa-calculator" aria-hidden="true"></i></button>';
@@ -131,7 +131,7 @@ class topLovedController extends Controller
                          }
                          else if($tempEquation2[0] == "b1"){
                          //This is Numeric Filter Condition
-                              $finalReturnHTML .= '<label class="numeric_filter_label_'.$equation_counter.'_'.$class_counter.'">['.ucfirst(str_replace('_',' ',$tempEquation2[1])).']</label>';
+                              $finalReturnHTML .= '<label class="numeric_filter_label numeric_filter_label_'.$equation_counter.'_'.$class_counter.'">['.ucfirst(str_replace('_',' ',$tempEquation2[1])).']</label>';
 
                               $finalReturnHTML .= "<select class='numeric_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;'>";
                               $finalReturnHTML .= "<option>Select Option</option>";
@@ -165,7 +165,7 @@ class topLovedController extends Controller
                          }
                          else if($tempEquation2[0] == "c1"){
                          //This is Open Filter Condition
-                              $finalReturnHTML .= "<label class='open_filter_label_".$equation_counter."_".$class_counter."'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
+                              $finalReturnHTML .= "<label class='open_filter_label open_filter_label_".$equation_counter."_".$class_counter."'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
 
 
                               $finalReturnHTML .= "<select class='open_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;'>";
@@ -327,7 +327,7 @@ class topLovedController extends Controller
                          }
                          else if($tempEquation2[0] == "d1"){
                          //This is Timing Filter Condition
-                              $finalReturnHTML .= "<label class='timing_filter_label_".$equation_counter."_".$class_counter."'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
+                              $finalReturnHTML .= "<label class='timing_filter_label timing_filter_label_".$equation_counter."_".$class_counter."'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
 
 
                               $finalReturnHTML .= "<select class='timing_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;'>";
@@ -414,8 +414,8 @@ class topLovedController extends Controller
                                              array_push($txt_box_values,$value4);
                                         }
                                    }
-                                   $finalReturnHTML .= "<label>".implode(',',$txt_box_values)."</label>";
-                                   $finalReturnHTML .= "<input type='text' name='custom_txt' style='display:none;' value=".implode(',',$txt_box_values).">";
+                                   $finalReturnHTML .= "<label class='custom_txt_label'>".implode(',',$txt_box_values)."</label>";
+                                   $finalReturnHTML .= "<input type='text' name='custom_txt_input' style='display:none;' value=".implode(',',$txt_box_values).">";
                               }
                               else if($tempEquation2[1] == ")"){
                                    $finalReturnHTML .= ")";

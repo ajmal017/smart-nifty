@@ -19,6 +19,10 @@
 		.main_equation_div{ color: #000; }
 		.main_equation_div button{ padding: 0;margin-left: 5px;margin-right: 5px;font-size: 0.9rem;cursor: pointer; }
 
+		.arith_label{ color: #8b0000;font-weight: bold; }
+		.numeric_filter_label{ color: #000;font-weight: bold; }
+		.open_filter_label{ color: #000;font-weight: bold; }
+
 	</style>
 @endsection
 
@@ -110,6 +114,7 @@
 
 
 	<script src="{{ asset('assets/js/screeners_js/headingEquation.js') }}"></script>
+	<script src="{{ asset('assets/js/screeners_js/mainEquation.js') }}"></script>
 	<!-- <script src="{{ asset('assets/js/filters/filter.js')}}"></script> -->
 
 	

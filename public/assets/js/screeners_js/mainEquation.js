@@ -76,3 +76,18 @@ function timing_filter_dropdown_click(equationCounter,classCounter)
 
 
 //-----------------------------------------------------------------------------------------------
+
+
+
+function custom_txt_label_click(equationCounter,classCounter)
+{
+	$(".custom_txt_label_"+equationCounter+"_"+classCounter).css('display','none');
+	$(".custom_txt_input_"+equationCounter+"_"+classCounter).css('display','');
+}
+
+
+function custom_txt_input_blur(equationCounter,classCounter)
+{
+	$(".custom_txt_label_"+equationCounter+"_"+classCounter).css('display','');
+	$(".custom_txt_input_"+equationCounter+"_"+classCounter).css('display','none');
+}

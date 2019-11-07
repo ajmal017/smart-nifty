@@ -414,8 +414,8 @@ class topLovedController extends Controller
                                              array_push($txt_box_values,$value4);
                                         }
                                    }
-                                   $finalReturnHTML .= "<label class='custom_txt_label'>".implode(',',$txt_box_values)."</label>";
-                                   $finalReturnHTML .= "<input type='text' name='custom_txt_input' style='display:none;' value=".implode(',',$txt_box_values).">";
+                                   $finalReturnHTML .= "<label class='custom_txt_label_".$equation_counter."_".$class_counter."' onclick='custom_txt_label_click(".$equation_counter.",".$class_counter.")'>".implode(',',$txt_box_values)."</label>";
+                                   $finalReturnHTML .= "<input type='text' name='custom_txt_input' class='custom_txt_input_".$equation_counter."_".$class_counter."' style='display:none;' value=".implode(',',$txt_box_values)." onblur='custom_txt_input_blur(".$equation_counter.",".$class_counter.")'>";
                               }
                               else if($tempEquation2[1] == ")"){
                                    $finalReturnHTML .= ")";

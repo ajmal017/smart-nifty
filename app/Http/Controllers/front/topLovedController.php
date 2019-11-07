@@ -327,10 +327,10 @@ class topLovedController extends Controller
                          }
                          else if($tempEquation2[0] == "d1"){
                          //This is Timing Filter Condition
-                              $finalReturnHTML .= "<label class='timing_filter_label timing_filter_label_".$equation_counter."_".$class_counter."'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
+                              $finalReturnHTML .= "<label class='timing_filter_label timing_filter_label_".$equation_counter."_".$class_counter."' onclick='timing_filter_label_click(".$equation_counter.",".$class_counter.")'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
 
 
-                              $finalReturnHTML .= "<select class='timing_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;'>";
+                              $finalReturnHTML .= "<select class='timing_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;' onchange='timing_filter_dropdown_click(".$equation_counter.",".$class_counter.")'>";
                               $finalReturnHTML .= "<optgroup label='--Minute--'>";
 
                               $finalReturnHTML .= "<option value='1_minute'>1 Minute</option>";

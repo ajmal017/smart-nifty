@@ -56,3 +56,23 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 
 
 //-----------------------------------------------------------------------------------------------
+
+
+function timing_filter_label_click(equationCounter,classCounter)
+{
+	$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+	$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','');
+}
+
+
+function timing_filter_dropdown_click(equationCounter,classCounter)
+{
+	var currentValue = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").text();
+	$(".timing_filter_label_"+equationCounter+"_"+classCounter).text(currentValue);
+	$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+	$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+}
+
+
+
+//-----------------------------------------------------------------------------------------------

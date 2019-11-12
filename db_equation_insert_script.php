@@ -40,6 +40,7 @@ Top Loved
 		Main Equation
 		=============
 		b1:0,d1:5_minute,c1:close,a1:greater_than,b1;-1,d1:5_minute,c1:close,arith==b1:-1,d1:5_minute,c1:close,a1:greater_than,b1;-2,d1:5_minute,c1:close,arith==b1:-2,d1:5_minute,c1:close,a1:greater_than,b1;-3,d1:5_minute,c1:close,arith==b1:0,d1:5_minute,c1:volume,a1:greater_than,b1:-1,d1:5_minute,c1:sma,other:(,other:customtxt_volume_15,other:),arith==b1:-1,d1:5_minute,c1:volume,a1:greater_than,b1:-2,d1:5_minute,c1:sma,other:(,other:customtxt_volume_15,other:),arith==b1:-2,d1:5_minute,c1:volume,a1:greater_than,b1:-3,d1:5_minute,c1:sma,other:(,other:customtxt_volume_15,other:),arith
+		
 
 	4)Bulish
 

@@ -27,9 +27,36 @@ function numeric_filter_label_click(equationCounter,classCounter)
 function numeric_filter_dropdown_click(equationCounter,classCounter)
 {
 	var currentValue = $(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").text();
-	$(".numeric_filter_label_"+equationCounter+"_"+classCounter).text("["+currentValue+"]");
-	$(".numeric_filter_label_"+equationCounter+"_"+classCounter).css('display','');
-	$(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+
+	var currentSelectedValue = $(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).val();
+
+	if(currentSelectedValue == "-n")
+	{
+		var entered_value = prompt("Enter Required Offset, 1 offset equals 1 candle");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).text("["+"-"+entered_value+"]");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+		$(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');		
+	}
+	else if(currentSelectedValue == "=n")
+	{
+		var entered_value = prompt("Enter Candle of a day, starting with 1");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).text("["+"="+entered_value+"]");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+		$(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+	}
+	else if(currentSelectedValue == "=-n")
+	{
+		var entered_value = prompt("Enter Candle of Previous day, the last candle referred as -1");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).text("["+"=-"+entered_value+"]");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+		$(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');		
+	}
+	else
+	{
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).text("["+currentValue+"]");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+		$(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+	}
 }
 
 

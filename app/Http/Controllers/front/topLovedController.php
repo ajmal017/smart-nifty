@@ -47,6 +47,7 @@ class topLovedController extends Controller
                     $tmpHeadingEquation = explode(':',$value6);
                     if($tempCount == 1){
                          $headingEquation .= "<label>Stock <span class='m1_span_".$headingEquationClassCounter."' onclick=span_click('m1','span',".$headingEquationClassCounter.")>".$tmpHeadingEquation[1]." </span>";
+
                          $headingEquation .= "<select id='m1_select_".$headingEquationClassCounter."' style='display: none;' onchange=select_click('m1','select',".$headingEquationClassCounter.")>";
                          $headingEquation .= "<option value='passes'>passes</option>";
                          $headingEquation .= "<option value='fails'>fails</option>";
@@ -106,7 +107,7 @@ class topLovedController extends Controller
                                    $finalReturnHTML .= '<button type="button" class="btn btn-info btn-sm arith_label_'.$equation_counter.'_'.$class_counter.'" onclick="arith_label_click('.$equation_counter.','.$class_counter.')"><i class="fa fa-calculator" aria-hidden="true"></i></button>';
                               }
 
-                              $finalReturnHTML .= '<select class="arith_dropdown_'.$equation_counter.'_'.$class_counter.'" style="display:none;" onchange="arith_dropdown_click('.$equation_counter.','.$class_counter.')">';
+                              $finalReturnHTML .= '<select class="arith_dropdown arith_dropdown_'.$equation_counter.'_'.$class_counter.'" style="display:none;" onchange="arith_dropdown_click('.$equation_counter.','.$class_counter.')">';
                               $finalReturnHTML .= '<option value="....">Please select a operation</option>';
                               $finalReturnHTML .= '<option value="remove">Remove operations on right</option>';
                               $finalReturnHTML .= '<optgroup label="--Arithmetic Operations--">';
@@ -133,7 +134,7 @@ class topLovedController extends Controller
                          //This is Numeric Filter Condition
                               $finalReturnHTML .= '<label class="numeric_filter_label numeric_filter_label_'.$equation_counter.'_'.$class_counter.'" onclick="numeric_filter_label_click('.$equation_counter.','.$class_counter.')">['.ucfirst(str_replace('_',' ',$tempEquation2[1])).']</label>';
 
-                              $finalReturnHTML .= "<select class='numeric_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;' onchange=numeric_filter_dropdown_click(".$equation_counter.",".$class_counter.")>";
+                              $finalReturnHTML .= "<select class='numeric_filter_dropdown numeric_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;' onchange=numeric_filter_dropdown_click(".$equation_counter.",".$class_counter.")>";
                               $finalReturnHTML .= "<option>Select Option</option>";
                               $finalReturnHTML .= "<option value='0'>0(Latest Candle)</option>";
                               $finalReturnHTML .= "<option value='-1'>-1(Previous Candle)</option>";
@@ -168,7 +169,7 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "<label class='open_filter_label open_filter_label_".$equation_counter."_".$class_counter."' onclick='open_filter_label_click(".$equation_counter.",".$class_counter.")'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
 
 
-                              $finalReturnHTML .= "<select class='open_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;' onchange=open_filter_dropdown_click(".$equation_counter.",".$class_counter.")>";
+                              $finalReturnHTML .= "<select class='open_filter_dropdown open_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;' onchange=open_filter_dropdown_click(".$equation_counter.",".$class_counter.")>";
                               $finalReturnHTML .= "<optgroup label='--Stock Attributes--'>";
                               $finalReturnHTML .= '<option value="Open">Open</option>';
 
@@ -327,7 +328,7 @@ class topLovedController extends Controller
                          }
                          else if($tempEquation2[0] == "d1"){
                          //This is Timing Filter Condition
-                              $finalReturnHTML .= "<label class='timing_filter_label timing_filter_label_".$equation_counter."_".$class_counter."' onclick='timing_filter_label_click(".$equation_counter.",".$class_counter.")'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
+                              $finalReturnHTML .= "<label class='timing_filter_dropdown timing_filter_label timing_filter_label_".$equation_counter."_".$class_counter."' onclick='timing_filter_label_click(".$equation_counter.",".$class_counter.")'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
 
 
                               $finalReturnHTML .= "<select class='timing_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;' onchange='timing_filter_dropdown_click(".$equation_counter.",".$class_counter.")'>";

@@ -166,7 +166,7 @@ class topLovedController extends Controller
                          }
                          else if($tempEquation2[0] == "c1"){
                               //This is Bracket() Code
-                              $finalReturnHTML .= '<label class="bracket_label bracket_open_filter_'.$equation_counter.'_'.$class_counter.'">Brackets( </label><label class="bracket_label bracket_timing_filter_'.$equation_counter.'_'.$class_counter.'">Latest </label><label class="bracket_label bracket_sub_open_filter_'.$equation_counter.'_'.$class_counter.'">Open </label><button type="button" class="bracket_label btn btn-info btn-sm bracket_arith_label_'.$equation_counter.'_'.$class_counter.'"><i class="fa fa-calculator"></i></button><label class="bracket_label">)</label>';
+                              $finalReturnHTML .= '';
 
 
                               //This is Open Filter Condition
@@ -199,7 +199,10 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "</optgroup>";
                               $finalReturnHTML .= "<optgroup label='--Math Functions--'>";
 
-                              $finalReturnHTML .= '<option value="brackets">Bracket(value)</option>';
+                              
+                              //$finalReturnHTML .= '<option value="brackets" data-equation="">Bracket(value)</option>';
+                              $finalReturnHTML .= "<option value='brackets' data-first_element='<div class=bracket_equation_div><label class=bracket_first_element_".$equation_counter."_".$class_counter.">Bracket</label>' data-second_element='<label class=bracket_second_element_".$equation_counter."_".$class_counter.">(</label>' data-third_element='<label class=bracket_third_element_".$equation_counter."_".$class_counter.">Latest</label>' data-fourth_element='<label class=bracket_fourth_element_".$equation_counter."_".$class_counter.">Open</label>' data-fifth_element='<button type=button class=bracket_fifth_element_".$equation_counter."_".$class_counter."><i class=fa></i></button>' data-sixth_element='<label class=bracket_sixth_element_".$equation_counter."_".$class_counter.">)</label></div>'>Bracket(value)</option>";
+
                               $finalReturnHTML .= '<option value="min">Min(duration, value)</option>';
                               $finalReturnHTML .= '<option value="max">Max(duration, value)</option>';
                               $finalReturnHTML .= '<option value="abs">Abs(value)</option>';

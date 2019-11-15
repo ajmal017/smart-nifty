@@ -78,22 +78,36 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 
 	var currentSelectedValue = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter).val();
 
+	//Pass all the Values with Or Condition Like Brackets in following first Condition
 	if(currentSelectedValue == "brackets")
 	{
+		
 		if(currentSelectedValue == "brackets")
 		{
-			$(".bracket_label").css('display','inline-block');
+			var first_element = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+			var second_element = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('second_element');
+			var third_element = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('third_element');
+			var fourth_element = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('fourth_element');
+			var fifth_element = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('fifth_element');
+			var sixth_element = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('sixth_element');
+
+
+			var complete_appended_html = first_element + second_element + third_element + fourth_element + fifth_element + sixth_element;
+
+
+
 			$(".timing_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
 			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-2)).css('display','none');
 			$(".open_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
-		}
-		else
-		{
-			$(".bracket_label").css('display','none');
-			$(".timing_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','');
-			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-2)).css('display','');
-			$(".open_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+
+			//Add Element Before Dropdown
+			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".bracket_equation_div").css('display','inline-block');
+
+			//Add Button Class & Calculator Class Dynamically
+			$(".bracket_fifth_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
+			$(".bracket_fifth_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
 		}
 	}
 	else

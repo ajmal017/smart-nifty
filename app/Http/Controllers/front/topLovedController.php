@@ -165,7 +165,12 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "</select>";
                          }
                          else if($tempEquation2[0] == "c1"){
-                         //This is Open Filter Condition
+                              //This is Bracket() Code
+                              $finalReturnHTML .= '<label class="bracket_label bracket_open_filter_'.$equation_counter.'_'.$class_counter.'">Brackets( </label><label class="bracket_label bracket_timing_filter_'.$equation_counter.'_'.$class_counter.'">Latest </label><label class="bracket_label bracket_sub_open_filter_'.$equation_counter.'_'.$class_counter.'">Open </label><button type="button" class="bracket_label btn btn-info btn-sm bracket_arith_label_'.$equation_counter.'_'.$class_counter.'"><i class="fa fa-calculator"></i></button><label class="bracket_label">)</label>';
+
+
+                              //This is Open Filter Condition
+
                               $finalReturnHTML .= "<label class='open_filter_label open_filter_label_".$equation_counter."_".$class_counter."' onclick='open_filter_label_click(".$equation_counter.",".$class_counter.")'>".ucfirst(str_replace('_',' ',$tempEquation2[1]))."</label>";
 
 
@@ -325,6 +330,9 @@ class topLovedController extends Controller
                               $finalReturnHTML .= '<option value="latest_ttmdepreciation">TTM Depreciation</option>';
                               $finalReturnHTML .= '</optgroup>';
                               $finalReturnHTML .= '</select>';
+
+
+
                          }
                          else if($tempEquation2[0] == "d1"){
                          //This is Timing Filter Condition

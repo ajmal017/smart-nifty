@@ -23,6 +23,12 @@
 		.numeric_filter_label{ color: #000;font-weight: bold; }
 		.open_filter_label{ color: #000;font-weight: bold; }
 
+
+		/**
+			CSS For Hide Bracket Function Labels and Buttons
+		**/
+		.bracket_label{ display: none; }
+
 	</style>
 @endsection
 

@@ -75,9 +75,33 @@ function open_filter_label_click(equationCounter,classCounter)
 function open_filter_dropdown_click(equationCounter,classCounter)
 {
 	var currentValue = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").text();
-	$(".open_filter_label_"+equationCounter+"_"+classCounter).text(currentValue);
-	$(".open_filter_label_"+equationCounter+"_"+classCounter).css('display','');
-	$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+
+	var currentSelectedValue = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter).val();
+
+	if(currentSelectedValue == "brackets")
+	{
+		if(currentSelectedValue == "brackets")
+		{
+			$(".bracket_label").css('display','inline-block');
+			$(".timing_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-2)).css('display','none');
+			$(".open_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+		}
+		else
+		{
+			$(".bracket_label").css('display','none');
+			$(".timing_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-2)).css('display','');
+			$(".open_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+		}
+	}
+	else
+	{
+		$(".open_filter_label_"+equationCounter+"_"+classCounter).text(currentValue);
+		$(".open_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+		$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+	}
 }
 
 

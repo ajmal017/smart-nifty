@@ -1,3 +1,5 @@
+//Function For Arithmetic Dropdown Click
+
 function arith_label_click(equationCounter,classCounter)
 {
 	$(".arith_label_"+equationCounter+"_"+classCounter).css('display','none');

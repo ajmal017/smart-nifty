@@ -109,7 +109,8 @@ class topLovedController extends Controller
 
                               $finalReturnHTML .= '<select class="arith_dropdown arith_dropdown_'.$equation_counter.'_'.$class_counter.'" style="display:none;" onchange="arith_dropdown_click('.$equation_counter.','.$class_counter.')">';
                               $finalReturnHTML .= '<option value="....">Please select a operation</option>';
-                              $finalReturnHTML .= '<option value="remove">Remove operations on right</option>';
+                              $finalReturnHTML .= "<option value='remove'
+                                   data-first_element='<div class=remove_equation_div><label class=remove_first_element_".$equation_counter."_".$class_counter.">Remove operations on right</label></div>'>Remove operations on right</option>";
                               $finalReturnHTML .= '<optgroup label="--Arithmetic Operations--">';
                               $finalReturnHTML .= '<option value="+">+</option>';
                               $finalReturnHTML .= '<option value="-">-</option>';
@@ -223,7 +224,13 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "<option value='round' data-first_element='<div class=round_equation_div><label class=round_first_element_".$equation_counter."_".$class_counter.">Round</label>' data-second_element='<label class=round_second_element_".$equation_counter."_".$class_counter.">(</label>' data-third_element='<label class=round_third_element_".$equation_counter."_".$class_counter.">Latest</label>' data-fourth_element='<label class=round_fourth_element_".$equation_counter."_".$class_counter.">Open</label>' data-fifth_element='<button type=button class=round_fifth_element_".$equation_counter."_".$class_counter."><i class=fa></i></button>' data-six_element='<label class=round_six_element_".$equation_counter."_".$class_counter.">)</label></div>'>Round(value)</option>";
 
                               $finalReturnHTML .= "<option value='square' data-first_element='<div class=square_equation_div><label class=square_first_element_".$equation_counter."_".$class_counter.">Square</label>' data-second_element='<label class=square_second_element_".$equation_counter."_".$class_counter.">(</label>' data-third_element='<label class=square_third_element_".$equation_counter."_".$class_counter.">Latest</label>' data-fourth_element='<label class=square_fourth_element_".$equation_counter."_".$class_counter.">Open</label>' data-fifth_element='<button type=button class=square_fifth_element_".$equation_counter."_".$class_counter."><i class=fa></i></button>' data-six_element='<label class=square_six_element_".$equation_counter."_".$class_counter.">)</label></div>'>Square(value)</option>";
-                              $finalReturnHTML .= "<option value='square_root' data-first_element='<div class=squareroot_equation_div><label class=squareroot_first_element_".$equation_counter."_".$class_counter.">Square root</label>' data-second_element='<label class=squareroot_second_element_".$equation_counter."_".$class_counter.">(</label>' data-third_element='<label class=squareroot_third_element_".$equation_counter."_".$class_counter.">Latest</label>' data-fourth_element='<label class=squareroot_fourth_element_".$equation_counter."_".$class_counter.">Open</label>' data-fifth_element='<button type=button class=squareroot_fifth_element_".$equation_counter."_".$class_counter."><i class=fa></i></button>' data-six_element='<label class=squareroot_six_element_".$equation_counter."_".$class_counter.">)</label></div>'>Square root(value)</option>";
+                              $finalReturnHTML .= "<option value='square_root'
+                                   data-first_element='<div class=squareroot_equation_div><label class=squareroot_first_element_".$equation_counter."_".$class_counter.">Square root</label>'
+                                   data-second_element='<label class=squareroot_second_element_".$equation_counter."_".$class_counter.">(</label>'
+                                   data-third_element='<label class=squareroot_third_element_".$equation_counter."_".$class_counter.">Latest</label>'
+                                   data-fourth_element='<label class=squareroot_fourth_element_".$equation_counter."_".$class_counter.">Open</label>'
+                                   data-fifth_element='<button type=button class=squareroot_fifth_element_".$equation_counter."_".$class_counter."><i class=fa></i></button>'
+                                   data-six_element='<label class=squareroot_six_element_".$equation_counter."_".$class_counter.">)</label></div>'>Square root(value)</option>";
 
                               $finalReturnHTML .= '</optgroup>';
                               $finalReturnHTML .= '<optgroup label="--Indicators--">';
@@ -587,11 +594,14 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "<select class='timing_filter_dropdown_".$equation_counter."_".$class_counter."' style='display:none;' onchange='timing_filter_dropdown_click(".$equation_counter.",".$class_counter.")'>";
                               $finalReturnHTML .= "<optgroup label='--Minute--'>";
 
-                              $finalReturnHTML .= "<option value='1_minute'>1 Minute</option>";
+                              $finalReturnHTML .= "<option value='1_minute'
+                              	data-first_element='<div class=1_minute_equation_div><label class=1_minute_first_element_".$equation_counter."_".$class_counter.">1 Minute</label></div>'>1 Minute</option>";
 
-                              $finalReturnHTML .= "<option value='2_minute'>2 Minute</option>";
+                              $finalReturnHTML .= "<option value='2_minute'
+                              	data-first_element='<div class=2_minute_equation_div><label class=2_minute_first_element_".$equation_counter."_".$class_counter.">2 Minute</label></div>'>2 Minute</option>";
 
-                              $finalReturnHTML .= "<option value='3_minute'>3 Minute</option>";
+                              $finalReturnHTML .= "<option value='3_minute'
+                              	data-first_element='<div class=3_minute_equation_div><label class=3_minute_first_element_".$equation_counter."_".$class_counter.">3 Minute</label></div>'>3 Minute</option>";
 
                               $finalReturnHTML .= "<option value='5_minute'>5 Minute</option>";
 
@@ -614,13 +624,17 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "</optgroup>";
                               $finalReturnHTML .= "<optgroup label='--Days--'>";
 
-                              $finalReturnHTML .= "<option value='Latest'>Latest(daily)</option>";
+                              $finalReturnHTML .= "<option value='Latest'
+                                   data-first_element='<div class=Latest_equation_div><label class=Latest_first_element_".$equation_counter."_".$class_counter.">Latest</label></div>'>Latest(daily)</option>";
 
-                              $finalReturnHTML .= "<option value='1_dayago'>1 day ago</option>";
+                              $finalReturnHTML .= "<option value='1_dayago'
+                                   data-first_element='<div class=1_dayago_equation_div><label class=1_dayago_first_element_".$equation_counter."_".$class_counter.">1 day ago</label></div>'>1 day ago</option>";
 
-                              $finalReturnHTML .= "<option value='2_dayago'>2 days ago</option>";
+                              $finalReturnHTML .= "<option value='2_dayago'
+                                   data-first_element='<div class=2_dayago_equation_div><label class=2_dayago_first_element_".$equation_counter."_".$class_counter.">2 day ago</label></div>'>2 days ago</option>";
 
-                              $finalReturnHTML .= "<option value='3_dayago'>3 days ago</option>";
+                              $finalReturnHTML .= "<option value='3_dayago'
+                                   data-first_element='<div class=3_dayago_equation_div><label class=3_dayago_first_element_".$equation_counter."_".$class_counter.">3 day ago</label></div>'>3 days ago</option>";
 
                               $finalReturnHTML .= "<option value='n_dayago'>n days ago</option>";
 
@@ -629,26 +643,34 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "<optgroup label='--Weeks--'>";
 
 
-                              $finalReturnHTML .= "<option value='Weekly'>Weekly</option>";
+                              $finalReturnHTML .= "<option value='Weekly'
+                                   data-first_element='<div class=Weekly_equation_div><label class=Weekly_first_element_".$equation_counter."_".$class_counter.">Weekly</label></div>'>Weekly</option>";
 
-                              $finalReturnHTML .= "<option value='1_weekago'>1 week ago</option>";
+                              $finalReturnHTML .= "<option value='1_weekago'
+                                   data-first_element='<div class=1_weekago_equation_div><label class=1_weekago_first_element_".$equation_counter."_".$class_counter.">1 week ago</label></div>'>1 week ago</option>";
 
-                              $finalReturnHTML .= "<option value='2_weekago'>2 weeks ago</option>";
+                              $finalReturnHTML .= "<option value='2_weekago'
+                                   data-first_element='<div class=2_weekago_equation_div><label class=2_weekago_first_element_".$equation_counter."_".$class_counter.">2 week ago</label></div>'>2 weeks ago</option>";
 
-                              $finalReturnHTML .= "<option value='3_weekago'>3 weeks ago</option>";
+                              $finalReturnHTML .= "<option value='3_weekago'
+                                   data-first_element='<div class=3_weekago_equation_div><label class=3_weekago_first_element_".$equation_counter."_".$class_counter.">3 week ago</label></div>'>3 weeks ago</option>";
 
                               $finalReturnHTML .= "<option value='n_weekago'>n weeks ago</option>";
 
                               $finalReturnHTML .= "</optgroup>";
                               $finalReturnHTML .= "<optgroup label='--Months--'>";
 
-                              $finalReturnHTML .= "<option value='Monthly'>Monthly</option>";
+                              $finalReturnHTML .= "<option value='Monthly'
+                                   data-first_element='<div class=Monthly_equation_div><label class=Monthly_first_element_".$equation_counter."_".$class_counter.">Monthly</label></div>'>Monthly</option>";
 
-                              $finalReturnHTML .= "<option value='1_monthago'>1 month ago</option>";
+                              $finalReturnHTML .= "<option value='1_monthago'
+                                   data-first_element='<div class=1_monthago_equation_div><label class=1_monthago_first_element_".$equation_counter."_".$class_counter.">1 month ago</label></div>'>1 month ago</option>";
 
-                              $finalReturnHTML .= "<option value='2_monthago'>2 months ago</option>";
+                              $finalReturnHTML .= "<option value='2_monthago'
+                                   data-first_element='<div class=2_monthago_equation_div><label class=2_monthago_first_element_".$equation_counter."_".$class_counter.">2 month ago</label></div>'>2 months ago</option>";
 
-                              $finalReturnHTML .= "<option value='3_monthago'>3 months ago</option>";
+                              $finalReturnHTML .= "<option value='3_monthago'
+                                   data-first_element='<div class=3_monthago_equation_div><label class=3_monthago_first_element_".$equation_counter."_".$class_counter.">3 month ago</label></div>'>3 months ago</option>";
 
                               $finalReturnHTML .= "<option value='n_monthago'>n months ago</option>";
 

@@ -1,11 +1,11 @@
-//Function For Arithmetic Dropdown Click
-//---------------------------------------
+//Function For Arithmatic Dropdown Click
 
 function arith_label_click(equationCounter,classCounter)
 {
 	$(".arith_label_"+equationCounter+"_"+classCounter).css('display','none');
 	$(".arith_dropdown_"+equationCounter+"_"+classCounter).css('display','');
 }
+
 
 
 function arith_dropdown_click(equationCounter,classCounter)
@@ -111,6 +111,10 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Button Class & Calculator Class Dynamically
 			$(".bracket_fifth_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
 			$(".bracket_fifth_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
+
+			//Add font css
+			$(".bracket_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".bracket_fourth_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 
@@ -141,6 +145,11 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			$(".min_seven_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
 			$(".min_seven_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
 
+			//Add font css
+			$(".min_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".min_fourth_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".min_six_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+
 		}
 	}
 	else if(currentSelectedValue == "max")
@@ -168,6 +177,11 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Button Class & Calculator Class Dynamically
 			$(".max_seven_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
 			$(".max_seven_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
+
+			//Add font css
+			$(".max_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".max_fourth_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".max_six_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 
 	}
@@ -198,6 +212,10 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Button Class & Calculator Class Dynamically
 			$(".abs_fifth_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
 			$(".abs_fifth_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
+
+			//Add font css
+			$(".abs_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".abs_fourth_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});	
 		}
 	}
 	else if(currentSelectedValue == "ceil")
@@ -225,7 +243,11 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 
 			//Add Button Class & Calculator Class Dynamically
 			$(".ceil_fifth_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
-			$(".ceil_fifth_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');	
+			$(".ceil_fifth_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
+
+			//Add font css
+			$(".ceil_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".ceil_fourth_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});	
 		}
 	}
 	else if(currentSelectedValue == "floor")
@@ -254,6 +276,10 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Button Class & Calculator Class Dynamically
 			$(".floor_fifth_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
 			$(".floor_fifth_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
+
+			//Add font css
+			$(".floor_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".floor_fourth_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}	
 	else if(currentSelectedValue == "round")
@@ -282,6 +308,10 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Button Class & Calculator Class Dynamically
 			$(".round_fifth_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
 			$(".round_fifth_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
+
+			//Add font css
+			$(".round_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".round_fourth_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "square")
@@ -310,6 +340,10 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Button Class & Calculator Class Dynamically
 			$(".square_fifth_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
 			$(".square_fifth_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
+
+			//Add font css
+			$(".square_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".square_fourth_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "square_root")
@@ -338,6 +372,10 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Button Class & Calculator Class Dynamically
 			$(".squareroot_fifth_element_"+equationCounter+"_"+classCounter).addClass('btn btn-info btn-sm');
 			$(".squareroot_fifth_element_"+equationCounter+"_"+classCounter+" .fa").addClass('fa-calculator');
+
+			//Add font css
+			$(".squareroot_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
+			$(".squareroot_fourth_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "pivot_point")
@@ -356,6 +394,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".pivotpoint_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".pivotpoint_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "pivot_point_r1")
@@ -374,6 +415,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".pivotpoint_r1_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".pivotpoint_r1_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "pivot_point_r2")
@@ -392,6 +436,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".pivotpoint_r2_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".pivotpoint_r2_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "pivot_point_s1")
@@ -410,6 +457,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".pivotpoint_s1_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".pivotpoint_s1_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "pivot_point_s2")
@@ -428,6 +478,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".pivotpoint_s2_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".pivotpoint_s2_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "sma")
@@ -448,6 +501,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".sma_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".sma_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "ema")
@@ -468,6 +524,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".ema_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".ema_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "wma")
@@ -488,6 +547,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".wma_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".wma_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "tma")
@@ -508,6 +570,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".tma_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".tma_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "stddva")
@@ -528,6 +593,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".stddva_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".stddva_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "parabolic_sar")
@@ -549,6 +617,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".parabolic_sar_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".parabolic_sar_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}	
 	else if(currentSelectedValue == "upper_bb")
@@ -569,6 +640,9 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 			//Add Element
 			$(".open_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
 			$(".upper_bb_equation_div").css('display','inline-block');
+
+			//Add font css
+			$(".upper_bb_first_element_"+equationCounter+"_"+classCounter).css({'color':'#000','font-weight':'bold'});
 		}
 	}
 	else if(currentSelectedValue == "lower_bb")
@@ -2181,7 +2255,7 @@ function open_filter_dropdown_click(equationCounter,classCounter)
 		{
 			var first_element = $(".open_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
 
-			var complete_appended_html = first_element; 
+			var complete_appended_html = first_element;
 
 			$(".timing_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
 			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-2)).css('display','none');
@@ -2224,11 +2298,294 @@ function timing_filter_label_click(equationCounter,classCounter)
 function timing_filter_dropdown_click(equationCounter,classCounter)
 {
 	var currentValue = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").text();
-	$(".timing_filter_label_"+equationCounter+"_"+classCounter).text(currentValue);
-	$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','');
-	$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+
+	var currentSelectedValue = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).val();
+
+	
+	if(currentSelectedValue == "Latest")
+	{
+		if(currentSelectedValue == "Latest")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".Latest_equation_div").css('display','inline-block');
+		}
+	}
+
+	else if(currentSelectedValue == "1_dayago")
+	{
+		if(currentSelectedValue == "1_dayago")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".1_dayago_equation_div").css('display','inline-block');
+		}
+	}
+	else if(currentSelectedValue == "2_dayago")
+	{
+		if(currentSelectedValue == "2_dayago")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".2_dayago_equation_div").css('display','inline-block');
+		}
+	}
+	else if(currentSelectedValue == "3_dayago")
+	{
+		if(currentSelectedValue == "3_dayago")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".3_dayago_equation_div").css('display','inline-block');
+		}
+	}
+	
+	else if(currentSelectedValue == "n_dayago")
+	{
+		if(currentSelectedValue == "n_dayago")
+		{
+			var entered_value = prompt("Enter Required Offset, 1 offset equals 1 candle");
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).text(entered_value+" "+"days ago");
+			
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+		}
+	}
+
+	else if(currentSelectedValue == "Weekly")
+	{
+		if(currentSelectedValue == "Weekly")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".Weekly_equation_div").css('display','inline-block');
+		}
+	}
+
+	else if(currentSelectedValue == "1_weekago")
+	{
+		if(currentSelectedValue == "1_weekago")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".1_weekago_equation_div").css('display','inline-block');
+		}
+	}
+
+	else if(currentSelectedValue == "2_weekago")
+	{
+		if(currentSelectedValue == "2_weekago")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".2_weekago_equation_div").css('display','inline-block');
+		}
+	}
+
+	else if(currentSelectedValue == "3_weekago")
+	{
+		if(currentSelectedValue == "3_weekago")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".3_weekago_equation_div").css('display','inline-block');
+		}
+	}
+
+	else if(currentSelectedValue == "n_weekago")
+	{
+		if(currentSelectedValue == "n_weekago")
+		{
+			var entered_value = prompt("Enter Required Offset, 1 offset equals 1 candle");
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).text(entered_value+" "+"week ago");
+			
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+		}
+	}
+
+	else if(currentSelectedValue == "Monthly")
+	{
+		if(currentSelectedValue == "Monthly")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".Monthly_equation_div").css('display','inline-block');
+		}
+	}
+
+	else if(currentSelectedValue == "1_monthago")
+	{
+		if(currentSelectedValue == "1_monthago")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".1_monthago_equation_div").css('display','inline-block');
+		}
+	}
+
+	else if(currentSelectedValue == "2_monthago")
+	{
+		if(currentSelectedValue == "2_monthago")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".2_monthago_equation_div").css('display','inline-block');
+		}
+	}
+
+	else if(currentSelectedValue == "3_monthago")
+	{
+		if(currentSelectedValue == "3_monthago")
+		{
+			var first_element = $(".timing_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").data('first_element');
+
+			var complete_appended_html = first_element;
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+
+			//Add Element
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).before(complete_appended_html);
+			$(".3_monthago_equation_div").css('display','inline-block');
+		}
+	}
+
+	else if(currentSelectedValue == "n_monthago")
+	{
+		if(currentSelectedValue == "n_monthago")
+		{
+			var entered_value = prompt("Enter Required Offset, 1 offset equals 1 candle");
+
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).text(entered_value+" "+"months ago");
+			
+			$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+			$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
+			$(".numeric_filter_label_"+equationCounter+"_"+(classCounter-1)).css('display','none');
+		}
+	}
+	else
+	{
+		$(".timing_filter_label_"+equationCounter+"_"+classCounter).text(currentValue);
+		$(".timing_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+		$(".timing_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+	}
+
+		
 }
 
+/*var currentValue = $(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").text();
+
+	var currentSelectedValue = $(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).val();
+
+	if(currentSelectedValue == "-n")
+	{
+		var entered_value = prompt("Enter Required Offset, 1 offset equals 1 candle");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).text("["+"-"+entered_value+"]");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+		$(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');		
+	}
+
+else
+	{
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).text("["+currentValue+"]");
+		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).css('display','');
+		$(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+	}*/
 
 
 //-----------------------------------------------------------------------------------------------

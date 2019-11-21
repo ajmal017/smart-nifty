@@ -23,22 +23,18 @@ function arith_dropdown_click(equationCounter,classCounter)
 	$(".arith_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
 }
 
-/*$(document).on('blur','#filterRule3Div #closeDropdown',function(){
-	closeDropDownBlur('filterRule3Div','filterRule3');
-});
 
+//Function For Arithmatic Dropdown Click
 
-$(document).on('blur','".arith_dropdown_"+equationCounter+"_"+classCounter',function(){
-	closeDropDownBlur('filterRule11Div','filterRule11');
-});*/
-
-
-/*function closeDropDownBlur(element_id,span_id)
+function arith_dropdown_select(equationCounter,classCounter)
 {
+		$(".arith_label_"+equationCounter+"_"+classCounter).css('display','none');
+		$(".arith_dropdown_"+equationCounter+"_"+classCounter).css('display','');	
+}
 
-	$("#"+element_id+" #"+span_id).css('display','');
-	$("#"+element_id+" #closeDropdown").css('display','none');
-}*/
+$(document).on('blur','".arith_label_"+equationCounter+"_"+classCounter',function(){
+	arith_label_select('equationCounter','classCounter');
+});
 
 //-----------------------------------------------------------------------------------------------
 

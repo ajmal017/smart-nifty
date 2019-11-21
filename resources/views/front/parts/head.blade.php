@@ -27,7 +27,7 @@
                                 <div class="home"><a href="<?php echo url('/'); ?>">Home</a></div>
                                 <div class="about"><a href="#">About</a></div>
                                 <div class="screener"><a href="/screeners">Screeners</a><br/>
-                                	<a href="/createscan" class="sub">Create Scan</a>
+                                	<!-- <a href="/createscan" class="sub">Create Scan</a> -->
                                 </div>
                                 <div class="chart"><a href="#">Charts</a></div>
                                 <!-- <li class="has-child">

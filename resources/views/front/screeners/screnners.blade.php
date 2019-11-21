@@ -37,7 +37,7 @@
 
 <div class="service-area sp" style="padding-top: 50px;">
     <div class="container outerDiv">
-        <div class="section-title" data-margin="0 0 40px">
+        <div class="section-title" data-margin="0 0 10px">
         	@php
         		$screenerName = str_replace('-',' ',$screenerName)
         	@endphp
@@ -55,9 +55,9 @@
 	            		</div>
 	            	@endforeach
 
-            		<div class="col-md-12 mb-2 text-left">
+            		<!-- <div class="col-md-12 mb-2 text-left">
         				<button class="btn btn-default filter"><i class="fa fa-filter" aria-hidden="true"></i></button>
-        			</div>
+        			</div> -->
 
 	            </div>
 			</div> 	
@@ -67,7 +67,7 @@
         <div class="row">
         	<div class="col-md-3">
         		<button class="btn btn-success">Run Scan</button>
-        		<button class="btn btn-success"><i class="fa fa-copy"></i>&nbsp;Copy Scan</button>
+        		<!-- <button class="btn btn-success"><i class="fa fa-copy"></i>&nbsp;Copy Scan</button> -->
         	</div>
         </div>
 

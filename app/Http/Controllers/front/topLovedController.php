@@ -48,7 +48,7 @@ class topLovedController extends Controller
                     if($tempCount == 1){
                          $headingEquation .= "<label>Stock <span class='m1_bold m1_span_".$headingEquationClassCounter."' onclick=span_click('m1','span',".$headingEquationClassCounter.")>".$tmpHeadingEquation[1]." </span>";
 
-                         $headingEquation .= "<select id='m1_select_".$headingEquationClassCounter."' style='display: none;' onchange=select_click('m1','select',".$headingEquationClassCounter.")>";
+                         $headingEquation .= "<select class='get_equation_data' id='m1_select_".$headingEquationClassCounter."' style='display: none;' onchange=select_click('m1','select',".$headingEquationClassCounter.")>";
                          $headingEquation .= "<option value='passes'>passes</option>";
                          $headingEquation .= "<option value='fails'>fails</option>";
                          $headingEquation .= "</select>";
@@ -109,8 +109,8 @@ class topLovedController extends Controller
 
                               $finalReturnHTML .= '<select class="arith_dropdown arith_dropdown_'.$equation_counter.'_'.$class_counter.'" style="display:none;" onchange="arith_dropdown_click('.$equation_counter.','.$class_counter.')">';
                               $finalReturnHTML .= '<option value="....">Please select a operation</option>';
-                              $finalReturnHTML .= "<option value='remove'
-                                   data-first_element='<div class=remove_equation_div><label class=remove_first_element_".$equation_counter."_".$class_counter.">Remove operations on right</label></div>'>Remove operations on right</option>";
+                              /*$finalReturnHTML .= "<option value='remove'
+                                   data-first_element='<div class=remove_equation_div><label class=remove_first_element_".$equation_counter."_".$class_counter.">Remove operations on right</label></div>'>Remove operations on right</option>";*/
                               $finalReturnHTML .= '<optgroup label="--Arithmetic Operations--">';
                               $finalReturnHTML .= '<option value="+">+</option>';
                               $finalReturnHTML .= '<option value="-">-</option>';

@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
     $(".m2_bold").css({'color':'red','font-weight':'bold'});
     $(".m1_bold").css({'color':'red','font-weight':'bold'});
     $(".m3_bold").css({'color':'red','font-weight':'bold'});
@@ -2586,25 +2586,6 @@ function timing_filter_dropdown_click(equationCounter,classCounter)
 
 		
 }
-
-/*var currentValue = $(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter+" option:selected").text();
-
-	var currentSelectedValue = $(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).val();
-
-	if(currentSelectedValue == "-n")
-	{
-		var entered_value = prompt("Enter Required Offset, 1 offset equals 1 candle");
-		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).text("["+"-"+entered_value+"]");
-		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).css('display','');
-		$(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');		
-	}
-
-else
-	{
-		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).text("["+currentValue+"]");
-		$(".numeric_filter_label_"+equationCounter+"_"+classCounter).css('display','');
-		$(".numeric_filter_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
-	}*/
 
 
 //-----------------------------------------------------------------------------------------------

@@ -109,8 +109,6 @@ class topLovedController extends Controller
 
                               $finalReturnHTML .= '<select class="arith_dropdown arith_dropdown_'.$equation_counter.'_'.$class_counter.'" style="display:none;" onchange="arith_dropdown_click('.$equation_counter.','.$class_counter.')">';
                               $finalReturnHTML .= '<option value="....">Please select a operation</option>';
-                              /*$finalReturnHTML .= "<option value='remove'
-                                   data-first_element='<div class=remove_equation_div><label class=remove_first_element_".$equation_counter."_".$class_counter.">Remove operations on right</label></div>'>Remove operations on right</option>";*/
                               $finalReturnHTML .= '<optgroup label="--Arithmetic Operations--">';
                               $finalReturnHTML .= '<option value="+">+</option>';
                               $finalReturnHTML .= '<option value="-">-</option>';
@@ -200,8 +198,6 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "</optgroup>";
                               $finalReturnHTML .= "<optgroup label='--Math Functions--'>";
 
-                              
-                              //$finalReturnHTML .= '<option value="brackets" data-equation="">Bracket(value)</option>';
                               $finalReturnHTML .= "<option value='brackets' data-first_element='<div class=bracket_equation_div><label class=bracket_first_element_".$equation_counter."_".$class_counter.">Bracket</label>' data-second_element='<label class=bracket_second_element_".$equation_counter."_".$class_counter.">(</label>' data-third_element='<label class=bracket_third_element_".$equation_counter."_".$class_counter.">Latest</label>' data-fourth_element='<label class=bracket_fourth_element_".$equation_counter."_".$class_counter.">Open</label>' data-fifth_element='<button type=button class=bracket_fifth_element_".$equation_counter."_".$class_counter."><i class=fa></i></button>' data-sixth_element='<label class=bracket_sixth_element_".$equation_counter."_".$class_counter.">)</label></div>'>Bracket(value)</option>";
 
                               $finalReturnHTML .= "<option value='min' data-first_element='<div class=min_equation_div><label class=min_first_element_".$equation_counter."_".$class_counter.">Min</label>' data-second_element='<label class=min_second_element_".$equation_counter."_".$class_counter.">(</label>'

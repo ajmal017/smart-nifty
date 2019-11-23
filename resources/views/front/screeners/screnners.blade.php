@@ -66,7 +66,7 @@
 
         <div class="row">
         	<div class="col-md-3">
-        		<button class="btn btn-success">Run Scan</button>
+        		<button class="btn btn-success" id="runscan">Run Scan</button>
         		<!-- <button class="btn btn-success"><i class="fa fa-copy"></i>&nbsp;Copy Scan</button> -->
         	</div>
         </div>

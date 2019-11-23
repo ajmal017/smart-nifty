@@ -1,4 +1,12 @@
-$(document).ready(function() {
+$("#runscan").click(function(){	
+	var data = $("#headingequation").html();
+    var array = data.split("<span></span>");
+ 	document.write(array);
+});
+
+
+
+$( document ).ready(function() {
     $(".m2_bold").css({'color':'red','font-weight':'bold'});
     $(".m1_bold").css({'color':'red','font-weight':'bold'});
     $(".m3_bold").css({'color':'red','font-weight':'bold'});

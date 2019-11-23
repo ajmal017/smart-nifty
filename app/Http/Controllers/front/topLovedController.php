@@ -46,9 +46,10 @@ class topLovedController extends Controller
                foreach($headingEquationParts as $value6){
                     $tmpHeadingEquation = explode(':',$value6);
                     if($tempCount == 1){
-                         $headingEquation .= "<label>Stock <span class='m1_bold m1_span_".$headingEquationClassCounter."' onclick=span_click('m1','span',".$headingEquationClassCounter.")>".$tmpHeadingEquation[1]." </span>";
+                         $headingEquation .= "<label id='headingequation'>Stock <span class='m1_bold m1_span_".$headingEquationClassCounter."' onclick=span_click('m1','span',".$headingEquationClassCounter.")>".$tmpHeadingEquation[1]." </span>";
 
-                         $headingEquation .= "<select class='get_equation_data' id='m1_select_".$headingEquationClassCounter."' style='display: none;' onchange=select_click('m1','select',".$headingEquationClassCounter.")>";
+                         $headingEquation .= "<select id='m1_select_".$headingEquationClassCounter."' style='display: none;' onchange=select_click('m1','select',".$headingEquationClassCounter.")
+                              onclick='GetSelectedValue(".$headingEquationClassCounter.")'>";
                          $headingEquation .= "<option value='passes'>passes</option>";
                          $headingEquation .= "<option value='fails'>fails</option>";
                          $headingEquation .= "</select>";

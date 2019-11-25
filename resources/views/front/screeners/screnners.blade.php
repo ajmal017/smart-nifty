@@ -123,8 +123,6 @@
 	<script src="{{ asset('assets/js/screeners_js/headingEquation.js') }}"></script>
 	<script src="{{ asset('assets/js/screeners_js/mainEquation.js') }}"></script>
 	<script src="{{ asset('assets/js/screeners_js/onBlur.js') }}"></script>
-
-	<script src="{{ asset('assets/js/screeners_js/getScanData.js') }}"></script>
 	
 
 	<script type="text/javascript">

@@ -2,7 +2,8 @@
 
 function arith_dropdown_blur(equation_counter,class_counter)
 {
-	//alert("Hi");
+	$(".arith_dropdown_"+equation_counter+"_"+class_counter).css('display','none');
+	$(".arith_label_"+equation_counter+"_"+class_counter).css('display','inline-block');
 }
 
 

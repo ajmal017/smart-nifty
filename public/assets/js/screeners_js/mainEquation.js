@@ -1,8 +1,8 @@
-$("#runscan").click(function(){	
+/*$("#runscan").click(function(){	
 	var data = $("#headingequation").html();
     var array = data.split("<span></span>");
  	document.write(array);
-});
+});*/
 
 
 
@@ -36,8 +36,8 @@ function arith_dropdown_click(equationCounter,classCounter)
 
 function arith_dropdown_select(equationCounter,classCounter)
 {
-		$(".arith_label_"+equationCounter+"_"+classCounter).css('display','none');
-		$(".arith_dropdown_"+equationCounter+"_"+classCounter).css('display','');	
+	$(".arith_label_"+equationCounter+"_"+classCounter).css('display','none');
+	$(".arith_dropdown_"+equationCounter+"_"+classCounter).css('display','');	
 }
 
 $(document).on('blur','".arith_label_"+equationCounter+"_"+classCounter',function(){

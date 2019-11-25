@@ -44,8 +44,11 @@
             <h4 class="text-left">{{$screenerName}} Screener</h4>
 
             <div class="header">
-            	<div class="equvation">
-            		@foreach($finalHeadingData as $value)
+            	@php
+            		$cnt = 1;
+            	@endphp
+            	@foreach($finalHeadingData as $value)
+            		<div class="equvation equvation_<?php echo $cnt; ?>">
 	            		<div class="col-md-12 mt-1 heading_equation_div">
 	            			<p class="text-left">{!! $value !!}</p>
 	            		</div>
@@ -53,13 +56,11 @@
 	            		<div class="col-md-12 mb-2 text-left main_equation_div" style="padding-left: 25px;">
 	            			<p>{!! $finalScreenersData[$value] !!}</p>
 	            		</div>
-	            	@endforeach
-
-            		<!-- <div class="col-md-12 mb-2 text-left">
-        				<button class="btn btn-default filter"><i class="fa fa-filter" aria-hidden="true"></i></button>
-        			</div> -->
-
-	            </div>
+	            	</div>
+	            	@php
+	            		$cnt++;
+	            	@endphp
+            	@endforeach
 			</div> 	
 
         </div>
@@ -122,6 +123,8 @@
 	<script src="{{ asset('assets/js/screeners_js/headingEquation.js') }}"></script>
 	<script src="{{ asset('assets/js/screeners_js/mainEquation.js') }}"></script>
 	<script src="{{ asset('assets/js/screeners_js/onBlur.js') }}"></script>
+
+	<script src="{{ asset('assets/js/screeners_js/getScanData.js') }}"></script>
 	
 
 	<script type="text/javascript">

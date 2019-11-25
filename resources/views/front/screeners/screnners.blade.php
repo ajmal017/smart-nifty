@@ -61,7 +61,11 @@
 	            		$cnt++;
 	            	@endphp
             	@endforeach
-			</div> 	
+			</div>
+
+			<form id="main_equation_data_form" style="display: none;">
+				
+			</form>
 
         </div>
 

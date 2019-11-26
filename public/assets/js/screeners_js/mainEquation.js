@@ -3,24 +3,59 @@ $(document).on('click','#runscan',function(){
 		This Code Will Get The Data Of Heading Equation
 		-----------------------------------------------
 	**/
-	var headingVal1_arr = [];
-	var headingVal2_arr = [];
-	var headingVal3_arr = [];
+		var headingVal1_arr = [];
+		var headingVal2_arr = [];
+		var headingVal3_arr = [];
 
-	var mainDivLength = $(".equvation").length;
-	for(var i=1;i<=mainDivLength;i++)
-	{
-		var tmpHeadingVal1 = $(".equvation_"+i).find(".m1_span_"+i).text();
-		var tmpHeadingVal2 = $(".equvation_"+i).find(".m2_span_"+i).text();
-		var tmpHeadingVal3 = $(".equvation_"+i).find(".m3_span_"+i).text();
+		var mainDivLength = $(".equvation").length;
+		for(var i=1;i<=mainDivLength;i++)
+		{
+			var tmpHeadingVal1 = $(".equvation_"+i).find(".m1_span_"+i).text();
+			var tmpHeadingVal2 = $(".equvation_"+i).find(".m2_span_"+i).text();
+			var tmpHeadingVal3 = $(".equvation_"+i).find(".m3_span_"+i).text();
 
-		headingVal1_arr.push(tmpHeadingVal1);
-		headingVal2_arr.push(tmpHeadingVal2);
-		headingVal3_arr.push(tmpHeadingVal3);
-	}
+			headingVal1_arr.push(tmpHeadingVal1);
+			headingVal2_arr.push(tmpHeadingVal2);
+			headingVal3_arr.push(tmpHeadingVal3);
+		}
 
 	/**
 		-------------------------------------------------
+	**/
+
+
+
+	/**
+		This Code Will Get Main Equation Data
+		-------------------------------------
+	**/
+		var main_equation_arr = [];
+
+		var mainEquationLen = $(".main_eq_div").length;
+		for(var i=1;i<=mainEquationLen;i++)
+		{
+			var tmpMainString = $(".main_eq_div_"+i).find("label").text().split('sep');
+			tmpMainString = tmpMainString.filter(function (el){
+				return el != "";
+			});
+
+			var mainTmpString = [];
+			for(var j=0;j<tmpMainString.length;j++)
+			{
+				var childTmpString = tmpMainString[j].split('child');
+				childTmpString = childTmpString.filter(function (el){
+					return el != "";
+				});
+				mainTmpString.push(childTmpString);
+			}
+
+			main_equation_arr.push(mainTmpString);
+		}
+
+		console.log(main_equation_arr);
+
+	/**
+		-------------------------------------
 	**/
 });
 
@@ -48,7 +83,7 @@ function arith_dropdown_click(equationCounter,classCounter)
 	var currentValue = $(".arith_dropdown_"+equationCounter+"_"+classCounter+" option:selected").text();
 	$(".arith_label_"+equationCounter+"_"+classCounter).text(currentValue);
 	$(".arith_label_"+equationCounter+"_"+classCounter).css('display','');
-	$(".arith_dropdown_"+equationCounter+"_"+classCounter).css('display','none');	
+	$(".arith_dropdown_"+equationCounter+"_"+classCounter).css('display','none');
 }
 
 
@@ -60,9 +95,9 @@ function arith_dropdown_select(equationCounter,classCounter)
 	$(".arith_dropdown_"+equationCounter+"_"+classCounter).css('display','');	
 }
 
-$(document).on('blur','".arith_label_"+equationCounter+"_"+classCounter',function(){
+/*$(document).on('blur','".arith_label_"+equationCounter+"_"+classCounter',function(){
 	arith_label_select('equationCounter','classCounter');
-});
+});*/
 
 //-----------------------------------------------------------------------------------------------
 

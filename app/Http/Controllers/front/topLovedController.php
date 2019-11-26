@@ -129,6 +129,9 @@ class topLovedController extends Controller
                               $finalReturnHTML .= '</optgroup>';
                               $finalReturnHTML .= '</select>';
 
+
+                              $finalReturnHTML .= "<label style='display:none;'>child</label>";
+
                          }
                          else if($tempEquation2[0] == "b1"){
                          //This is Numeric Filter Condition
@@ -163,6 +166,9 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "<option value='=-n'>-nth last candle of previous day</option>";
                               $finalReturnHTML .= "</optgroup>";
                               $finalReturnHTML .= "</select>";
+
+
+                              $finalReturnHTML .= "<label style='display:none;'>child</label>";
                          }
                          else if($tempEquation2[0] == "c1"){
                               //This is Bracket() Code
@@ -581,6 +587,7 @@ class topLovedController extends Controller
                               $finalReturnHTML .= '</select>';
 
 
+                              $finalReturnHTML .= "<label style='display:none;'>child</label>";
 
                          }
                          else if($tempEquation2[0] == "d1"){
@@ -672,6 +679,9 @@ class topLovedController extends Controller
                               $finalReturnHTML .= "<option value='n_monthago'>n months ago</option>";
 
                               $finalReturnHTML .= "</select>";
+
+
+                              $finalReturnHTML .= "<label style='display:none;'>child</label>";
                          }
                          else if($tempEquation2[0] == "other"){
                               if($tempEquation2[1] == "("){
@@ -693,10 +703,14 @@ class topLovedController extends Controller
                               else if($tempEquation2[1] == ")"){
                                    $finalReturnHTML .= ")";
                               }
+
+
+                              $finalReturnHTML .= "<label style='display:none;'>child</label>";
                          }
                     }
 
                     $finalReturnHTML .= "<br />";
+                    $finalReturnHTML .= "<label style='display:none;'>sep</label>";
                }
 
                $headingEquationCounter++;

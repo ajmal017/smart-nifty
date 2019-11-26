@@ -54,7 +54,7 @@
 	            		</div>
 
 	            		<div class="col-md-12 mb-2 text-left main_equation_div" style="padding-left: 25px;">
-	            			<p>{!! $finalScreenersData[$value] !!}</p>
+	            			<p class="main_eq_div main_eq_div_<?php echo $cnt; ?>">{!! $finalScreenersData[$value] !!}</p>
 	            		</div>
 	            	</div>
 	            	@php
@@ -64,7 +64,6 @@
 			</div>
 
 			<form id="main_equation_data_form" style="display: none;">
-				
 			</form>
 
         </div>

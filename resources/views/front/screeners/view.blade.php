@@ -58,22 +58,22 @@
                             <!-- <li class="list-group-item list-group-item-light"><a href="/screeners/Wipro">Wipro</a></li> -->
                             <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/15-Minute-Stock-Breakouts">15 Minute stock Breakouts</a></li>
                             
-                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Short-Term-Breakouts">Short term Breakouts</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Short Tream Breakouts">Short term Breakouts</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Last-15-Minutes-intraday">Intraday buying seen in the Past 15 minutes</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Bulish-For-Next-Day">Bulish for next day</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Intraday buying seen in the Past 15 minutes">Intraday buying seen in the Past 15 minutes</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Bulish for next day">Bulish for next day</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Supertrend-10-Mins">Supertrend positive breakout - 10 mins</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Volume-Shockers">Volume shockers(stocks with rising volumes)</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Supertrend positive breakout - 10 mins">Supertrend positive breakout - 10 mins</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Volume Shockers(stocks with rising volumes)">Volume shockers(stocks with rising volumes)</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Perfect-Sell">Perfect sell(short)</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Nks-best-buy-stocks">NKs best buy stocks for intraday</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Perfect Sell(Short)">Perfect sell(short)</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/NKs best buy stocks for intraday">NKs best buy stocks for intraday</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Potential-Breakout">Potential breakouts</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Strong-Breakout">Strong stocks</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Potential breakouts">Potential breakouts</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Strong Stocks">Strong stocks</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/Macd-Bearish">Macd bearish or bullish crossover</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Daily-rsi">Daily rsi oversold/overbought scan</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/topLoved/MACD Bearish or Bullish crossover">Macd bearish or bullish crossover</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/topLoved/Daily RSI Oversold/Overbought scan">Daily rsi oversold/overbought scan</a></li>
                         </ul>
                     </div>
                 </div>

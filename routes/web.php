@@ -29,6 +29,9 @@ Route::resource('/screeners','front\screenerController');
 
 //Route Of Screener Second Detail Page
 Route::get('/screeners/topLoved/{screenerName}','front\topLovedController@index');
+Route::get('/screeners/candleStick/{screenerName}','front\CandleStickController@index');
+Route::get('/screeners/rangeBreakout/{screenerName}','front\RangeBreakoutController@index');
+Route::get('/screeners/builshScan/{screenerName}','front\BuilshScanController@index');
 
 
 

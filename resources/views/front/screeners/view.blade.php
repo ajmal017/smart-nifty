@@ -85,25 +85,25 @@
                     <div class="card-body">
                         <h4 class="text-primary text-left">Candlestick Patterns Scan</h4>
                         <ul class="list-group text-left">
-                            <li class="list-group-item list-group-item-light"><a href="#">15 Minute stock Breakouts</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Short term Breakouts</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/candleStick/15-Minute-Stock-Breakouts">15 Minute stock Breakouts</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/candleStick/Short Tream Breakouts">Short term Breakouts</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Supertrend positive breakout - 10 mins</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Volume spike on 1 minute candle</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/candleStick/Supertrend positive breakout - 10 mins">Supertrend positive breakout - 10 mins</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/candleStick/Volume spike on 1 minute candle">Volume spike on 1 minute candle</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Top Shares for 2018 - stocks to invest in</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Morning star candlestick pattern</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/candleStick/Top Shares for 2018 - Stocks to invest in">Top Shares for 2018 - stocks to invest in</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/candleStick/Morning Star Candlestick pattern">Morning star candlestick pattern</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Doji</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Evening star candlestick pattern</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/candleStick/Doji">Doji</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/candleStick/Evening Star Candlestick Pattern">Evening star candlestick pattern</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Buy Entry intraday</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Positive hammer</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/candleStick/Buy entry intraday">Buy Entry intraday</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/candleStick/Positive Hammer">Positive hammer</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Sell entry intraday</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Breakout intraday</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/candleStick/Sell entry intraday">Sell entry intraday</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/candleStick/Breakout intraday">Breakout intraday</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Breakout days high - 5 mins</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/candleStick/Breaking Days High - 5 Mins">Breakout days high - 5 mins</a></li>
                         </ul>
                     </div>
                 </div>
@@ -116,25 +116,25 @@
                     <div class="card-body">
                         <h4 class="text-primary text-left">Range Breakouts Scan</h4>
                         <ul class="list-group text-left">
-                            <li class="list-group-item list-group-item-light"><a href="#">52 week breakout</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Nr7 - current day</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/rangeBreakout/52 week breakout">52 week breakout</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/rangeBreakout/NR7- CURRENT DAY">Nr7 - current day</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Range breakout with volume</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Narrow range 7 - nr7</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/rangeBreakout/Range Break Out With Volume">Range breakout with volume</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/rangeBreakout/Narrow Range 7 - NR7">Narrow range 7 - nr7</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">52 week low</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Ohol+prb</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/rangeBreakout/52 WEEK LOW">52 week low</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/rangeBreakout/OHOL PRB">Ohol+prb</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Nr7+nr4 with inside</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Technical indicators</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/rangeBreakout/NR7 NR4 with INSIDE">Nr7+nr4 with inside</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/rangeBreakout/Technical Indicators">Technical indicators</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Yesterday's nr7 Stocks</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Nr7 ib - nr7 stocks with inside bar pattern by www.squareoff.in</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/rangeBreakout/Yesterdays NR7 Stocks">Yesterday's nr7 Stocks</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/rangeBreakout/NR7 IB">Nr7 ib - nr7 stocks with inside bar pattern by www.squareoff.in</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">003-nr7-9:30 buy scan</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Bollinger band squeeze</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/rangeBreakout/003 NR7">003-nr7-9:30 buy scan</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/rangeBreakout/Bollinger band Squeeze">Bollinger band squeeze</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Nr7-fut</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/rangeBreakout/NR7 FUT">Nr7-fut</a></li>
                         </ul>
                     </div>
                 </div>
@@ -146,25 +146,25 @@
                     <div class="card-body">
                         <h4 class="text-primary text-left">Bulish Scan</h4>
                         <ul class="list-group text-left">
-                            <li class="list-group-item list-group-item-light"><a href="#">Bulish for next day</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Macd bearish or bulish crossover</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/builshScan/Bulish for next day">Bulish for next day</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/builshScan/MACD Bearish or Bullish crossover">Macd bearish or bulish crossover</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Bulish engulfing - strong</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Pure bulish trend stocks</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/builshScan/Bullish Engulfing Strong">Bulish engulfing - strong</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/builshScan/Pure bullish trend stocks">Pure bulish trend stocks</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">2 days bulish by tomorrow</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Bulish engulfing pattern</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/builshScan/2 days Bullish">2 days bulish by tomorrow</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/builshScan/Bullish Engulfing Pattern">Bulish engulfing pattern</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Golden Crossover</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Morning Star - bullish pattern</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/builshScan/Golden Crossover">Golden Crossover</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/builshScan/Morning Star">Morning Star - bullish pattern</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Bullish-rsi-stochastic</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Bullish engulf</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/builshScan/Bullish-rsi-stochastic">Bullish-rsi-stochastic</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/builshScan/Bullish Engulf">Bullish engulf</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Tradersway buy</a></li>
-                            <li class="list-group-item list-group-item-dark"><a href="#">Tss momentum long</a></li>
+                            <li class="list-group-item list-group-item-light"><a href="/screeners/builshScan/Tradersway Buy">Tradersway buy</a></li>
+                            <li class="list-group-item list-group-item-dark"><a href="/screeners/builshScan/TSS Momentum Long">Tss momentum long</a></li>
 
-                            <li class="list-group-item list-group-item-light"><a href="#">Pvc screener @ druzbeh</a></li>
+                            <!-- <li class="list-group-item list-group-item-light"><a href="/screeners/builshScan/Short Tream Breakouts">Pvc screener @ druzbeh</a></li> -->
                         </ul>
                     </div>
                 </div>

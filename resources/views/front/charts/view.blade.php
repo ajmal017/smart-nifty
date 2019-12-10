@@ -1,4 +1,4 @@
-    @extends('front.app')
+@extends('front.app')
 
 @section('title', '| Screeners')
 
@@ -85,16 +85,119 @@
 			
 		}
 	</style>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="assets/css/custom.css">
+
 @endsection
 
 @section('content')
 
 <div class="service-area sp">
     <div class="container">
+
+        <div class="row">    
+            <div class="col-lg-12">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">    
+                            <div class="col-xs-4">
+                                <h3 style="margin: 0px;margin-left: 5px;font-size:20px">Jaihind Projects Limited</h3>
+                            </div>
+
+                            <div class="col-xs-4">
+                                <p id="iditext" class="text-center">Minimize Indicators</p>
+                            </div>
+
+                            <div class="col-xs-4">
+                                <div>NSE
+                                    <b>»</b><a href="https://chartink.com/stocks/JAIHINDPRO.html">JAIHINDPRO</a> AND
+                                    BSE <b>»</b><a href="https://chartink.com/stocks/531339.html">531339</a></div>
+                            </div>    
+                        </div>
+                    </div>
+
+
+                    <div class="panel-body">
+                        
+                        <div class="row p-3 panel-row">
+                            <div class="col-xs-5 shadow panel-row-1">
+                                <div id="exTab2"> 
+                                    <ul class="nav nav-tabs">
+                                            <li class="active"><a  href="#1" data-toggle="tab">Lower Indicators</a>
+                                            </li>
+                                            <li><a href="#2" data-toggle="tab">Upper Overlays</a>
+                                            </li>
+                                            <li><a href="#3" data-toggle="tab">Moving Avgs</a>
+                                            </li>
+                                    </ul>
+
+                                    <div class="tab-content ">
+                                        <div class="tab-pane active" id="1">
+                                            <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
+                                        </div>
+                                        <div class="tab-pane" id="2">
+                                            <h3>Notice the gap between the content and tab after applying a background color</h3>
+                                        </div>
+                                        <div class="tab-pane" id="3">
+                                            <h3>add clearfix to tab-content (see the css)</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="col-xs-2 shadow panel-row-2">
+                                <h1>dfdf</h1>
+                            </div>
+
+                            <div class="col-xs-5 shadow panel-row-3">
+                                <div id="exTab2"> 
+                                    <ul class="nav nav-tabs">
+                                            <li class="active"><a  href="#4" data-toggle="tab">Alerts</a>
+                                            </li>
+                                            <li><a href="#5" data-toggle="tab">Drawing Tools</a>
+                                            </li>
+                                            <li><a href="#6" data-toggle="tab">Other Settings</a>
+                                            </li>
+                                    </ul>
+
+                                    <div class="tab-content ">
+                                        <div class="tab-pane active" id="4">
+                                            <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
+                                        </div>
+                                        <div class="tab-pane" id="5">
+                                            <h3>Notice the gap between the content and tab after applying a background color</h3>
+                                        </div>
+                                        <div class="tab-pane" id="6">
+                                            <h3>add clearfix to tab-content (see the css)</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>        
+             </div>
+        </div>    
+        
+
+
+
+
+
+
+
+
+
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-header"><h3>{{$stockName}}</h3></div>
+                    <div class="card-header"><h3>stockName</h3></div>
                     <div class="card-body">
                         	<div class="row toolbar">
 	                            <div class="col-lg-8 toolbar-inner">
@@ -147,8 +250,8 @@
 
 
 
-        $(document).ready(function(){
-            var result_Data = JSON.parse('<?php echo $apiData; ?>');
+        /*$(document).ready(function(){
+            var result_Data = JSON.parse('<?php //echo $apiData; ?>');
             const chart = LightweightCharts.createChart(document.getElementById('chart_div'), {
                 width: 1050,
                 height: 300,
@@ -239,7 +342,7 @@
 
         $(document).on('click','#tool5',function(){
            document.getElementById("tool5").style.cursor="crosshair";
-        });
+        });*/
 
         </script>
 

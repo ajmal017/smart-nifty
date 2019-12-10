@@ -39,7 +39,8 @@ Route::get('/screeners/builshScan/{screenerName}','front\BuilshScanController@in
 //Route For Get Chart Of Specific Stock
 
 Route::post('/screeners_get','front\chartController@getlivedata');
-Route::get('/chart/{screener_name}/{stock_name}','front\chartController@index');
+//Route::get('/chart/{screener_name}/{stock_name}','front\chartController@index');
+Route::get('/chart/','front\chartController@index');
 
 
 

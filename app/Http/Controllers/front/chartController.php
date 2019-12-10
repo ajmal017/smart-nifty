@@ -13,7 +13,7 @@ class chartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($screener_name,$stock_name)
+    /*public function index($screener_name,$stock_name)
     {
         $screener_name = $screener_name;
         $stockName = $stock_name;
@@ -32,7 +32,7 @@ class chartController extends Controller
             --------------------------------------------------
         **/
 
-        $latestDate = $api_data[0]->Date;
+        /*$latestDate = $api_data[0]->Date;
         $tmpDates = explode('/',$latestDate);
         $tmpYear = substr($tmpDates[2],0,2);
         $finalYear = 2000 + ((int)$tmpYear);
@@ -48,7 +48,7 @@ class chartController extends Controller
         **/
 
 
-        $finalApiData = array();
+        /*$finalApiData = array();
         foreach($api_data as $value){
             $tmpApiData = array();  
 
@@ -92,6 +92,11 @@ class chartController extends Controller
         $apiData = json_encode($finalApiData);
 
         return view('front\charts\view',compact('apiData','stockName'));
+    }*/
+
+    public function index()
+    {
+        return view('front\charts\view');
     }
 
     /**

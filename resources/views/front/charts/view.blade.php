@@ -135,21 +135,173 @@
                                     </ul>
 
                                     <div class="tab-content ">
-                                        <div class="tab-pane active" id="1">
-                                            <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
+                                        <div class="tab-pane active tabs" id="1">
+                                                <table class="table table-striped table-responsive">
+                                                  <tbody>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Accumulation/Distribution</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Aroon Oscillator</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Aroon Up/Down</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
                                         </div>
-                                        <div class="tab-pane" id="2">
-                                            <h3>Notice the gap between the content and tab after applying a background color</h3>
+                                        <div class="tab-pane tabs" id="2">
+                                            <table class="table table-striped table-responsive">
+                                                  <tbody>
+                                                    <tr>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab2_c2">Bollinger Band</td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab2_c2">Parabolic SAR</td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab2_c2">Donchain Channel</td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                    </tr>
+                                                  </tbody>
+                                            </table>
                                         </div>
-                                        <div class="tab-pane" id="3">
-                                            <h3>add clearfix to tab-content (see the css)</h3>
+                                        <div class="tab-pane tabs" id="3">
+                                            <table class="table table-striped table-responsive">
+                                                  <tbody>
+                                                    <tr>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab3_c2">Moving avg 1</td>
+                                                        <td class="tab3_c3"><select class="selectbox" name="a1t">
+                                                            <option value="o">Open</option>
+                                                            <option value="h">High</option>
+                                                            <option value="l">Low</option>
+                                                            <option value="c" selected="selected">Close</option>
+                                                        </select></td>
+
+                                                        <td class="tab3_c4">
+                                                            <select class="selectbox1" name="a1t">
+                                                                <option value="SMA" selected="selected">Simple</option>
+                                                                <option value="EMA">Exponential</option>
+                                                                <option value="l">Low</option>
+                                                                <option value="WMA">Weighted</option>
+                                                                <option value="TMA">Triangular</option>
+                                                            </select>
+                                                        </select></td>    
+                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab3_c2">Moving avg 2</td>
+                                                        <td class="tab3_c3"><select class="selectbox" name="a1t">
+                                                            <option value="o">Open</option>
+                                                            <option value="h">High</option>
+                                                            <option value="l">Low</option>
+                                                            <option value="c" selected="selected">Close</option>
+                                                        </select></td>
+                                                        
+                                                        <td class="tab3_c4">
+                                                            <select class="selectbox1" name="a1t">
+                                                                <option value="SMA" selected="selected">Simple</option>
+                                                                <option value="EMA">Exponential</option>
+                                                                <option value="l">Low</option>
+                                                                <option value="WMA">Weighted</option>
+                                                                <option value="TMA">Triangular</option>
+                                                            </select>
+                                                        </select></td>    
+                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" /></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                     
                             <div class="col-xs-2 shadow panel-row-2">
-                                <h1>dfdf</h1>
+                                
+                                    <div class="col-xs-4">
+                                        <b>Period: </b>
+                                    </div>
+
+                                    
+
+                                    <div class="col-xs-8">
+                                        <select id="ti" name="ti" style="font-family:Verdana,Helvetica,Arial,Geneva,Helvetica,sans-serif; font-size: 12px; width:100%; height:10%">
+                                            <option value="1">1 days</option>
+                                            <option value="2">2 days</option>
+                                            <option value="3">3 days</option>
+                                            <option value="5">5 days</option>
+                                            <option value="10">10 days</option>
+                                            <option value="22">1 month</option>
+                                            <option value="44">2 months</option>
+                                            <option value="66">3 months</option>
+                                            <option value="91">4 months</option>
+                                            <option value="121" selected="">6 months</option>
+                                            <option value="198">9 months</option>
+                                            <option value="252">1 year</option>
+                                            <option value="504">2 years</option>
+                                            <option value="756">3 years</option>
+                                            <option value="1008">5 years</option>
+                                            <option value="1764">8 years</option>
+                                            <option value="5000">All Data</option>
+                                        </select>
+                                    </div>
+                                
+                                    
+
+                                
+                                    <div class="col-xs-4">
+                                        <b>Range: </b>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <select id="d" name="d" class="selectbox">
+                                            <option value="d">Daily</option>
+                                            <option value="w">Weekly</option>
+                                            <option value="m">Monthly</option>
+                                            <optgroup label="Intraday">
+                                                <option value="1_minute">1 Minute</option>
+                                                <option value="2_minute">2 Minute</option>
+                                                <option value="3_minute">3 Minute</option>
+                                                <option value="5_minute">5 Minute</option>
+                                                <option value="10_minute">10 Minute</option>
+                                                <option value="15_minute">15 Minute</option>
+                                                <option value="20_minute">20 Minute</option>
+                                                <option value="30_minute">30 Minute</option>
+                                                <option value="75_minute">75 minute</option>
+                                                <option value="60_minute">1 hour</option>
+                                                <option value="120_minute">2 hour</option>
+                                                <option value="240_minute">4 hour</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                            
+                                
+                                    <div class="col-xs-4">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <select id="c" name="c" class="selectbox">
+                                            <option value="None" selected="">CandleStick</option>
+                                            <option value="heikin-ashi">Heikin-Ashi</option>
+                                            <option value="s">Closing Price</option>
+                                            <option value="m">Median Price</option>
+                                            <option value="o">OHLC</option>
+                                            <option value="TP">Typical Price</option>
+                                            <option value="WC">Weighted Close</option>
+                                        </select>
+                                    </div>
+                                
                             </div>
 
                             <div class="col-xs-5 shadow panel-row-3">

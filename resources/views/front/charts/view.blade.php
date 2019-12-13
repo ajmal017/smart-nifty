@@ -25,7 +25,7 @@
 		.toolbar
 		{
 		    width: 98%;
-		    margin-left:2px;
+		    margin-left:10px!important;
 		    background: lightgray;
 		    padding: 5px!important;
 		    border-radius: 3px;
@@ -73,7 +73,7 @@
 			height: 300px!important;
 			/*position: absolute;*/
 			  top: 0!important;
-		  left: 0!important;
+		    margin-left:18!important;
 		}
 
 		#canvas_preview
@@ -101,7 +101,7 @@
             <div class="col-lg-12">
                 <div class="panel-group">
                     <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading p-header">
                         <div class="row">    
                             <div class="col-xs-4">
                                 <h3 style="margin: 0px;margin-left: 5px;font-size:20px">Jaihind Projects Limited</h3>
@@ -141,18 +141,187 @@
                                                     <tr>
                                                         <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
                                                         <td class="tab1_c2">Accumulation/Distribution</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
                                                         <td class="tab1_c2">Aroon Oscillator</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
                                                         <td class="tab1_c2">Aroon Up/Down</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
                                                     </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Aroon Up/Down</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">RSI: Relative Strength Ind</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Avg Directional Index</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Avg True Range</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Bollinger Band Width</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Chaikin Money Flow</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Chaikin Oscillator</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Chaikin Volatility</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Close Location Value</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Commodity Channel Index</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Detrended Price Osc</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Donchian Channel Width</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Ease of Movement</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+
+                                                     
+
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Fast Stochastic</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">MACD</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Mass Index</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Momentum</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Money Flow Index</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Neg Volume Index</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">On Balance Volume</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Performance</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">% Price Oscillator</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">% Volume Oscillator</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>     
+
+                                                     
+
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">% Pos Volume Index</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Price Volume Trend</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Rate of Change</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Slow Stochastic</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">StochRSI</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">TRIX</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Ultimate Oscillator</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>     
+                                                     
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">Williams %R</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab1_c2">WaveTrend</td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr> 
                                                   </tbody>
                                                 </table>
                                         </div>
@@ -162,17 +331,37 @@
                                                     <tr>
                                                         <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
                                                         <td class="tab2_c2">Bollinger Band</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
                                                         <td class="tab2_c2">Parabolic SAR</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
                                                         <td class="tab2_c2">Donchain Channel</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" /></td>
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab2_c2">Supertrend</td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab2_c2">Ichimoku clouds</td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab2_c2">priceband</td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab2_c2">Envelop</td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
                                                     </tr>
                                                   </tbody>
                                             </table>
@@ -199,7 +388,7 @@
                                                                 <option value="TMA">Triangular</option>
                                                             </select>
                                                         </select></td>    
-                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" /></td>
+                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
@@ -220,7 +409,70 @@
                                                                 <option value="TMA">Triangular</option>
                                                             </select>
                                                         </select></td>    
-                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" /></td>
+                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab3_c2">Moving avg 3</td>
+                                                        <td class="tab3_c3"><select class="selectbox" name="a1t">
+                                                            <option value="o">Open</option>
+                                                            <option value="h">High</option>
+                                                            <option value="l">Low</option>
+                                                            <option value="c" selected="selected">Close</option>
+                                                        </select></td>
+
+                                                        <td class="tab3_c4">
+                                                            <select class="selectbox1" name="a1t">
+                                                                <option value="SMA" selected="selected">Simple</option>
+                                                                <option value="EMA">Exponential</option>
+                                                                <option value="l">Low</option>
+                                                                <option value="WMA">Weighted</option>
+                                                                <option value="TMA">Triangular</option>
+                                                            </select>
+                                                        </select></td>    
+                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab3_c2">Moving avg 4</td>
+                                                        <td class="tab3_c3"><select class="selectbox" name="a1t">
+                                                            <option value="o">Open</option>
+                                                            <option value="h">High</option>
+                                                            <option value="l">Low</option>
+                                                            <option value="c" selected="selected">Close</option>
+                                                        </select></td>
+
+                                                        <td class="tab3_c4">
+                                                            <select class="selectbox1" name="a1t">
+                                                                <option value="SMA" selected="selected">Simple</option>
+                                                                <option value="EMA">Exponential</option>
+                                                                <option value="l">Low</option>
+                                                                <option value="WMA">Weighted</option>
+                                                                <option value="TMA">Triangular</option>
+                                                            </select>
+                                                        </select></td>    
+                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab3_c2">Moving avg 5</td>
+                                                        <td class="tab3_c3"><select class="selectbox" name="a1t">
+                                                            <option value="o">Open</option>
+                                                            <option value="h">High</option>
+                                                            <option value="l">Low</option>
+                                                            <option value="c" selected="selected">Close</option>
+                                                        </select></td>
+
+                                                        <td class="tab3_c4">
+                                                            <select class="selectbox1" name="a1t">
+                                                                <option value="SMA" selected="selected">Simple</option>
+                                                                <option value="EMA">Exponential</option>
+                                                                <option value="l">Low</option>
+                                                                <option value="WMA">Weighted</option>
+                                                                <option value="TMA">Triangular</option>
+                                                            </select>
+                                                        </select></td>    
+                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
                                                     </tr>
                                                   </tbody>
                                                 </table>
@@ -231,77 +483,93 @@
                     
                             <div class="col-xs-2 shadow panel-row-2">
                                 
-                                    <div class="col-xs-4">
-                                        <b>Period: </b>
-                                    </div>
+                                <table class="tables table-responsive">
+                                    <tr>
+                                        <td>              
+                                            <div class="col-xs-4 p-0 pl-3">
+                                                <b>Period: </b>
+                                            </div>
 
-                                    
+                                            <div class="col-xs-8">
+                                                <select id="ti" name="ti" class="selectbox_center">
+                                                    <option value="1">1 days</option>
+                                                    <option value="2">2 days</option>
+                                                    <option value="3">3 days</option>
+                                                    <option value="5">5 days</option>
+                                                    <option value="10">10 days</option>
+                                                    <option value="22">1 month</option>
+                                                    <option value="44">2 months</option>
+                                                    <option value="66">3 months</option>
+                                                    <option value="91">4 months</option>
+                                                    <option value="121" selected="">6 months</option>
+                                                    <option value="198">9 months</option>
+                                                    <option value="252">1 year</option>
+                                                    <option value="504">2 years</option>
+                                                    <option value="756">3 years</option>
+                                                    <option value="1008">5 years</option>
+                                                    <option value="1764">8 years</option>
+                                                    <option value="5000">All Data</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                            
+                                    <tr>    
+                                        <td>
+                                            <div class="col-xs-4 p-0 pl-3">
+                                                <b>Range: </b>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <select id="d" name="d" class="selectbox_center">
+                                                    <option value="d">Daily</option>
+                                                    <option value="w">Weekly</option>
+                                                    <option value="m">Monthly</option>
+                                                    <optgroup label="Intraday">
+                                                        <option value="1_minute">1 Minute</option>
+                                                        <option value="2_minute">2 Minute</option>
+                                                        <option value="3_minute">3 Minute</option>
+                                                        <option value="5_minute">5 Minute</option>
+                                                        <option value="10_minute">10 Minute</option>
+                                                        <option value="15_minute">15 Minute</option>
+                                                        <option value="20_minute">20 Minute</option>
+                                                        <option value="30_minute">30 Minute</option>
+                                                        <option value="75_minute">75 minute</option>
+                                                        <option value="60_minute">1 hour</option>
+                                                        <option value="120_minute">2 hour</option>
+                                                        <option value="240_minute">4 hour</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>    
+                                            <div class="col-xs-4 p-0 pl-3">
+                                                <b>Type: </b>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <select id="c" name="c" class="selectbox_center">
+                                                    <option value="None" selected="">CandleStick</option>
+                                                    <option value="heikin-ashi">Heikin-Ashi</option>
+                                                    <option value="s">Closing Price</option>
+                                                    <option value="m">Median Price</option>
+                                                    <option value="o">OHLC</option>
+                                                    <option value="TP">Typical Price</option>
+                                                    <option value="WC">Weighted Close</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
 
-                                    <div class="col-xs-8">
-                                        <select id="ti" name="ti" style="font-family:Verdana,Helvetica,Arial,Geneva,Helvetica,sans-serif; font-size: 12px; width:100%; height:10%">
-                                            <option value="1">1 days</option>
-                                            <option value="2">2 days</option>
-                                            <option value="3">3 days</option>
-                                            <option value="5">5 days</option>
-                                            <option value="10">10 days</option>
-                                            <option value="22">1 month</option>
-                                            <option value="44">2 months</option>
-                                            <option value="66">3 months</option>
-                                            <option value="91">4 months</option>
-                                            <option value="121" selected="">6 months</option>
-                                            <option value="198">9 months</option>
-                                            <option value="252">1 year</option>
-                                            <option value="504">2 years</option>
-                                            <option value="756">3 years</option>
-                                            <option value="1008">5 years</option>
-                                            <option value="1764">8 years</option>
-                                            <option value="5000">All Data</option>
-                                        </select>
-                                    </div>
-                                
-                                    
-
-                                
-                                    <div class="col-xs-4">
-                                        <b>Range: </b>
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <select id="d" name="d" class="selectbox">
-                                            <option value="d">Daily</option>
-                                            <option value="w">Weekly</option>
-                                            <option value="m">Monthly</option>
-                                            <optgroup label="Intraday">
-                                                <option value="1_minute">1 Minute</option>
-                                                <option value="2_minute">2 Minute</option>
-                                                <option value="3_minute">3 Minute</option>
-                                                <option value="5_minute">5 Minute</option>
-                                                <option value="10_minute">10 Minute</option>
-                                                <option value="15_minute">15 Minute</option>
-                                                <option value="20_minute">20 Minute</option>
-                                                <option value="30_minute">30 Minute</option>
-                                                <option value="75_minute">75 minute</option>
-                                                <option value="60_minute">1 hour</option>
-                                                <option value="120_minute">2 hour</option>
-                                                <option value="240_minute">4 hour</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                            
-                                
-                                    <div class="col-xs-4">
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <select id="c" name="c" class="selectbox">
-                                            <option value="None" selected="">CandleStick</option>
-                                            <option value="heikin-ashi">Heikin-Ashi</option>
-                                            <option value="s">Closing Price</option>
-                                            <option value="m">Median Price</option>
-                                            <option value="o">OHLC</option>
-                                            <option value="TP">Typical Price</option>
-                                            <option value="WC">Weighted Close</option>
-                                        </select>
-                                    </div>
-                                
+                                    <tr>
+                                        <td>
+                                            <div class="col-xs-12">
+                                                <input id="innerb" name="innerb" type="submit" value="UPDATE CHART" style="width: 96%;margin-left: 3px; padding: 5px; font-size: 12px;background-color: #e3e0ff;">
+                                            </div>
+                                        </td>
+                                    </tr>
+                            </table>    
                             </div>
 
                             <div class="col-xs-5 shadow panel-row-3">
@@ -317,13 +585,77 @@
 
                                     <div class="tab-content ">
                                         <div class="tab-pane active" id="4">
-                                            <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
+                                            <p> Coming soon..</p>
                                         </div>
                                         <div class="tab-pane" id="5">
-                                            <h3>Notice the gap between the content and tab after applying a background color</h3>
+                                            <table class="table table-striped table-responsive">
+                                                <tbody>
+                                                    <p>Check the following box, to enable the drawing tools</p>
+                                                    <tr>
+                                                        <td class="tab5_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab5_c2">Draw Lines(Enabled)</td>
+                                                        <td class="tab5_c3"><input type="text" name="paint" id="paint" class="textbox_tab5" value="SAVE IMG"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>    
                                         </div>
                                         <div class="tab-pane" id="6">
-                                            <h3>add clearfix to tab-content (see the css)</h3>
+                                            <table class="table table-striped table-responsive">
+                                                  <tbody>
+                                                    <tr>
+                                                       <td class="tab6_c6" colspan="
+                                                       3"><b> Volume Bars </b></td>
+                                                       <td class="tab6_c7"></td>
+                                                       <td class="tab6_c8"><b> Theme </b></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab6_c9" colspan="3">    
+                                                            <select class="tab6_selectbox" name="v" id="v">
+                                                                <option value="o" selected="selected">OverLap Main</option>
+                                                                <option value="b">Below Main</option>
+                                                                <option value="n">Disable</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="tab6_c10"></td>
+                                                        <td class="tab6_c11">
+                                                            <select class="tab6_selectbox" name="t" id="t">    <option value="c">Pale yellow</option>
+                                                                <option value="m">Mint cream</option>
+                                                                <option value="b">Light Blue</option>
+                                                                <option value="d" selected="selected">Default (classic)</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab6_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab6_c2">XXXX</td>
+                                                        <td class="tab6_c3"></td>    
+                                                        <td class="tab6_c4"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab6_c5">Show Splits & Bonus</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab6_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab6_c2">Horizontal Grid</td>
+                                                        <td class="tab6_c3"></td>    
+                                                        <td class="tab6_c4"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab6_c5">Log Scale</td>
+                                                    </tr>
+                                                   <tr>
+                                                        <td class="tab6_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab6_c2">Vertical Grid</td>
+                                                        <td class="tab6_c3"></td>
+                                                        <td class="tab6_c4"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab6_c5">Y-axis Labels</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tab6_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab6_c2">Scrollable Chart</td>
+                                                        <td class="tab6_c3"></td>
+                                                        <td class="tab6_c4"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab6_c5">Show Price Labels</td>
+                                                    </tr>
+                                                    
+                                                  </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -336,11 +668,6 @@
              </div>
         </div>    
         
-
-
-
-
-
 
 
 
@@ -368,7 +695,7 @@
 	                                <button type="button" class="btn btn-primary float-right" id="btnDownloadImage" style="cursor: pointer;">Save Image</button>
 	                            </div>
 							</div>
-	                        <div class="row mt-2">
+	                        <div class="row mt-2" style="margin-left: -1px!important;">
 	                            <div class="col-lg-12 tools" id="chart">
 	                                <div id="chart_div"></div>
 	                          		<canvas id='canvas' width=1050 height=300 style="position: absolute !important;top: 1px !important;z-index: 2 !important;"></canvas>

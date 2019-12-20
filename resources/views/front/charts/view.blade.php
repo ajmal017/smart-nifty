@@ -139,188 +139,183 @@
                                                 <table class="table table-striped table-responsive">
                                                   <tbody>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Accumulation/Distribution</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="accumulation_distribution" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_accumulation_distribution">Accumulation/Distribution</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_accumulation_distribution" id="firtselect" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Aroon Oscillator</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="aroon_oscillator" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_aroon_oscillator">Aroon Oscillator</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_aroon_oscillator" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Aroon Up/Down</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="aroon_updown" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_aroon_updown">Aroon Up/Down</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_aroon_updown" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Aroon Up/Down</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="relative_strength_ind" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_relative_strength_ind">RSI: Relative Strength Ind</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_relative_strength_ind" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">RSI: Relative Strength Ind</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="avg_directional_index" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_avg_directional_index">Avg Directional Index</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_avg_directional_index" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Avg Directional Index</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="avg_true_range" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_avg_true_range">Avg True Range</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_avg_true_range" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Avg True Range</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="bollinger_band_width" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_bollinger_band_width">Bollinger Band Width</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_bollinger_band_width" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Bollinger Band Width</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="chaikin_money_flow" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_chaikin_money_flow">Chaikin Money Flow</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_chaikin_money_flow" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Chaikin Money Flow</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="chaikin_oscillator" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_chaikin_oscillator">Chaikin Oscillator</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_chaikin_oscillator" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Chaikin Oscillator</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Chaikin Volatility</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="chaikin_volatility" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_chaikin_volatility">Chaikin Volatility</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_chaikin_volatility" id="" readonly="true" /></td>
                                                     </tr>
 
 
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Close Location Value</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="close_location_value" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_close_location_value">Close Location Value</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_close_location_value" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Commodity Channel Index</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="commodity_channel_index" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_commodity_channel_index">Commodity Channel Index</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_commodity_channel_index" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Detrended Price Osc</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="detrended_price_osc" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_detrended_price_osc">Detrended Price Osc</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_detrended_price_osc" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Donchian Channel Width</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="donchian_channel_width" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_donchian_channel_width">Donchian Channel Width</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_donchian_channel_width" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Ease of Movement</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="ease_of_movement" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_ease_of_movement">Ease of Movement</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_ease_of_movement" id="" readonly="true" /></td>
                                                     </tr>
 
                                                      
 
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Fast Stochastic</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="fast_stochastic" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_fast_stochastic">Fast Stochastic</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_fast_stochastic" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">MACD</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="macd" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_macd">MACD</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_macd" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Mass Index</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="mass_index" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_mass_index">Mass Index</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_mass_index" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Momentum</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="momentum" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_momentum">Momentum</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_momentum" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Money Flow Index</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="money_flow_index" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_money_flow_index">Money Flow Index</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_money_flow_index" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Neg Volume Index</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="neg_volume_index" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_neg_volume_index">Neg Volume Index</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_neg_volume_index" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">On Balance Volume</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="on_balance_volume" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_on_balance_volume">On Balance Volume</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_on_balance_volume" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Performance</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="performance" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_performance">Performance</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_performance" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">% Price Oscillator</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="price_oscillator" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_price_oscillator">% Price Oscillator</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_price_oscillator" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">% Volume Oscillator</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="volume_oscillator" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_volume_oscillator">% Volume Oscillator</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_volume_oscillator" id="" readonly="true" /></td>
                                                     </tr>     
 
                                                      
 
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">% Pos Volume Index</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="pos_volume_index" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_pos_volume_index">% Pos Volume Index</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_pos_volume_index" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Price Volume Trend</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="price_volume_trend" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_price_volume_trend">Price Volume Trend</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_price_volume_trend" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Rate of Change</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="rate_of_change" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_rate_of_change">Rate of Change</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_rate_of_change" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Slow Stochastic</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="slow_stochastic" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_slow_stochastic">Slow Stochastic</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_slow_stochastic" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">StochRSI</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="stochrsi" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_stochrsi">StochRSI</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_stochrsi" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">TRIX</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="trix" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_trix">TRIX</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_trix" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Ultimate Oscillator</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="ultimate_oscillator" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_ultimate_oscillator">Ultimate Oscillator</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_ultimate_oscillator" id="" readonly="true" /></td>
                                                     </tr>     
                                                      
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">Williams %R</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="williams_r" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_williams_r">Williams %R</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_williams_r" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab1_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab1_c2">WaveTrend</td>    
-                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab1_c1"><input type="checkbox" class="" id="" value="waveTrend" onchange="clickMe(this)"></td>
+                                                        <td class="tab1_c2"><span class="span_waveTrend">WaveTrend</span></td>    
+                                                        <td class="tab1_c3">Parameters : <input type="text" class="textbox textbox_waveTrend" id="" readonly="true" /></td>
                                                     </tr> 
                                                   </tbody>
                                                 </table>
@@ -329,39 +324,39 @@
                                             <table class="table table-striped table-responsive">
                                                   <tbody>
                                                     <tr>
-                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab2_c2">Bollinger Band</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id="" value="bollinger_band" onchange="clickMe(this)"></td>
+                                                        <td class="tab2_c2"><span class="span_bollinger_band">Bollinger Band</span></td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox textbox_bollinger_band" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab2_c2">Parabolic SAR</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id="" value="parabolic_sar" onchange="clickMe(this)"></td>
+                                                        <td class="tab2_c2"><span class="span_parabolic_sar">Parabolic SAR</span></td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox textbox_parabolic_sar" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id="" value="donchain_channel" onchange="clickMe(this)"></td>
                                                         <td class="tab2_c2">Donchain Channel</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox textbox_donchain_channel" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab2_c2">Supertrend</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id="" value="supertrend" onchange="clickMe(this)"></td>
+                                                        <td class="tab2_c2"><span class="span_supertrend">Supertrend</span></td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox textbox_supertrend" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab2_c2">Ichimoku clouds</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id="" value="ichimoku_clouds" onchange="clickMe(this)"></td>
+                                                        <td class="tab2_c2"><span class="span_ichimoku_clouds">Ichimoku clouds</span></td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox textbox_ichimoku_clouds" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab2_c2">priceband</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id="" value="priceband" onchange="clickMe(this)"></td>
+                                                        <td class="tab2_c2"><span class="span_priceband">priceband</span></td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox textbox_priceband" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab2_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab2_c2">Envelop</td>    
-                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab2_c1"><input type="checkbox" class="" id="" value="envelop" onchange="clickMe(this)"></td>
+                                                        <td class="tab2_c2"><span class="span_envelop">Envelop</span></td>    
+                                                        <td class="tab2_c3">Parameters : <input type="text" class="textbox textbox_envelop" id="" readonly="true" /></td>
                                                     </tr>
                                                   </tbody>
                                             </table>
@@ -387,7 +382,7 @@
                                                                 <option value="WMA">Weighted</option>
                                                                 <option value="TMA">Triangular</option>
                                                             </select>
-                                                        </select></td>    
+                                                        </td>    
                                                         <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
@@ -727,6 +722,38 @@
     <script type="text/javascript">
     
 
+    function clickMe(e){
+ 
+
+
+        if($(e).prop('checked')){
+            
+            $('.span_' + e.value).css({"font-weight":"bold"});
+            $('.textbox_' + e.value).attr('readonly',false);
+        }
+        else{
+            $('.span_' + e.value).css("font-weight", "Normal");
+            $('.textbox_' + e.value).attr('readonly',true);
+        }
+         
+
+
+ 
+    }
+
+//    accumulation_distribution    
+
+        /*$('input:checkbox').change(function(){
+
+
+
+
+            if($(this).is(":checked")) {
+                $("span").css({"font-weight":"bold", "readonly":"false"});
+            } else {
+                $("span").css("font-weight", "Normal");
+            }
+        });*/
 
 
         /*$(document).ready(function(){

@@ -365,8 +365,8 @@
                                             <table class="table table-striped table-responsive">
                                                   <tbody>
                                                     <tr>
-                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab3_c2">Moving avg 1</td>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id="" value="moving_avg_1" onchange="clickMe(this)"></td>
+                                                        <td class="tab3_c2"><span class="span_moving_avg_1">Moving avg 1</span></td>
                                                         <td class="tab3_c3"><select class="selectbox" name="a1t">
                                                             <option value="o">Open</option>
                                                             <option value="h">High</option>
@@ -383,11 +383,11 @@
                                                                 <option value="TMA">Triangular</option>
                                                             </select>
                                                         </td>    
-                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab3_c5"><input type="text" class="textbox textbox_moving_avg_1" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab3_c2">Moving avg 2</td>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id="" value="moving_avg_2" onchange="clickMe(this)"></td>
+                                                        <td class="tab3_c2"><span class="span_moving_avg_2">Moving avg 2</span></td>
                                                         <td class="tab3_c3"><select class="selectbox" name="a1t">
                                                             <option value="o">Open</option>
                                                             <option value="h">High</option>
@@ -404,11 +404,11 @@
                                                                 <option value="TMA">Triangular</option>
                                                             </select>
                                                         </select></td>    
-                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab3_c5"><input type="text" class="textbox textbox_moving_avg_2" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab3_c2">Moving avg 3</td>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id="" value="moving_avg_3" onchange="clickMe(this)"></td>
+                                                        <td class="tab3_c2"><span class="span_moving_avg_3">Moving avg 3</span></td>
                                                         <td class="tab3_c3"><select class="selectbox" name="a1t">
                                                             <option value="o">Open</option>
                                                             <option value="h">High</option>
@@ -425,11 +425,11 @@
                                                                 <option value="TMA">Triangular</option>
                                                             </select>
                                                         </select></td>    
-                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab3_c5"><input type="text" class="textbox textbox_moving_avg_3" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab3_c2">Moving avg 4</td>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id="" value="moving_avg_4" onchange="clickMe(this)"></td>
+                                                        <td class="tab3_c2"><span class="span_moving_avg_4">Moving avg 4</span></td>
                                                         <td class="tab3_c3"><select class="selectbox" name="a1t">
                                                             <option value="o">Open</option>
                                                             <option value="h">High</option>
@@ -446,11 +446,11 @@
                                                                 <option value="TMA">Triangular</option>
                                                             </select>
                                                         </select></td>    
-                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab3_c5"><input type="text" class="textbox textbox_moving_avg_4" id="" readonly="true" /></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="tab3_c1"><input type="checkbox" class="" id=""></td>
-                                                        <td class="tab3_c2">Moving avg 5</td>
+                                                        <td class="tab3_c1"><input type="checkbox" class="" id="" value="moving_avg_5" onchange="clickMe(this)"></td>
+                                                        <td class="tab3_c2"><span class="span_moving_avg_5">Moving avg 5</span></td>
                                                         <td class="tab3_c3"><select class="selectbox" name="a1t">
                                                             <option value="o">Open</option>
                                                             <option value="h">High</option>
@@ -467,7 +467,7 @@
                                                                 <option value="TMA">Triangular</option>
                                                             </select>
                                                         </select></td>    
-                                                        <td class="tab3_c5"><input type="text" class="textbox" id="" readonly="true" /></td>
+                                                        <td class="tab3_c5"><input type="text" class="textbox textbox_moving_avg_5" id="" readonly="true" /></td>
                                                     </tr>
                                                   </tbody>
                                                 </table>
@@ -724,21 +724,16 @@
 
     function clickMe(e){
  
-
-
         if($(e).prop('checked')){
             
             $('.span_' + e.value).css({"font-weight":"bold"});
             $('.textbox_' + e.value).attr('readonly',false);
+            $('.textbox_' + e.value).css('background-color' , '#FFFFF');
         }
         else{
             $('.span_' + e.value).css("font-weight", "Normal");
             $('.textbox_' + e.value).attr('readonly',true);
         }
-         
-
-
- 
     }
 
 //    accumulation_distribution    

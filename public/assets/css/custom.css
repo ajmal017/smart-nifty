@@ -1,7 +1,10 @@
+/*------------------- For Screener chart Box Design ---------------------*/
+
 .shadow{
     -moz-box-shadow: 0 0 5px #6e6a6a;
 -webkit-box-shadow: 0 0 5px #6e6a6a;
 box-shadow: 0 0 5px #6e6a6a;  }
+
 
 .panel-row-1{
   width: 40%!important;
@@ -68,9 +71,17 @@ box-shadow: 0 0 5px #6e6a6a;  }
   border-bottom: 1px solid lightgray!important;
 }
 
+/*--------------------- For text-box & select-box -------------------*/
 .textbox{
   height: 14px;
   width:46px;
+  border:1px solid gray;
+  color: black;
+}
+
+input:read-only {
+  color: black;
+  background-color: #EBEBE4;
 }
 
 .selectbox{
@@ -91,61 +102,54 @@ box-shadow: 0 0 5px #6e6a6a;  }
   height:10%
 }
 
+/*--------------------- For tab-1 -------------------*/
 .tab1_c1{
   width: 5%;
 }
-
 .tab1_c2{
   width: 60%;
   text-align: left;
 }
-
 .tab1_c3{
   width: 35%;
   text-align: right;
 }
 
-
+/*--------------------- For tab-2 -------------------*/
 .tab2_c1{
   width: 5%;
 }
-
 .tab2_c2{
   width: 60%;
   text-align: left;
 }
-
 .tab2_c3{
   width: 35%;
   text-align: right;
 }
 
-
+/*--------------------- For tab-3 -------------------*/
 .tab3_c1{
   width: 5%;
 }
-
 .tab3_c2{
   width: 50%;
   text-align: left;
 }
-
 .tab3_c3{
   width: 12%;
   text-align: left;
 }
-
 .tab3_c4{
   width: 20%;
   text-align: right;
 }
-
 .tab3_c5{
   width: 13%;
   text-align: right;
 }
 
-
+/*--------------------- For tab-5 -------------------*/
 .tab5_c1{
   width: 5%;
   text-align: left;
@@ -158,13 +162,12 @@ box-shadow: 0 0 5px #6e6a6a;  }
   width: 25%;
   text-align: left;
 }
-
 .textbox_tab5{
   width: 100px;
   font-size: 11px;
 }
 
-
+/*--------------------- For tab-6 -------------------*/
 .tab6_c1{
   width: 5%;
   text-align: left;
@@ -185,39 +188,30 @@ box-shadow: 0 0 5px #6e6a6a;  }
   text-align: left;
   margin-left:10px!important;
 }
-
 .tab6_c6{
   width: 40%;
   text-align: left;
 }
-
 .tab6_c7{
   width: 40%;
   text-align: left;
 }
-
 .tab6_c8{
   width: 20%;
   text-align: left;
 }
-
-
 .tab6_c9{
   width: 20%;
   text-align: left;
 }
-
 .tab6_c10{
   width: 10%!important;
   text-align: left;
 }
-
 .tab6_c11{
   width: 40%;
   text-align: left;
 }
-
-
 .tab6_selectbox{ 
   font-size: 12px;
    width: 155px;

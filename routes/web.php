@@ -43,6 +43,9 @@ Route::post('/screeners_get','front\chartController@getlivedata');
 Route::get('/chart/','front\chartController@index');
 
 
+Route::get('/screeners_data','front\topLovedController@screenerdata');
+
+
 
 
 

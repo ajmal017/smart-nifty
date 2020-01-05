@@ -83,17 +83,32 @@
 		            	<table id="example" class="table table-striped table-bordered" style="width:100%">
 					        <thead>
 					            <tr>
-					                <th>Srno.</th>
+					                <!-- <th>Srno.</th>
 					                <th>Stock Name</th>
 					                <th>Symbol</th>
 					                <th>Links</th>
 					                <th>% Chg</th>
-					                <th>Price</th>
+					                <th>Price</th> -->
+					                <th>Open</th>
+					                <th>High</th>
+					                <th>Low</th>
+					                <th>Close</th>
 					                <th>Volume</th>
 					            </tr>
 					        </thead>
-					        <tbody>
-					        	
+					         <tbody id="tbody_data">
+					        	<!-- <tr>
+					        		
+					        		
+					        		<td></td>
+					        		<td></td>
+					        		<td></td>
+					        		<td></td>
+					        		<td></td>
+					        		<td></td>
+					        		<td></td>
+					        		
+					        	</tr> -->
 					        </tbody>
 					    </table>
 					</div>
@@ -138,8 +153,27 @@
 			});
 		});
 
+		function getdata() {
+    		$.ajax({
+    			cache:false,
+                url: '/screeners_data',
+                method: 'GET',
+                success:function(result){
+					$("#tbody_data").empty();
+					$('#example').DataTable().destroy();
+					$("#tbody_data").append(result);
+					$("#example").DataTable({
+						dom: 'Bfrtip',
+				        buttons: [
+				            'excel'
+				        ]
+					});
+              	}
+            });
+		}
 
-	
-
+	 	$(document).ready(function(){
+	 		getdata();	
+	 	});
 	</script>
 @endsection

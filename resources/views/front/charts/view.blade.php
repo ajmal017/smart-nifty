@@ -134,7 +134,7 @@
                                             </li>
                                     </ul>
 
-                                    <div class="tab-content ">
+                                    <div class="tab-content">
                                         <div class="tab-pane active tabs" id="1">
                                                 <table class="table table-striped table-responsive">
                                                   <tbody>

@@ -723,12 +723,51 @@ class topLovedController extends Controller
 
           
           //return $finalReturnHTML;
+
+          // dd($res);
+          // return response()->json($response);	
+
+
           $screenerName = $screenerName;
           $stockName = 'Wipro';
           return view('front/screeners/screnners',compact('screenerName','stockName','finalHeadingData','finalScreenersData'));
           /*$api_data = Curl::to('http://www.smartnifty.com/convertcsv.json')->asJson()->get();
           return $api_data;
           return view('front/screeners/screnners_list',compact('screenerName'));*/
+     }
+
+
+     public function screenerdata(){
+
+     	$response = Curl::to('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=NSE&interval=5min&apikey=JXZD1OZTSNHTC50V')
+           ->asJson()->get();
+		$getresponse = json_encode($response);
+		$getdata = json_decode($getresponse, true);
+
+		foreach ($getdata as $key => $value){
+			$datamain[]=array(
+				"value" => $value,
+			);	
+		}
+		foreach ($datamain[1]['value'] as $key => $val) {
+			$datasub[]=$val;	
+		}
+		for($datamain=0;$datamain < count($datasub);$datamain++){
+			$datasub1[]=array(
+				"open" => $datasub[$datamain]['1. open'],
+				"high" => $datasub[$datamain]['2. high'],
+				"low" => $datasub[$datamain]['3. low'],
+				"close" => $datasub[$datamain]['4. close'],
+				"volume" => $datasub[$datamain]['5. volume'],
+			);		
+		}
+
+		$tmpData = "";
+
+		for($datas=0;$datas < count($datasub1);$datas++){
+			$tmpData .= '<tr><td>'.$datasub1[$datas]["open"].'</td><td>'.$datasub1[$datas]["high"].'</td><td>'.$datasub1[$datas]["low"].'</td><td>'.$datasub1[$datas]["close"].'</td><td>'.$datasub1[$datas]["volume"].'</td></tr>';
+		}
+        return $tmpData;
      }
 
      /**
